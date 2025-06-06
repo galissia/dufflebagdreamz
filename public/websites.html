@@ -1,9 +1,125 @@
+<!doctype html>
+<html>
+<head>
+    
+    <!-- Change your site title: (It is shown in the tab) -->
+    <title>Gal's Space!</title>
+
+    <!-- Change your site description: (It is shown in Google results) -->
+    <meta content="My personal website!" name="description" />
+
+    <!-- Setting character encoding and viewport size. Do not remove. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FavIcon (small image in tab), change to any image you want: -->
+    <link href="./images/theme_assets/em2lV2r.gif" rel="icon" type="image/x-icon" />
+
+    <!-- CSS: -->
+    <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css" if this HTML file is in 2 subfolders, etc. -->
+    <link href="https://fonts.cdnfonts.com/css/elmono-2" rel="stylesheet" />
+<link href="https://fonts.cdnfonts.com/css/beginning-2" rel="stylesheet">
+    <link href="./css/home.css" rel="stylesheet" />
+    <style>
+      #time {
+                            font-size: 10px;
+                            margin-left:-10px;
+                            margin-top: 5px;
+                        }</style>
+    <script src="https://status.cafe/current-status.js?name=galissia" defer></script>
+    <script>
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var site_data = JSON.parse(this.responseText);
+                    var num_arr = site_data.info.views.toString().split("");
+                    var num_str = "";
+                    for (i = 0; i < num_arr.length; i++) {
+                        num_str += num_arr[i];
+                        if ((num_arr.length - 1 - i) % 3 == 0 && num_arr.length - 1 - i != 0) {
+                            num_str += ",";
+                        }
+                        var date_str = site_data.info.last_updated;
+                        var date_obj = new Date(site_data.info.last_updated);
+                        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                        var months = [
+                            "January",
+                            "February",
+                            "March",
+                            "April",
+                            "May",
+                            "June",
+                            "July",
+                            "August",
+                            "September",
+                            "October",
+                            "November",
+                            "December"
+                        ];
+                        document.getElementById("lastupdate").innerHTML =
+                            days[date_obj.getDay()] +
+                            " " +
+                            months[date_obj.getMonth()] +
+                            " " +
+                            date_obj.getDate() +
+                            ", " +
+                            date_obj.getFullYear();
+                    }
+                    document.getElementById("hitcount").innerHTML = num_str;
+                }
+            };
+            xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=dufflebagdreamz", true);
+            xhttp.send();
+        </script>
+    <script type="text/javascript">
+      function changeStyle(style) {
+    if (style == null)
+        style = localStorage.getItem("style");
+        if (style == null) 
+            style = "/css/home";
+    document.querySelector("link[type='text/css']").setAttribute("href", "/public/css/" + style + ".css");
+    localStorage.setItem("style", style);
+}
+
+changeStyle();</script>
+    <!-- JavaScript: -->
+    <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js" if this HTML file is in 2 subfolders, etc. -->
+    <script src="./layout.js"></script>
+
+    <script>
+      // Template generated with petrapixel's layout generator.
+      // (Please do not remove this credit.)
+      console.log("%c Template generated with petrapixel's layout generator.", "font-size: 14pt;");
+      console.log("%c https://petrapixel.neocities.org/coding/layout-generator", "font-size: 14pt;");
+    </script>
+    </head>
+    <body>
+    <!-- The next line is a skip-to-content link for keyboard users. Do not remove it! -->
+    <a href="#content" id="skip-to-content-link">Skip to content</a>
+
+    <div class="layout">
+      
+      <!-- =============================================== -->
+      <!-- Header (and Sidebars) will be loaded per JavaScript! Edit layout.js to change. -->
+      <!-- =============================================== -->
+
+  
+      <main id="content"> <!-- Do NOT remove the ID here -->
+
+        <noscript>Please enable JavaScript to view this website!</noscript>
+    
 <link rel="shortcut icon" type="image/x-icon" href="/images/theme_assets/favicon.png" />
+    <link href="/style/iframe.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.cdnfonts.com/css/elmono-2" rel="stylesheet">
+<div class="mainboxes">
+<!-- REPLACE CONTENT BELOW WITH YOUR OWN -->
+    <link rel="shortcut icon" type="image/x-icon" href="/images/theme_assets/favicon.png" />
 <link href="/style/iframe.css" rel="stylesheet" type="text/css" />
 <link href="https://fonts.cdnfonts.com/css/elmono-2" rel="stylesheet" />
 <div id="main">
   <div class="mainboxes">
-    <div class="subheader"><h3 style="text-align: center">cool websites & fanlistings</h3></div>
+    <div class="subheader"><h3 style="text-align: center;  background: #a36fbf;
+background: linear-gradient(90deg, rgba(163, 111, 191, 1) 0%, rgba(38, 62, 171, 1) 100%);">cool websites & fanlistings</h3></div>
 
     <div class="mainboxescontent">
       <!-- REPLACE CONTENT BELOW WITH YOUR OWN -->
@@ -32,11 +148,13 @@
         
         <a target="_blank" href="https://orangepeels.neocities.org">orangepeelpith</a> //
         <a target="_blank" href="https://bidoofis.neocities.org">Bidoofis</a> //
-        <a target="_blank" href="https://nineteentails.neocities.org">Nineteentails</a><br /><br />
+        <a target="_blank" href="https://nineteentails.neocities.org">Nineteentails</a>
+          <br />
+          <br />
         <a href="https://nathanntan.neocities.org/" target="_blank"><img src="https://nathanntan.neocities.org/avatars/button%20(1).png"></a>
-        <a target="_blank" href="https://doqmeat.com"><img alt="doqmeat.com" src="/images/buttons/doqmeat.png" /></a>
+        <a target="_blank" href="https://doqmeat.com"><img alt="doqmeat.com" src="./images/buttons/doqmeat.png" /></a>
         <a target="_blank" href="https://y2kbugz.neocities.org"
-          ><img alt="y2kbugz.neocities.org" src="/images/buttons/y2kbugs.png"
+          ><img alt="y2kbugz.neocities.org" src="./images/buttons/y2kbugs.png"
         /></a>
         <a href="https://maphren.neocities.org/" target="_blank"
             ><img src="https://maphren.neocities.org/imgs/buttons/maphren.gif" alt="maphren.neocities.org"
@@ -47,10 +165,10 @@
             src="https://file.garden/ZoMEF_reXgpHHpnb/cavitycollector-button.gif"
         /></a>
         <a target="_blank" href="https://numbersstory.com"
-          ><img alt="numbersstory.com" src="/images/buttons/numbers.png"
+          ><img alt="numbersstory.com" src="./images/buttons/numbers.png"
         /></a>
         <a href="https://dustedpink.neocities.org/" target="_blank"
-          ><img alt="dustedpink.neocities.org" src="/images/buttons/dustedpink.gif"
+          ><img alt="dustedpink.neocities.org" src="./images/buttons/dustedpink.gif"
         /></a>
       </center>
       <br /><br /><br />
@@ -58,44 +176,44 @@
       <h3 style="text-align: center">cool sites</h3>
       <br />
       <center>
-        <a href="https://strawbebby228.neocities.org/" target="_blank"><img src="/images/buttons/ButtonPink.gif" /></a>
+        <a href="https://strawbebby228.neocities.org/" target="_blank"><img src="./images/buttons/ButtonPink.gif" /></a>
          <a href="http://cepheus.xyz" target="_blank"
-            ><img alt="click to visit cepheus" src="/images/buttons/cepheus.gif"
+            ><img alt="click to visit cepheus" src="./images/buttons/cepheus.gif"
         /></a>
         
         <a href="https://jackisnotbright.neocities.org" target="_blank"
-            ><img src="images/buttons/JACKISNOTBRIGHT.gif" /><img
+            ><img src="./images/buttons/JACKISNOTBRIGHT.gif" /><img
         /></a>
         <a href="https://petrapixel.neocities.org/" target="_blank"
-            ><img src="/images/buttons/petra.webp" alt="petrapixel"
+            ><img src="./images/buttons/petra.webp" alt="petrapixel"
         /></a>
-        <a href="https://mooeena.neocities.org" target="_blank"><img src="images/buttons/goat.gif" /><img /></a>
+        <a href="https://mooeena.neocities.org" target="_blank"><img src="./images/buttons/goat.gif" /><img /></a>
          
-         <a href="https://lastsunrise.art" target="_blank"><img src="/images/buttons/lastsunrise.gif" alt="Last Sunrise Button" /></a>
-        <a href="https://theponyhighway.neocities.org/" target="_blank"><img src="/images/buttons/tphbuttonshine.gif"></a>
-             <a href="https://postwick.net" target="_blank"><img src="/images/buttons/postwickbutton.gif" alt="Postwick's site button"></a>
-        <a href="http://whimsical.heartette.net" target="_blank"><img src="images/buttons/whimsical.gif" /><img /></a>
+         <a href="https://lastsunrise.art" target="_blank"><img src="./images/buttons/lastsunrise.gif" alt="Last Sunrise Button" /></a>
+        <a href="https://theponyhighway.neocities.org/" target="_blank"><img src="./images/buttons/tphbuttonshine.gif"></a>
+             <a href="https://postwick.net" target="_blank"><img src="./images/buttons/postwickbutton.gif" alt="Postwick's site button"></a>
+        <a href="http://whimsical.heartette.net" target="_blank"><img src="./images/buttons/whimsical.gif" /><img /></a>
         
-        <a href="https://dokode.moe" target="_blank"><img src="images/buttons/dokodemobutton3.gif" /><img /></a>
+        <a href="https://dokode.moe" target="_blank"><img src="./images/buttons/dokodemobutton3.gif" /><img /></a>
         <a href="https://olliveen.neocities.org/" target="_blank"><img src="https://olliveen.neocities.org/img/button.gif"></a>
         <a href="https://tectrix.neocities.org" target="_blank"><img src="https://tectrix.neocities.org/images/button.gif"></a>
         
-        <a href="https://pinkdreamsponyland.neocities.org" target="_blank"> <img src="/images/buttons/pinkpony.png"></a>
-        <a href="https://ballonlea.net" target="_blank"><img src="images/buttons/sitebutton1.gif" /><img /></a>
+        <a href="https://pinkdreamsponyland.neocities.org" target="_blank"> <img src="./images/buttons/pinkpony.png"></a>
+        <a href="https://ballonlea.net" target="_blank"><img src="./images/buttons/sitebutton1.gif" /><img /></a>
         <a href="https://theabsoluterealm.com/" target="_blank">
-            <img alt="the absolute realm" src="images/buttons/absolute-realm.gif"
+            <img alt="the absolute realm" src="./images/buttons/absolute-realm.gif"
         /></a>
         <a href="https://ne0nbandit.neocities.org/" target="_blank"><img src="https://ne0nbandit.github.io/assets/img/btn/mine/nbbanner.png"></a>
-        <a href="https://vidapon.net/" target="_blank"><img alt="Vidapon's Artbox!" src="/images/buttons/Astertrail_button.gif"></a>
+        <a href="https://vidapon.net/" target="_blank"><img alt="Vidapon's Artbox!" src="./images/buttons/Astertrail_button.gif"></a>
         <a href="https://chimeramanticore.neocities.org" target="_blank"
-            ><img src="images/buttons/chimerabutton.gif" /><img
+            ><img src="./images/buttons/chimerabutton.gif" /><img
         /></a>
       
-        <a href="https://starrs.neocities.org/" target="_blank"><img src="/images/buttons/tiny_space.gif" /></a>
+        <a href="https://starrs.neocities.org/" target="_blank"><img src="./images/buttons/tiny_space.gif" /></a>
         
-        <a href="https://insect.christmas" target="_blank"><img src="images/buttons/insectchristmas.png" /><img /></a>
-        <a href="https://32bit.cafe" target="_blank"><img src="/images/buttons/32b-pcb.png" /><img /></a>
-        <a href="https://dimden.dev" target="_blank"><img src="/images/buttons/dimden.gif" />
+        <a href="https://insect.christmas" target="_blank"><img src="./images/buttons/insectchristmas.png" /><img /></a>
+        <a href="https://32bit.cafe" target="_blank"><img src="./images/buttons/32b-pcb.png" /><img /></a>
+        <a href="https://dimden.dev" target="_blank"><img src="./images/buttons/dimden.gif" />
       </a></center>
           <br><br>
       <hr />
@@ -148,10 +266,10 @@
           ><img src="/images/fanlistings/tes.png" alt="The Elder Scrolls Series" title="The Elder Scrolls Series" border="0"
         /></a>
         <a target="_blank" href="https://beatngu.altervista.org/bi/index.php"
-          ><img src="images/fanlistings/bi.png" alt="Bisexuality" title="Bisexuality"
+          ><img src="./images/fanlistings/bi.png" alt="Bisexuality" title="Bisexuality"
         /></a>
         <a target="_blank" href="https://nature.i-heart-you.net/forests/"
-          ><img src="images/fanlistings/forests.gif" alt="Forests" title="Forests"
+          ><img src="./images/fanlistings/forests.gif" alt="Forests" title="Forests"
         /></a>
         <a
           target="_blank"
@@ -163,7 +281,7 @@
           ><img src="/images/fanlistings/witchcraft.png" alt="Witchcraft" border="0" title="Witchcraft"
         /></a>
         <a target="_blank" href="http://fan.still-breathing.com/history/"
-          ><img src="images/fanlistings/history.png" alt="History" title="History"
+          ><img src="./images/fanlistings/history.png" alt="History" title="History"
         /></a>
         <a target="_blank" href="https://theatregirl.net/midnight"
           ><img src="/images/fanlistings/midnight.png" alt="Midnight" title="Midnight"
@@ -175,53 +293,53 @@
           ><img src="/images/fanlistings/s4.gif" alt="Doctor Who Series 4" title="Doctor Who Series 4"
         /></a>
         <a target="_blank" href="https://tv.i-heart-you.net/crowley/"
-          ><img src="images/fanlistings/crowley.gif" alt="Crowley" title="Crowley"
+          ><img src="./images/fanlistings/crowley.gif" alt="Crowley" title="Crowley"
         /></a>
         <a target="_blank" href="http://contradiction.altervista.org/supernatural/index.php"
-          ><img src="images/fanlistings/supernatural.png" alt="Supernatural" title="Supernatural"
+          ><img src="./images/fanlistings/supernatural.png" alt="Supernatural" title="Supernatural"
         /></a>
         <a target="_blank" href="https://go.wings.nu/index.php"
           ><img src="/images/fanlistings/go07.png" alt="Good Omens" title="Good Omens"
         /></a>
         <a target="_blank" href="https://yerfej.org/lucifer/"
-          ><img src="images/fanlistings/lucifer.png" alt="Lucifer" title="Lucifer"
+          ><img src="./images/fanlistings/lucifer.png" alt="Lucifer" title="Lucifer"
         /></a>
         <a target="_blank" href="https://www.into-a-dream.com.ar/wwstv/"
-          ><img src="images/fanlistings/wwdits.png" alt="What We Do In The Shadows" title="What We Do In The Shadows"
+          ><img src="./images/fanlistings/wwdits.png" alt="What We Do In The Shadows" title="What We Do In The Shadows"
         /></a>
         <a target="_blank" href="https://fan.robotess.net/david-tennant"
-          ><img src="images/fanlistings/tennant.jpeg" alt="David Tennant" title="David Tennant"
+          ><img src="./images/fanlistings/tennant.jpeg" alt="David Tennant" title="David Tennant"
         /></a>
         
         <a target="_blank" href="https://yaten.net/capaldi/"
-          ><img src="images/fanlistings/capaldi.png" alt="Peter Capaldi" title="Peter Capaldi"
+          ><img src="./images/fanlistings/capaldi.png" alt="Peter Capaldi" title="Peter Capaldi"
         /></a>
         <a target="_blank" href="http://winterseve.altervista.org/jensen"
-          ><img src="images/fanlistings/jensen.png" alt="Jensen Ackles" title="Jensen Ackles"
+          ><img src="./images/fanlistings/jensen.png" alt="Jensen Ackles" title="Jensen Ackles"
         /></a>
         <a target="_blank" href="https://boundless-realms.com/misha/"
-          ><img src="images/fanlistings/misha.jpg" alt="Misha Collins" title="Misha Collins"
+          ><img src="./images/fanlistings/misha.jpg" alt="Misha Collins" title="Misha Collins"
         /></a>
         <a target="_blank" href="https://tardis.i-heart-you.net/rose/"
-          ><img src="images/fanlistings/rose.gif" alt="Rose Tyler" title="Rose Tyler"
+          ><img src="./images/fanlistings/rose.gif" alt="Rose Tyler" title="Rose Tyler"
         /></a>
         <a target="_blank" href="http://edgeofseventeen.altervista.org/sweeneytodd/index.php"
-          ><img src="images/fanlistings/sweeney.png" alt="Sweeney Todd" title="Sweeny Todd"
+          ><img src="./images/fanlistings/sweeney.png" alt="Sweeney Todd" title="Sweeny Todd"
         /></a>
         <a target="_blank" href="https://love.cordy.nu/grimm/"
-          ><img src="images/fanlistings/monroe.webp" alt="Grimm" title="Grimm"
+          ><img src="./images/fanlistings/monroe.webp" alt="Grimm" title="Grimm"
         /></a>
       <a target="_blank" href="http://amalgamate.afflatus-misery.net/apollo/"
-          ><img src="images/fanlistings/apollo.png" alt="Apollo" title="Apollo"
+          ><img src="./images/fanlistings/apollo.png" alt="Apollo" title="Apollo"
         /></a>
         <a target="_blank" href="http://andrasta.net/artemis/"
-          ><img src="images/fanlistings/artemis.jpg" alt="Artemis" title="Artemis"
+          ><img src="./images/fanlistings/artemis.jpg" alt="Artemis" title="Artemis"
         /></a>
         <a target="_blank" href="http://www.into-a-dream.com.ar/taurus/index.php"
-          ><img src="images/fanlistings/taurus.png" alt="Taurus" title="Taurus"
+          ><img src="./images/fanlistings/taurus.png" alt="Taurus" title="Taurus"
         /></a>
         <a target="_blank" href="http://fan.greenhype.net/mp3players/about.php"
-          ><img src="images/fanlistings/mp3players50j.gif" alt="MP3 Players" title="MP3 Players"
+          ><img src="./images/fanlistings/mp3players50j.gif" alt="MP3 Players" title="MP3 Players"
         /></a>
         <a target="_blank" href=""><img src="/images/fanlistings/html50x50_001.png" alt="HTML" title="html"> </a>
         
@@ -229,7 +347,7 @@
         
 <!--
         <a target="_blank" href=""
-          ><img src="images/fanlistings/" alt="" title=""
+          ><img src="./images/fanlistings/" alt="" title=""
         /></a>
 -->
         
@@ -684,3 +802,8 @@
 
   <br />
 </div>
+          </div>
+        </main>
+        </div>
+    </body>
+</html>
