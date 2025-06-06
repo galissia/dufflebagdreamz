@@ -87,7 +87,7 @@ a:focus {
 /* -------------------------------------------------------- */
 
 .layout {
-  width: 70%;
+  width: 60%;
   display: grid;
   grid-gap: var(--margin);
   grid-template: "header header header" auto "leftSidebar main rightSidebar" auto "footer footer footer" auto / var(--sidebar-width) auto var(--sidebar-width);
@@ -541,4 +541,18 @@ main h6 {
   #skip-to-content-link {
     font-size: 1rem;
   }
+}
+
+#statuscafe {
+    padding: .5em;
+    
+   
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+
 }

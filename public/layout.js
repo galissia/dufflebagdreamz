@@ -56,10 +56,29 @@ function headerHTML() {
         </div>
         <div class="sidebar-section">
           <div class="sidebar-title"> ☄. *.  Section Title</div>
-          <blockquote>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
-          </blockquote>
+          <div id="statuscafe">
+                                        <div id="statuscafe-username"></div>
+                                        <div id="statuscafe-content"></div>
+                                    </div>
+                                    <hr
+                                        style="
+                                            border: dashed;
+                                            border-width: thin;
+                                            border-color: rgba(129, 119, 122, 0.4);
+                                            margin-top: -5px;
+                                            margin-bottom: 5px;
+                                        " />
+
+                                    
+                                    <div style="text-align: center; margin-bottom: 5px">
+                                        I am feeling...
+                                        <a href="https://www.imood.com/users/galissia_"
+                                            ><img
+                                                src="https://moods.imood.com/display/uname-galissia_/fg-6351C6/trans-1/imood.gif"
+                                                alt="The current mood of galissia_ at www.imood.com"
+                                                border="0"
+                                        /></a>
+                                    </div>
         </div>
         <div class="sidebar-section">
           <div class="sidebar-title">Section Title</div>
@@ -137,48 +156,48 @@ function headerHTML() {
           <br>
           <div style="max-height:190px; overflow-y:scroll;">
           <a target="_blank" href="http://fanique.altervista.org/moon/buttons.php"
-          ><img src="/images/fanlistings/moon.png" alt="Moon" title="The Moon"
+          ><img src="./images/fanlistings/moon.png" alt="Moon" title="The Moon"
         /></a>
         <a target="_blank" href="http://www.marheavenj.net/picture/index.php"
-          ><img src="/images/fanlistings/dorian.jpg" alt="Dorian Gray" title="The Picture of Dorian Gray"
+          ><img src="./images/fanlistings/dorian.jpg" alt="Dorian Gray" title="The Picture of Dorian Gray"
         /></a>
         <a target="_blank" href="http://fanimated.net/mylittlepony/"
-          ><img src="/images/fanlistings/mlp.gif" alt="My Little Pony" title="My Little Pony"
+          ><img src="./images/fanlistings/mlp.gif" alt="My Little Pony" title="My Little Pony"
         /></a>
         <a
           target="_blank"
           href="http://www.noonvale.net/scoobydoo/
 "
-          ><img src="/images/fanlistings/scooby.gif" alt="Scooby Doo: Mystery Incorporated" title="Scooby Doo: Mystery Incorporated"
+          ><img src="./images/fanlistings/scooby.gif" alt="Scooby Doo: Mystery Incorporated" title="Scooby Doo: Mystery Incorporated"
         /></a>
         <a target="_blank" href="http://www.royal-drama.net/scoobydoo/"
-          ><img src="/images/fanlistings/scooby2.png" alt="Scooby Doo, Where Are You!" title="Scooby Doo, Where Are You!"
+          ><img src="./images/fanlistings/scooby2.png" alt="Scooby Doo, Where Are You!" title="Scooby Doo, Where Are You!"
         /></a>
-        <a target="_blank" href="https://yerfej.org/moulin/" alt="Moulin Rouge!" title="Moulin Rouge!"><img src="/images/fanlistings/moulin.png"></a>
+        <a target="_blank" href="https://yerfej.org/moulin/" alt="Moulin Rouge!" title="Moulin Rouge!"><img src="./images/fanlistings/moulin.png"></a>
         <a target="_blank" href="http://theatregirl.net/jekyll&hyde"
-          ><img src="/images/fanlistings/jekyllhyde.png" title="Jekyll and Hyde (Musical)" alt="Jekyll and Hyde (Musical)"
+          ><img src="./images/fanlistings/jekyllhyde.png" title="Jekyll and Hyde (Musical)" alt="Jekyll and Hyde (Musical)"
         /></a>
         <a target="_blank" href="https://theatregirl.net/jhsoundtrack/index.php"
-          ><img src="/images/fanlistings/jekyllhyde4.png" title="Jekyll and Hyde (Soundtrack)" alt="Jekyll and Hyde (Soundtrack)"
+          ><img src="./images/fanlistings/jekyllhyde4.png" title="Jekyll and Hyde (Soundtrack)" alt="Jekyll and Hyde (Soundtrack)"
         /></a>
         <a target="_blank" href="https://theatregirl.net/hyde/index.php"
-          ><img src="/images/fanlistings/jekyllhyde3.png" alt="Jekyll and Hyde (Character)" title="Jekyll and Hyde (Character)"
+          ><img src="./images/fanlistings/jekyllhyde3.png" alt="Jekyll and Hyde (Character)" title="Jekyll and Hyde (Character)"
         /></a>
         
         <a target="_blank" href="http://movies.i-heart-you.net/bttf."
-          ><img src="/images/fanlistings/bttf.gif" alt="Back To The Future" border="0" title="Back to the Future"
+          ><img src="./images/fanlistings/bttf.gif" alt="Back To The Future" border="0" title="Back to the Future"
         /></a>
         <a href="https://fan.redcrown.net/bride"
-          ><img src="/images/fanlistings/tpb.png" alt="The Princess Bride fanlisting" title="The Princess Bride"
+          ><img src="./images/fanlistings/tpb.png" alt="The Princess Bride fanlisting" title="The Princess Bride"
         /></a>
         <a target="_blank" href="http://www.ladyrose.buruma.net/animaniacs/1993"
-          ><img src="/images/fanlistings/animaniacs.png" alt="Animaniacs" title="Animaniacs"
+          ><img src="./images/fanlistings/animaniacs.png" alt="Animaniacs" title="Animaniacs"
         /></a>
         <a target="_blank" href="http://tardis.i-heart-you.net/doctorwho"
-          ><img src="/images/fanlistings/dw.gif" alt="Doctor Who" border="0" title="Doctor Who"
+          ><img src="./images/fanlistings/dw.gif" alt="Doctor Who" border="0" title="Doctor Who"
         /></a>
         <a target="_blank" href="https://auridon.com/elderscrolls/index.php"
-          ><img src="/images/fanlistings/tes.png" alt="The Elder Scrolls Series" title="The Elder Scrolls Series" border="0"
+          ><img src="./images/fanlistings/tes.png" alt="The Elder Scrolls Series" title="The Elder Scrolls Series" border="0"
         /></a>
         <a target="_blank" href="https://beatngu.altervista.org/bi/index.php"
           ><img src="images/fanlistings/bi.png" alt="Bisexuality" title="Bisexuality"
@@ -190,22 +209,22 @@ function headerHTML() {
           target="_blank"
           href="https://fans.thislove.nu/ghosts
 "
-          ><img src="/images/fanlistings/ghosts.png" alt="Ghosts" title="Ghosts"
+          ><img src="./images/fanlistings/ghosts.png" alt="Ghosts" title="Ghosts"
         /></a>
         <a target="_blank" href="https://fan.wings.nu/witchcraft/"
-          ><img src="/images/fanlistings/witchcraft.png" alt="Witchcraft" border="0" title="Witchcraft"
+          ><img src="./images/fanlistings/witchcraft.png" alt="Witchcraft" border="0" title="Witchcraft"
         /></a>
         <a target="_blank" href="http://fan.still-breathing.com/history/"
           ><img src="images/fanlistings/history.png" alt="History" title="History"
         /></a>
         <a target="_blank" href="https://theatregirl.net/midnight"
-          ><img src="/images/fanlistings/midnight.png" alt="Midnight" title="Midnight"
+          ><img src="./images/fanlistings/midnight.png" alt="Midnight" title="Midnight"
         /></a>
         <a target="_blank" href="https://ryo.whorehau.se/index.php"
-          ><img src="/images/fanlistings/50x50ryo1.png" alt="Ryo Asuka" title="Ryo Asuka"
+          ><img src="./images/fanlistings/50x50ryo1.png" alt="Ryo Asuka" title="Ryo Asuka"
         /></a>
         <a target="_blank" href="https://tardis.i-heart-you.net/s4/"
-          ><img src="/images/fanlistings/s4.gif" alt="Doctor Who Series 4" title="Doctor Who Series 4"
+          ><img src="./images/fanlistings/s4.gif" alt="Doctor Who Series 4" title="Doctor Who Series 4"
         /></a>
         <a target="_blank" href="https://tv.i-heart-you.net/crowley/"
           ><img src="images/fanlistings/crowley.gif" alt="Crowley" title="Crowley"
@@ -214,7 +233,7 @@ function headerHTML() {
           ><img src="images/fanlistings/supernatural.png" alt="Supernatural" title="Supernatural"
         /></a>
         <a target="_blank" href="https://go.wings.nu/index.php"
-          ><img src="/images/fanlistings/go07.png" alt="Good Omens" title="Good Omens"
+          ><img src="./images/fanlistings/go07.png" alt="Good Omens" title="Good Omens"
         /></a>
         <a target="_blank" href="https://yerfej.org/lucifer/"
           ><img src="images/fanlistings/lucifer.png" alt="Lucifer" title="Lucifer"
@@ -256,7 +275,7 @@ function headerHTML() {
         <a target="_blank" href="http://fan.greenhype.net/mp3players/about.php"
           ><img src="images/fanlistings/mp3players50j.gif" alt="MP3 Players" title="MP3 Players"
         /></a>
-        <a target="_blank" href=""><img src="/images/fanlistings/html50x50_001.png" alt="HTML" title="html"> </a>
+        <a target="_blank" href=""><img src="./images/fanlistings/html50x50_001.png" alt="HTML" title="html"> </a>
         </div></div>
 		<div class="sidebar-section">
           <div class="sidebar-title-2">Section Title ✧.*</div>
