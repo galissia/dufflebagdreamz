@@ -51,7 +51,7 @@ body {
   font-family: var(--font);
   line-height: 1.2;
   background: var(--background-color);
-  background-image: url("/images/nightsky.gif");
+  background-image: url("./images/nightsky.gif");
   
 }
 
