@@ -17,17 +17,18 @@
   --link-color: #fcff8e;
   --link-color-hover: #da9652;
 
-  /* Text: */
-  --font: Lucida Console, monospace;
-  --heading-font: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', 'ＭＳ ゴシック' , 'MS Gothic', 'Noto Sans CJK JP', TakaoPGothic, sans-serif;
+   /* Text: */
+  --font: 'Elmono', sans-serif;
+  --heading-font: 'Beginning', sans-serif;
   --font-size: 13px;
 
   /* Other Settings: */
-  --margin: 40px;
+  --margin: 20px;
   --padding: 24px;
   --border: 5px solid #ffffff;
   --round-borders: 6px;
   --sidebar-width: 250px;
+
 }
 
 /* -------------------------------------------------------- */
@@ -50,7 +51,7 @@ body {
   font-family: var(--font);
   line-height: 1.2;
   background: var(--background-color);
-  background-image: url("/wallpapers/leaves.png");
+  background-image: url("../images/wallpapers/leaves.png");
   background-attachment: fixed, scroll;
   
 }

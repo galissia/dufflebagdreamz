@@ -78,7 +78,7 @@
         style = localStorage.getItem("style");
         if (style == null) 
             style = "/css/home";
-    document.querySelector("link[type='text/css']").setAttribute("href", "/css/" + style + ".css");
+    document.querySelector("link[type='text/css']").setAttribute("href", "/public/css/" + style + ".css");
     localStorage.setItem("style", style);
 }
 

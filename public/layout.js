@@ -162,7 +162,7 @@ function headerHTML() {
         <a target="_blank" href="http://www.royal-drama.net/scoobydoo/"
           ><img src="/images/fanlistings/scooby2.png" alt="Scooby Doo, Where Are You!" title="Scooby Doo, Where Are You!"
         /></a>
-        <a target="_blank" href="https://yerfej.org/moulin/" title="Moulin Rouge!"><img src="/images/fanlistings/moulin.png"></a>
+        <a target="_blank" href="https://yerfej.org/moulin/" alt="Moulin Rouge!" title="Moulin Rouge!"><img src="/images/fanlistings/moulin.png"></a>
         <a target="_blank" href="http://theatregirl.net/jekyll&hyde"
           ><img src="/images/fanlistings/jekyllhyde.png" title="Jekyll and Hyde (Musical)" alt="Jekyll and Hyde (Musical)"
         /></a>
