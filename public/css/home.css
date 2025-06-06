@@ -18,8 +18,9 @@
   --link-color-hover: #9e48ec;
 
   /* Text: */
-  --font: Lucida Console, monospace;
-  --heading-font: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', 'ＭＳ ゴシック' , 'MS Gothic', 'Noto Sans CJK JP', TakaoPGothic, sans-serif;
+  --font: 'Elmono', sans-serif;
+                                                
+  --heading-font: 'Beginning', sans-serif;
   --font-size: 13px;
 
   /* Other Settings: */
@@ -153,19 +154,19 @@ aside {
 }
 
 .sidebar-title {
-  font-weight: bold;
   background: #a36fbf;
 background: linear-gradient(90deg, rgba(163, 111, 191, 1) 0%, rgba(38, 62, 171, 1) 100%);
-  font-size: 1.2em;
+  font-size: 1.7em;
+  letter-spacing: 2px;
   font-family: var(--heading-font);
   color: white;
   text-align: end;
 }
 .sidebar-title-2 {
-  font-weight: bold;
-  background: #263EAB;
-background: linear-gradient(90deg, rgba(38, 62, 171, 1) 0%, rgba(163, 111, 191, 1) 100%);
-  font-size: 1.2em;
+  background: #a36fbf;
+background: linear-gradient(90deg, rgba(163, 111, 191, 1) 0%, rgba(38, 62, 171, 1) 100%);
+  font-size: 1.7em;
+  letter-spacing: 2px;
   font-family: var(--heading-font);
   color: white;
   text-align: left;
@@ -381,27 +382,27 @@ main h6:first-child {
 }
 
 main h1 {
-  font-size: 1.5em;
+  font-size: 3em;
 }
 
 main h2 {
-  font-size: 1.4em;
+  font-size: 2.5em;
 }
 
 main h3 {
-  font-size: 1.3em;
+  font-size: 2em;
 }
 
 main h4 {
-  font-size: 1.2em;
+  font-size: 1.8em;
 }
 
 main h5 {
-  font-size: 1.1em;
+  font-size: 1.5em;
 }
 
 main h6 {
-  font-size: 1em;
+  font-size: 1.3em;
 }
 
 /* COLUMNS: */
