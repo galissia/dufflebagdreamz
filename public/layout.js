@@ -74,38 +74,30 @@ function headerHTML() {
           <div class="sidebar-title">Section Title</div>
           <marquee scrollamount="4">
 		  	<span>
-<img src="images/webdesign.png">
-<img src="images/handcoded.gif">
-<img src="images/poweredbybob.gif">
-<img src="images/arizona.gif" >
-<img src="images/krisbtn.png" >
-<img src="images/htmlenhanced.gif" >
-<img src="images/neocities-pink.gif" >
-<img src="images/ilikecomputer.png" >
-<img src="images/al.png">
-<img src="images/friendship.png">
-<img src="/images/stamps/ralseismoking.gif">
-<img src="images/windows.gif">
-<img src="images/brackets.gif">
-<img src="images/queer.png">
-<img src="images/blehhhh.gif" >
-<img src="images/seedyourtorrents.png" >
-<img src="images/physical.gif" >
-<img src="images/piracy.gif" >
-<img src="images/opera.gif" >
+<img src="./images/buttons/webdesign.png">
+<img src="./images/buttons/handcoded.gif">
+<img src="./images/buttons/poweredbybob.gif">
+<img src="./images/buttons/arizona.gif" >
+<img src="./images/buttons/krisbtn.png" >
+<img src="./images/buttons/htmlenhanced.gif" >
+<img src="./images/buttons/neocities-pink.gif" >
+<img src="./images/buttons/ilikecomputer.png" >
+<img src="./images/buttons/al.png">
+<img src="./images/buttons/friendship.png">
+<img src="./images/buttons/windows.gif">
+<img src="./images/buttons/brackets.gif">
+<img src="./images/buttons/queer.png">
+<img src="./images/buttons/blehhhh.gif" >
+<img src="./images/buttons/physical.gif" >
+<img src="./images/buttons/piracy.gif" >
 </span>
 <span>
-<img src="images/biflag.gif">
-<img src="images/desktop.gif">
-<img src="images/catscape3.gif">
-<img src="images/best_viewed_with_open_eyes.gif" >
-<img src="images/censor_14c.gif" >
-<img src="images/fuckingwebmaster.gif" >
-<img src="images/spice.png" >
-<img src="images/steampunk.png" >
-<img src="images/bloom.png" >
-<img src="images/werewolves.png" >
-<img src="https://files.catbox.moe/mwhfq5.png"/>
+<img src="./images/buttons/biflag.gif">
+<img src="./images/buttons/desktop.gif">
+<img src="./images/buttons/catscape3.gif">
+<img src="./images/buttons/best_viewed_with_open_eyes.gif" >
+<img src="./images/buttons/censor_14c.gif" >
+<img src="./images/buttons/fuckingwebmaster.gif" >
 </span>
 		  </marquee>
         </div>
