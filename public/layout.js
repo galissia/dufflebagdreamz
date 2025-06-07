@@ -56,7 +56,7 @@ function headerHTML() {
         </div>
         <div class="sidebar-section">
           <div class="sidebar-title"> ☄. *.  Section Title</div>
-          <div id="statuscafe">
+          <div style="padding:5px; border-style:dotted; border-radius:10%;"><div id="statuscafe">
                                         <div id="statuscafe-username"></div>
                                         <div id="statuscafe-content"></div>
                                     </div>
@@ -79,7 +79,7 @@ function headerHTML() {
                                                 border="0"
                                         /></a>
                                     </div>
-        </div>
+        </div></div>
         <div class="sidebar-section">
           <div class="sidebar-title">Section Title</div>
           <ul>
@@ -133,6 +133,8 @@ function headerHTML() {
         </div>
       </aside>
 	
+    
+    
       <aside class="right-sidebar">
 	  
         <div class="sidebar-section">
@@ -151,169 +153,98 @@ function headerHTML() {
             <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
           </blockquote>
         </div>
+        
+        
+        
+        
         <div class="sidebar-section">
-          <div class="sidebar-title-2">Section Title ☄. *. ⋆ </div>
-          <br>
-          <div style="max-height:190px; overflow-y:scroll;">
-          <a target="_blank" href="http://fanique.altervista.org/moon/buttons.php"
-          ><img src="./images/fanlistings/moon.png" alt="Moon" title="The Moon"
-        /></a>
-        <a target="_blank" href="http://www.marheavenj.net/picture/index.php"
-          ><img src="./images/fanlistings/dorian.jpg" alt="Dorian Gray" title="The Picture of Dorian Gray"
-        /></a>
-        <a target="_blank" href="http://fanimated.net/mylittlepony/"
-          ><img src="./images/fanlistings/mlp.gif" alt="My Little Pony" title="My Little Pony"
-        /></a>
-        <a
-          target="_blank"
-          href="http://www.noonvale.net/scoobydoo/
-"
-          ><img src="./images/fanlistings/scooby.gif" alt="Scooby Doo: Mystery Incorporated" title="Scooby Doo: Mystery Incorporated"
-        /></a>
-        <a target="_blank" href="http://www.royal-drama.net/scoobydoo/"
-          ><img src="./images/fanlistings/scooby2.png" alt="Scooby Doo, Where Are You!" title="Scooby Doo, Where Are You!"
-        /></a>
-        <a target="_blank" href="https://yerfej.org/moulin/" alt="Moulin Rouge!" title="Moulin Rouge!"><img src="./images/fanlistings/moulin.png"></a>
-        <a target="_blank" href="http://theatregirl.net/jekyll&hyde"
-          ><img src="./images/fanlistings/jekyllhyde.png" title="Jekyll and Hyde (Musical)" alt="Jekyll and Hyde (Musical)"
-        /></a>
-        <a target="_blank" href="https://theatregirl.net/jhsoundtrack/index.php"
-          ><img src="./images/fanlistings/jekyllhyde4.png" title="Jekyll and Hyde (Soundtrack)" alt="Jekyll and Hyde (Soundtrack)"
-        /></a>
-        <a target="_blank" href="https://theatregirl.net/hyde/index.php"
-          ><img src="./images/fanlistings/jekyllhyde3.png" alt="Jekyll and Hyde (Character)" title="Jekyll and Hyde (Character)"
-        /></a>
-        
-        <a target="_blank" href="http://movies.i-heart-you.net/bttf."
-          ><img src="./images/fanlistings/bttf.gif" alt="Back To The Future" border="0" title="Back to the Future"
-        /></a>
-        <a href="https://fan.redcrown.net/bride"
-          ><img src="./images/fanlistings/tpb.png" alt="The Princess Bride fanlisting" title="The Princess Bride"
-        /></a>
-        <a target="_blank" href="http://www.ladyrose.buruma.net/animaniacs/1993"
-          ><img src="./images/fanlistings/animaniacs.png" alt="Animaniacs" title="Animaniacs"
-        /></a>
-        <a target="_blank" href="http://tardis.i-heart-you.net/doctorwho"
-          ><img src="./images/fanlistings/dw.gif" alt="Doctor Who" border="0" title="Doctor Who"
-        /></a>
-        <a target="_blank" href="https://auridon.com/elderscrolls/index.php"
-          ><img src="./images/fanlistings/tes.png" alt="The Elder Scrolls Series" title="The Elder Scrolls Series" border="0"
-        /></a>
-        <a target="_blank" href="https://beatngu.altervista.org/bi/index.php"
-          ><img src="images/fanlistings/bi.png" alt="Bisexuality" title="Bisexuality"
-        /></a>
-        <a target="_blank" href="https://nature.i-heart-you.net/forests/"
-          ><img src="images/fanlistings/forests.gif" alt="Forests" title="Forests"
-        /></a>
-        <a
-          target="_blank"
-          href="https://fans.thislove.nu/ghosts
-"
-          ><img src="./images/fanlistings/ghosts.png" alt="Ghosts" title="Ghosts"
-        /></a>
-        <a target="_blank" href="https://fan.wings.nu/witchcraft/"
-          ><img src="./images/fanlistings/witchcraft.png" alt="Witchcraft" border="0" title="Witchcraft"
-        /></a>
-        <a target="_blank" href="http://fan.still-breathing.com/history/"
-          ><img src="images/fanlistings/history.png" alt="History" title="History"
-        /></a>
-        <a target="_blank" href="https://theatregirl.net/midnight"
-          ><img src="./images/fanlistings/midnight.png" alt="Midnight" title="Midnight"
-        /></a>
-        <a target="_blank" href="https://ryo.whorehau.se/index.php"
-          ><img src="./images/fanlistings/50x50ryo1.png" alt="Ryo Asuka" title="Ryo Asuka"
-        /></a>
-        <a target="_blank" href="https://tardis.i-heart-you.net/s4/"
-          ><img src="./images/fanlistings/s4.gif" alt="Doctor Who Series 4" title="Doctor Who Series 4"
-        /></a>
-        <a target="_blank" href="https://tv.i-heart-you.net/crowley/"
-          ><img src="images/fanlistings/crowley.gif" alt="Crowley" title="Crowley"
-        /></a>
-        <a target="_blank" href="http://contradiction.altervista.org/supernatural/index.php"
-          ><img src="images/fanlistings/supernatural.png" alt="Supernatural" title="Supernatural"
-        /></a>
-        <a target="_blank" href="https://go.wings.nu/index.php"
-          ><img src="./images/fanlistings/go07.png" alt="Good Omens" title="Good Omens"
-        /></a>
-        <a target="_blank" href="https://yerfej.org/lucifer/"
-          ><img src="images/fanlistings/lucifer.png" alt="Lucifer" title="Lucifer"
-        /></a>
-        <a target="_blank" href="https://www.into-a-dream.com.ar/wwstv/"
-          ><img src="images/fanlistings/wwdits.png" alt="What We Do In The Shadows" title="What We Do In The Shadows"
-        /></a>
-        <a target="_blank" href="https://fan.robotess.net/david-tennant"
-          ><img src="images/fanlistings/tennant.jpeg" alt="David Tennant" title="David Tennant"
-        /></a>
-        
-        <a target="_blank" href="https://yaten.net/capaldi/"
-          ><img src="images/fanlistings/capaldi.png" alt="Peter Capaldi" title="Peter Capaldi"
-        /></a>
-        <a target="_blank" href="http://winterseve.altervista.org/jensen"
-          ><img src="images/fanlistings/jensen.png" alt="Jensen Ackles" title="Jensen Ackles"
-        /></a>
-        <a target="_blank" href="https://boundless-realms.com/misha/"
-          ><img src="images/fanlistings/misha.jpg" alt="Misha Collins" title="Misha Collins"
-        /></a>
-        <a target="_blank" href="https://tardis.i-heart-you.net/rose/"
-          ><img src="images/fanlistings/rose.gif" alt="Rose Tyler" title="Rose Tyler"
-        /></a>
-        <a target="_blank" href="http://edgeofseventeen.altervista.org/sweeneytodd/index.php"
-          ><img src="images/fanlistings/sweeney.png" alt="Sweeney Todd" title="Sweeny Todd"
-        /></a>
-        <a target="_blank" href="https://love.cordy.nu/grimm/"
-          ><img src="images/fanlistings/monroe.webp" alt="Grimm" title="Grimm"
-        /></a>
-      <a target="_blank" href="http://amalgamate.afflatus-misery.net/apollo/"
-          ><img src="images/fanlistings/apollo.png" alt="Apollo" title="Apollo"
-        /></a>
-        <a target="_blank" href="http://andrasta.net/artemis/"
-          ><img src="images/fanlistings/artemis.jpg" alt="Artemis" title="Artemis"
-        /></a>
-        <a target="_blank" href="http://www.into-a-dream.com.ar/taurus/index.php"
-          ><img src="images/fanlistings/taurus.png" alt="Taurus" title="Taurus"
-        /></a>
-        <a target="_blank" href="http://fan.greenhype.net/mp3players/about.php"
-          ><img src="images/fanlistings/mp3players50j.gif" alt="MP3 Players" title="MP3 Players"
-        /></a>
-        <a target="_blank" href=""><img src="./images/fanlistings/html50x50_001.png" alt="HTML" title="html"> </a>
-        </div></div>
+          <div class="sidebar-title-2">links ☄. *. ⋆ </div>
+          <div style="padding:5px; border-style:dotted; border-radius:10%;">
+          
+          <center>
+          <a href="https://www.instagram.com/Galissia_/"><img src="./images/socials/instagram.png"></a>
+          <a href="https://toyhou.se/Galissia_"><img src="./images/socials/toyhou.se.png"></a>
+          <a href="https://www.tumblr.com/galissia-x"><img src="./images/socials/tumblr.png"></a>
+          <a href="https://artfight.net/~Galissia_"><img src="./images/socials/artfight.png"></a>
+          <a href="https://www.deviantart.com/galissiax"><img src="./images/socials/deviantart.png"></a>
+          </center>
+          
+          </div>
+          </div>
+          
+          
+          
+          
 		<div class="sidebar-section">
-          <div class="sidebar-title-2">Section Title ✧.*</div>
+          <div class="sidebar-title-2">neat sites ✧.*</div>
           <marquee scrollamount="4">
-		  	 <a href="https://numbersstory.com" target="_blank"><img src="images/buttons/numbers.png"><img></a>
-    <a href="https://dokode.moe" target="_blank"><img src="images/buttons/dokodemobutton3.gif"><img></a>
-    <a href="https://theabsoluterealm.com/" target="_blank"> <img alt="the absolute realm" src="images/buttons/absolute-realm.gif"></a>
-    <a href="https://mooeena.neocities.org" target="_blank"><img src="images/buttons/goat.gif"><img></a>
-    <a href="https://starrs.neocities.org/" target="_blank"><img src="/images/buttons/tiny_space.gif"></a>
-    <a href="https://ballonlea.net" target="_blank"><img src="images/buttons/sitebutton1.gif"><img></a>
-    <a href="https://sunwukong.neocities.org" target="_blank"><img src="images/buttons/wukongbutton.png"><img></a>
-    <a href="https://goblin-heart.net/sadgrl/" target="_blank"><img src="https://goblin-heart.net/sadgrl/assets/images/buttons/sadgrlonline.gif"></a>
-    <a href="http://cepheus.xyz" target="_blank"><img alt="click to visit cepheus" src="https://cepheus.neocities.org/img/button2.gif"></a>
-   <a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://github.com/petracoding/petrapixel.neocities.org/blob/master/public/img/linkback.webp?raw=true" alt="petrapixel"></a>
-   <a href="https://numbersstory.com" target="_blank"><img src="images/buttons/numbers.png"><img></a>
-    <a href="https://dokode.moe" target="_blank"><img src="images/buttons/dokodemobutton3.gif"><img></a>
-    <a href="https://theabsoluterealm.com/" target="_blank"> <img alt="the absolute realm" src="images/buttons/absolute-realm.gif"></a>
-    <a href="https://mooeena.neocities.org" target="_blank"><img src="images/buttons/goat.gif"><img></a>
-    <a href="https://starrs.neocities.org/" target="_blank"><img src="/images/buttons/tiny_space.gif"></a>
-    <a href="https://doqmeat.com" target="_blank"><img src="/images/buttons/doqmeat.png" alt="doqmeat"></a>
-    <a href="http://whimsical.heartette.net" target="_blank"><img src="images/buttons/whimsical.gif"><img></a>
-    <a href="https://lastsunrise.art"><img src="https://lastsunrise.neocities.org/images/mybutton.gif" alt="Last Sunrise Button"></a>
-    <a href="https://insect.christmas" target="_blank"><img src="images/buttons/insectchristmas.png"><img></a>
-    <a href="https://chimeramanticore.neocities.org" target="_blank"><img src="images/buttons/chimerabutton.gif"><img></a>
-   <a href='https://strawbebby228.neocities.org/' target='_blank'><img src='https://strawbebby228.neocities.org/arts/UI/ButtonPink.gif'></a>
-    <a href="https://mooeena.neocities.org" target="_blank"><img src="images/buttons/goat.gif"><img></a>
-    <a href="https://starrs.neocities.org/" target="_blank"><img src="/images/buttons/tiny_space.gif"></a>
-    <a href="https://32bit.cafe" target="_blank"><img src="https://32bit.cafe/linktous/32b-pcb.png"><img></a>
-    <a href="https://lastsunrise.art"><img src="https://lastsunrise.neocities.org/images/mybutton.gif" alt="Last Sunrise Button"></a>
-    <a href="https://goblin-heart.net/sadgrl/" target="_blank"><img src="https://goblin-heart.net/sadgrl/assets/images/buttons/sadgrlonline.gif"></a>
-    <a href="http://cepheus.xyz" target="_blank"><img alt="click to visit cepheus" src="https://cepheus.neocities.org/img/button2.gif"></a>
-    <a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://github.com/petracoding/petrapixel.neocities.org/blob/master/public/img/linkback.webp?raw=true" alt="petrapixel"></a>
+		  	  <center>
+   <a href="https://dustedpink.neocities.org/" target="_blank"
+          ><img alt="dustedpink.neocities.org" src="./images/buttons/dustedpink.gif"
+        /></a>
+   <a target="_blank" href="https://cavitycollector.neocities.org"
+          ><img
+            alt="cavitycollector.neocities.org"
+            src="https://file.garden/ZoMEF_reXgpHHpnb/cavitycollector-button.gif"
+        /></a>
+        <a href="https://strawbebby228.neocities.org/" target="_blank"><img src="./images/buttons/ButtonPink.gif" /></a>
+         <a href="http://cepheus.xyz" target="_blank"
+            ><img alt="click to visit cepheus" src="./images/buttons/cepheus.gif"
+        /></a>
+        
+        <a href="https://jackisnotbright.neocities.org" target="_blank"
+            ><img src="./images/buttons/JACKISNOTBRIGHT.gif" /><img
+        /></a>
+        <a href="https://petrapixel.neocities.org/" target="_blank"
+            ><img src="./images/buttons/petra.webp" alt="petrapixel"
+        /></a>
+        <a href="https://mooeena.neocities.org" target="_blank"><img src="./images/buttons/goat.gif" /><img /></a>
+         
+         <a href="https://lastsunrise.art" target="_blank"><img src="./images/buttons/lastsunrise.gif" alt="Last Sunrise Button" /></a>
+        <a href="https://theponyhighway.neocities.org/" target="_blank"><img src="./images/buttons/tphbuttonshine.gif"></a>
+             <a href="https://postwick.net" target="_blank"><img src="./images/buttons/postwickbutton.gif" alt="Postwick's site button"></a>
+        <a href="http://whimsical.heartette.net" target="_blank"><img src="./images/buttons/whimsical.gif" /><img /></a>
+        
+        <a href="https://dokode.moe" target="_blank"><img src="./images/buttons/dokodemobutton3.gif" /><img /></a>
+        <a href="https://olliveen.neocities.org/" target="_blank"><img src="https://olliveen.neocities.org/img/button.gif"></a>
+        
+        <a href="https://maphren.neocities.org/" target="_blank"
+            ><img src="https://maphren.neocities.org/imgs/buttons/maphren.gif" alt="maphren.neocities.org"
+        /></a>
+        <a href="https://pinkdreamsponyland.neocities.org" target="_blank"> <img src="./images/buttons/pinkpony.png"></a>
+        <a href="https://ballonlea.net" target="_blank"><img src="./images/buttons/sitebutton1.gif" /><img /></a>
+   <a href="https://tectrix.neocities.org" target="_blank"><img src="https://tectrix.neocities.org/images/button.gif"></a>
+   <a href="https://nathanntan.neocities.org/" target="_blank"><img src="https://nathanntan.neocities.org/avatars/button%20(1).png"></a>
+        <a href="https://ne0nbandit.neocities.org/" target="_blank"><img src="https://ne0nbandit.github.io/assets/img/btn/mine/nbbanner.png"></a>
+   <a href="https://theabsoluterealm.com/" target="_blank">
+            <img alt="the absolute realm" src="./images/buttons/absolute-realm.gif"
+        /></a>
+        
+   <a target="_blank" href="https://doqmeat.com"><img alt="doqmeat.com" src="./images/buttons/doqmeat.png" /></a>
+        <a href="https://vidapon.net/" target="_blank"><img alt="Vidapon's Artbox!" src="./images/buttons/Astertrail_button.gif"></a>
+    <a target="_blank" href="https://numbersstory.com"
+          ><img alt="numbersstory.com" src="./images/buttons/numbers.png"
+        /></a>
+        <a href="https://chimeramanticore.neocities.org" target="_blank"
+            ><img src="./images/buttons/chimerabutton.gif" /><img
+        /></a>
+      
+        <a href="https://starrs.neocities.org/" target="_blank"><img src="./images/buttons/tiny_space.gif" /></a>
+   <a href="https://insect.christmas" target="_blank"><img src="./images/buttons/insectchristmas.png" /><img /></a>
+        <a href="https://32bit.cafe" target="_blank"><img src="./images/buttons/32b-pcb.png" /><img /></a>
+   <a target="_blank" href="https://y2kbugz.neocities.org"
+          ><img alt="y2kbugz.neocities.org" src="./images/buttons/y2kbugs.png"
+        /></a>
+        <a href="https://dimden.dev" target="_blank"><img src="./images/buttons/dimden.gif" />
+      </a>
+   
+        
+        </center>
 		  </marquee>
+          
+          
         </div>
-		<div class="sidebar-section">
-          <div class="sidebar-title-2">Section Title</div>
-          <img class="full-width-image" src="https://picsum.photos/id/25/900/400">
-        </div>
+		
 		<div class="sidebar-section">
           <div class="sidebar-title-2">link to me!!</div>
           <div class="site-button">
