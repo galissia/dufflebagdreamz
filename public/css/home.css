@@ -528,14 +528,9 @@ background-size: cover;
 
   .layout {
     width: 100%;
-    grid-template: "header" auto  "rightSidebar" auto "main" auto "footer" auto / 1fr;
+    grid-template: "header" auto   "main" auto "leftSidebar" auto "rightSidebar" auto "footer" auto / 1fr;
     /* Confused by the grid? Check out my tutorial: https://petrapixel.neocities.org/coding/positioning-tutorial#grid */
   }
-
-  .left-sidebar { 
-    display: none;
-  }
-  
 
   aside {
     border-bottom: 1px solid;

@@ -1,0 +1,206 @@
+<!-- base template by teppyslayouts.neocities.org -->
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	<title>Afraid??</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+		body {
+			font-family: lucida grande,verdana,arial,helvetica;
+			font-size: 12px;
+          background: #1c2966;
+background: radial-gradient(circle, rgba(28, 41, 102, 1) 5%, rgba(13, 10, 33, 1) 100%);
+		}
+
+		.container {
+			width: 400px;
+			height: 500px;
+			margin: auto;
+			margin-top: 170px;
+			position: relative;
+		}
+
+		h1 {
+			font-family: 'Nanum Pen Script', cursive;
+			margin: 0;
+          margin-left: 30px;
+			padding: 0;
+			font-size: 46px;
+			font-weight: normal;
+			line-height: 42px;
+          color: white;
+		}
+
+		.subtitle {
+          color: white;
+			font-size: 12px;
+          margin-left: 30px;
+		}
+
+		.white {
+			border: 1px solid #000;
+			padding: 12px;
+			margin: 6px 0;
+          background-color: white;
+		}
+
+		.banner {
+			height: 100px;
+			border: 1px solid black;
+			background: #666;
+			text-align: center;
+			padding: 7px;
+			background-image: url(https://files.catbox.moe/dtsjn5.png);
+			background-position: center;
+			background-size: cover;
+			color: #EEE;
+			font-size: 57px;
+          padding-top: 33px;
+          font-family: Jua;
+
+		}
+
+		.nav a {
+			display: inline-block;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-weight: bold;
+			color: black;
+			text-decoration: none;
+			margin-top: 12px;
+			border-bottom: 1px dotted black;
+		}
+
+		.updates {
+			width: 340px;
+			margin-left: 60px;
+			overflow: hidden;
+			height: 14px;
+          color: white;
+		}
+
+		.update {
+			display: inline;
+			margin-right: 24px;
+		}
+
+		.updates {
+			/* margin-top: 6px; */
+		}
+
+		.item-desc {
+			font-size: 12px;
+		}
+
+		img {
+			position: absolute;
+			height: 587px;
+			top: -100px;
+			left: -360px;
+          pointer-events: none;
+		}
+      
+
+		
+       .floating {
+            
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+      .floating: {
+        display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+      }
+
+	</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+</style>
+</head>
+  <div id="particles-js"> </div>
+<body>
+  
+	<div class="container">
+		<img  class="floating" id="hvr-grow-rotate" src="https://f2.toyhou.se/file/f2-toyhou-se/images/27982436_K1RNSDIvdxJYIEl.gif?1734065668">
+		<div class="title">
+			<h1>Afraid??</h1>
+			<div class="subtitle">Personal site and laboratory</div>
+		</div>
+
+		<div class="white">
+			<div class="banner"> ENTER? </div>
+			<div class="nav">
+				<div class="item" style="margin-left: 60px">
+					<a href="https://teppyslayouts.neocities.org/11/home.html">material</a>
+					<div class="item-desc">materials for your website or other projects</div>
+				</div>
+				<div class="item" style="margin-left: 70px">
+					<a href="https://teppyslayouts.neocities.org/11/home.html">software</a>
+					<div class="item-desc">web applications made by tom</div>
+				</div>
+				<div class="item" style="margin-left: 60px">
+					<a href="https://teppyslayouts.neocities.org/11/home.html">blog</a>
+					<div class="item-desc">programming and personal notes</div>
+				</div>
+				<div class="item" style="margin-left: 60px">
+					<a href="https://teppyslayouts.neocities.org/11/home.html">ezine</a>
+					<div class="item-desc">electronic magazine of games tom has played</div>
+				</div>
+				<div class="item" style="margin-left: 50px">
+					<a href="https://teppyslayouts.neocities.org/11/home.html">about</a>
+					<div class="item-desc">about the website and webmaster</div>
+				</div>
+			</div>
+		</div>
+		<marquee class="updates">
+			<div class="update">2025-06-13 // New Site Launched!</div>
+			<div class="update">2021-02-21 // Layout Update</div>
+			<div class="update">2021-01-09 // Software Godot Game</div>
+		</marquee>
+	</div>
+
+
+</body>
+  <style>
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+/* ---- particles.js container ---- */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 1050px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1;
+  top:-20px;
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS("particles-js", { "particles": { "number": { "value": 64, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#ffffff" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } }, "opacity": { "value": 0.5, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 2.5, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } }, "line_linked": { "enable": true, "distance": 25, "color": "#ffffff", "opacity": 0.42, "width": 1 }, "move": { "enable": true, "speed": 2.5, "direction": "none", "random": true, "straight": false, "out_mode": "bounce", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "bubble" }, "onclick": { "enable": false, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 100, "size": 5, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true }); var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function () { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+</script>
+  </html>

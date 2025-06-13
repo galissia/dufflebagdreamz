@@ -1,223 +1,218 @@
+<!-- base template by teppyslayouts.neocities.org -->
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	<title>welcome...</title>
+    <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat996.cur), auto !important;}</style>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+		body {
+			font-family: lucida grande,verdana,arial,helvetica;
+			font-size: 12px;
+          background: #926ecc;
+background: linear-gradient(180deg, rgba(146, 110, 204, 1) 5%, rgba(170, 177, 230, 1) 100%);
+            background-attachment: fixed;
+            overflow: hidden;
+            margin: auto;
+            
+		}
 
-    <!-- Change your site title: (It is shown in the tab) -->
-    <title>Gal's Space!</title>
+		.container {
+			width: 400px;
+			height: 500px;
+			margin: auto;
+			margin-top: 170px;
+			position: relative;
+		}
 
-    <!-- Change your site description: (It is shown in Google results) -->
-    <meta content="My personal website!" name="description" />
+		h1 {
+			font-family: 'Nanum Pen Script', cursive;
+			margin: 0;
+          margin-left: 30px;
+			padding: 0;
+			font-size: 46px;
+			font-weight: normal;
+			line-height: 42px;
+          color: white;
+		}
 
-    <!-- Setting character encoding and viewport size. Do not remove. -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		.subtitle {
+          color: white;
+			font-size: 12px;
+          margin-left: 30px;
+		}
 
-    <!-- FavIcon (small image in tab), change to any image you want: -->
+		.white {
+			border: 1px solid #000;
+			padding: 12px;
+			margin: 6px 0;
+          background-color: white;
+		}
+
+		.banner {
+			height: 44px;
+			border: 1px solid black;
+			background: #666;
+			text-align: center;
+			background-image: url(https://files.catbox.moe/dtsjn5.png);
+			background-position: center;
+			background-size: cover;
+			color: #ffffff;
+			font-size: 15px;
+          font-family: Jua;
+
+		}
+        .banner h3{
+            margin-top:10px;
+        filter: drop-shadow(rgba(0, 0, 0, 0.63) 2px 2px 2px);
+        }
+      
+		.nav a {
+			display: inline-block;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-weight: bold;
+			color: black;
+			text-decoration: none;
+			margin-top: 12px;
+			border-bottom: 1px dotted black;
+		}
+
+		.updates {
+			width: 316px;
+			margin-left: 80px;
+			overflow: hidden;
+			height: 14px;
+          color: white;
+		}
+
+		.update {
+			display: inline;
+			margin-right: 24px;
+		}
+
+		.updates {
+			/* margin-top: 6px; */
+		}
+
+		.item-desc {
+			font-size: 12px;
+		}
+
+		#img {
+			position: absolute;
+			height: 587px;
+			top: -79px;
+			left: -230px;
+            filter: drop-shadow(rgba(4, 8, 30, 0.25) 6px 5px 5px);
+		}
+      
+
+		
+       .floating {
+            
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+      .floating:hover {
+        display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+      }
+
+	</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+    
+</style>
     <link href="./images/theme_assets/em2lV2r.gif" rel="icon" type="image/x-icon" />
+</head>
+  <div id="particles-js"> </div>
+<body>
+  
+	<div class="container">
+		<a href="https://dufflebagdreamz.neocities.org/index2"><img  class="floating" id="img" src="https://files.catbox.moe/ngclor.gif"></a>
+		<div class="title">
+			<h1>dreaming...</h1>
+			<div class="subtitle">Layout v4 - est  06/2025 </div>
+		</div>
 
-    <!-- CSS: -->
-    <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css" if this HTML file is in 2 subfolders, etc. -->
-    <link href="https://fonts.cdnfonts.com/css/elmono-2" rel="stylesheet" />
-<link href="https://fonts.cdnfonts.com/css/beginning-2" rel="stylesheet">
-    <link href="./css/home.css" rel="stylesheet" />
-    <style>
-      #time {
-                            font-size: 10px;
-                            margin-left:-10px;
-                            margin-top: 5px;
-                        }</style>
-    <script src="https://status.cafe/current-status.js?name=galissia" defer></script>
-    <script>
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    var site_data = JSON.parse(this.responseText);
-                    var num_arr = site_data.info.views.toString().split("");
-                    var num_str = "";
-                    for (i = 0; i < num_arr.length; i++) {
-                        num_str += num_arr[i];
-                        if ((num_arr.length - 1 - i) % 3 == 0 && num_arr.length - 1 - i != 0) {
-                            num_str += ",";
-                        }
-                        var date_str = site_data.info.last_updated;
-                        var date_obj = new Date(site_data.info.last_updated);
-                        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-                        var months = [
-                            "January",
-                            "February",
-                            "March",
-                            "April",
-                            "May",
-                            "June",
-                            "July",
-                            "August",
-                            "September",
-                            "October",
-                            "November",
-                            "December"
-                        ];
-                        document.getElementById("lastupdate").innerHTML =
-                            days[date_obj.getDay()] +
-                            " " +
-                            months[date_obj.getMonth()] +
-                            " " +
-                            date_obj.getDate() +
-                            ", " +
-                            date_obj.getFullYear();
-                    }
-                    document.getElementById("hitcount").innerHTML = num_str;
-                }
-            };
-            xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=dufflebagdreamz", true);
-            xhttp.send();
-        </script>
-    <script type="text/javascript">
-      function changeStyle(style) {
-    if (style == null)
-        style = localStorage.getItem("style");
-        if (style == null) 
-            style = "/css/home";
-    document.querySelector("link[type='text/css']").setAttribute("href", "./css/" + style + ".css");
-    localStorage.setItem("style", style);
+		<div class="white">
+			<div class="banner"><h3>WELCOME TO GAL'S CORNER.</h3></div>
+			<div class="nav">
+				<div class="item" style="margin-left: 39px">
+					<h3>Before you enter:</h3>
+				</div>
+				<div class="item" style="margin-left: 0px">
+					<ul>
+                    <li>
+                        This site uses JavaScript. If you have it disabled, you should use the <a href="">sitemap</a> to navigate.</li></ul>
+				</div>
+				<div class="item" style="margin-left: 42px; margin-bottom: -30px;">
+					<ul>
+                    <li>
+                        While this site is not NSFW, there will be language and is not fully appropriate for children.</li></ul>
+                    <img style="height: 3em; position: relative; left:15em; bottom:2em;" src="http://www.mabsland.com/Pandas/Censor_14c.gif">
+				</div><div class="item" style="margin-left: 45px">
+					<ul>
+                <li>
+                    This site should work okay on mobile, but it works best on a 1920 x 1080 desktop computer. Tested in FireFox</li></ul>
+				</div>
+				<div class="item" style="margin-left: 88px;">
+                    <a href="">← click on jay to enter</a>
+					
+                    <p></p>
+                </div>
+				
+			</div>
+		</div>
+		<marquee class="updates">
+			<div class="update">2025-06-13 // New Site Launched!</div>
+			
+		</marquee>
+	</div>
+
+
+</body>
+  <style>
+canvas {
+    display: block;
+    vertical-align: bottom;
 }
+/* ---- particles.js container ---- */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 1050px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1;
+  top:-20px;
+}
+</style>
 
-changeStyle();</script>
-    <!-- JavaScript: -->
-    <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js" if this HTML file is in 2 subfolders, etc. -->
-    <script src="./layout.js"></script>
-
-    <script>
-      // Template generated with petrapixel's layout generator.
-      // (Please do not remove this credit.)
-      console.log("%c Template generated with petrapixel's layout generator.", "font-size: 14pt;");
-      console.log("%c https://petrapixel.neocities.org/coding/layout-generator", "font-size: 14pt;");
-    </script>
-  </head>
-  <body>
-    <!-- The next line is a skip-to-content link for keyboard users. Do not remove it! -->
-    <a href="#content" id="skip-to-content-link">Skip to content</a>
-
-    <div class="layout">
-      
-      <!-- =============================================== -->
-      <!-- Header (and Sidebars) will be loaded per JavaScript! Edit layout.js to change. -->
-      <!-- =============================================== -->
-
-  
-      <main id="content"> <!-- Do NOT remove the ID here -->
-
-        <noscript>Please enable JavaScript to view this website!</noscript>
-
-        <!-- =============================================== -->
-        <!-- MAIN CONTENT -->
-        <!-- =============================================== -->
-
-
-        <section>
-
-          <h1>WELCOME!</h1>
-          <p>This layout was generated with <a href="https://petrapixel.neocities.org/" target="_blank">petrapixel</a>'s layout generator. You may remove the credit in the footer, but please leave the credit in the code. Thank you!</p>
-          <p>
-            I will now show you how to use the most common HTML text elements:
-            <b>This is bold text.</b> 
-            <strong>This is also bold text.</strong> 
-            <i>This is italic text.</i> 
-            <em>This is also italic text.</em> 
-            <strike>This is strikethrough text.</strike> 
-            <u>This is underlined text.</u> 
-            <a href="https://petrapixel.neocities.org/">This is a link.</a> 
-            <a href="https://petrapixel.neocities.org/" target="_blank">This is a link that will open in a new tab.</a> 
-            <code>This is code (displayed in a monospace font).</code>
-            <abbr title="Example.">This is an abbreviation (Try hovering over it).</abbr>
-            <mark>This is highlighted text.</mark>
-            This is a line break (The br stands for break.): <br />It's different from a paragraph because it does not add space inbetween the lines of text.
-          </p>
-          <p>This is a paragraph. As you can see, there's a bit of space between it and the previous paragraph.</p>
-
-          <blockquote>This is a blockquote. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</blockquote>
-
-          <h2>Heading 2</h2>
-          <ul>
-            <li>Unsorted list</li>
-            <li>Unsorted list</li>
-            <li>Unsorted list</li>
-          </ul>
-
-          <p>Lorem ipsum dolor sit amet.</p>
-
-          <ol>
-            <li>Sorted list</li>
-            <li>Sorted list</li>
-            <li>Sorted list</li>
-          </ol>
-
-          <h3>Heading 3</h3>
-          <pre>This is preformatted text, which means that     spaces    are preserved:
-          :D</pre>
-
-          <p>This is preformatted code:</p>
-          <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;body&gt;
-   &lt;h1&gt;My First Heading&lt;/h1&gt;
-   &lt;p&gt;My first paragraph.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-          <p>This is a separator line / divider:</p>
-          <hr /> <!-- hr = horizontal rule -->
-
-          <p>
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-          </p>
-
-          <h4>Heading 4</h4>
-
-          <p>Here are two columns:</p>
-          <div class="two-columns">
-	          <div>
-	          	<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-	          	<p>At
-            vero eos et accusam et justo duo dolores et ea rebum.</p>
-	          </div>
-	          <div>
-	          	<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-	          	<p>At
-            vero eos et accusam et justo duo dolores et ea rebum.</p>
-	          </div>
-          </div>
-
-          <h5>Heading 5</h5>
-
-          <p>This is an image:</p>
-          <img class="image" alt="" src="https://picsum.photos/id/38/200/100" />
-
-          <p>This is a full-width image:</p>
-          <img class="full-width-image" alt="" src="https://picsum.photos/id/38/1000/400" />
-
-          <p>These are multiple images in a row:</p>
-          <div class="images">
-            <img alt="" src="https://picsum.photos/id/38/1000/400" />
-            <img alt="" src="https://picsum.photos/id/38/1000/400" />
-            <img alt="" src="https://picsum.photos/id/38/1000/400" />
-          </div>
-
-          <h6>Heading 6</h6>
-          <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-
-        </section>
-      </main>
-      
-      <!-- =============================================== -->
-      <!-- Footer will be loaded per JavaScript! Edit layout.js to change. -->
-      <!-- =============================================== -->
-
-  
-    <!-- Closing .layout: -->
-    </div>
-
-
-    <!-- Add any additional Javascript code (<script></script>) here. -->
-  </body>
-</html>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS("particles-js", { "particles": { "number": { "value": 64, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#ffffff" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } }, "opacity": { "value": 0.5, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 2.5, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } }, "line_linked": { "enable": true, "distance": 25, "color": "#ffffff", "opacity": 0.42, "width": 1 }, "move": { "enable": true, "speed": 2.5, "direction": "none", "random": true, "straight": false, "out_mode": "bounce", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "bubble" }, "onclick": { "enable": false, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 100, "size": 5, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true }); var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function () { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+</script>
+  </html>
