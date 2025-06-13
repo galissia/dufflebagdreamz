@@ -56,21 +56,39 @@ function headerHTML() {
           <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
         </div>
         <div class="sidebar-section">
-          <div class="sidebar-title"> ✧.*  Section Title</div>
-          
-        <div class="sidebar-section">
-          <div class="sidebar-title">✧.* Section Title</div>
-          <ul>
-            <li>List</li>
-            <li>List</li>
-            <li><a href="#">List</a></li>
-            <li>List</li>
-          </ul>
-        </div>
-		<div class="sidebar-section">
+          <div class="sidebar-title"> ✧.*  Changelog</div>
+          <div style="padding:5px; border-style:dotted; border-radius:5%; max-height:300px; overflow-y:scroll;">
+         <hr
+                            style="
+                                border: dashed;
+                                border-width: thin;
+                                border-color: rgba(129, 119, 122, 0.4);
+                                margin-top: 15px;
+                                margin-bottom: 15px;
+                            " />
+                        <em style="color: #c7d6f8;">Apr 9 2025</em
+                        ><img
+                            style="padding-left: 7px; padding-right: 3px"
+                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
+                        Created <a href="/witch/altars/altars.html">Altars</a> pages in witchcraft section
+         <hr
+                            style="
+                                border: dashed;
+                                border-width: thin;
+                                border-color: rgba(129, 119, 122, 0.4);
+                                margin-top: 15px;
+                                margin-bottom: 15px;
+                            " />
+                        <em style="color: #c7d6f8;">Apr 9 2025</em
+                        ><img
+                            style="padding-left: 7px; padding-right: 3px"
+                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
+                        Created <a href="/witch/altars/altars.html">Altars</a> pages in witchcraft section
+                        
+          </div>
+          <div class="sidebar-section">
           <div class="sidebar-title">✧.* Section Title</div>
           <marquee scrollamount="4">
-		  	<span>
 <img src="./images/buttons/webdesign.png">
 <img src="./images/buttons/handcoded.gif">
 <img src="./images/buttons/poweredbybob.gif">
@@ -87,28 +105,36 @@ function headerHTML() {
 <img src="./images/buttons/blehhhh.gif" >
 <img src="./images/buttons/physical.gif" >
 <img src="./images/buttons/piracy.gif" >
-</span>
-<span>
 <img src="./images/buttons/biflag.gif">
 <img src="./images/buttons/desktop.gif">
 <img src="./images/buttons/catscape3.gif">
 <img src="./images/buttons/best_viewed_with_open_eyes.gif" >
 <img src="./images/buttons/censor_14c.gif" >
 <img src="./images/buttons/fuckingwebmaster.gif" >
-</span>
 		  </marquee>
         </div>
-		<div class="sidebar-section">
-          <div class="sidebar-title">✧.* Section Title</div>
-          <img class="full-width-image" src="https://picsum.photos/id/25/900/400">
+        <div class="sidebar-section">
+          <div class="sidebar-title">✧.* To-do</div>
+          <div style="padding:5px; border-style:dotted; border-radius:5%; max-height:200px; overflow-y:scroll;">
+          <ul style="list-style-image: none; position: relative; left:-15px; top:-5px;">
+                        <li><s>☑ make a to-do list </s></li>
+                        <li><s>☑ finish filling art gallery pages</s></li>
+                        <li>☐ add click-to-enlarge on art gallery </li>
+                        <li>☐ create a collection page (library, mlp collection, music...) </li>
+                        <li>☐ create reading log page</li>
+                        <li>☐ make website responsive (to some compacity) </li>
+                        <li>☐ finish credits page</li>
+                        <li>☐ figure out how github repositories work</li>
+                        <li>☐ complete about me on witchcraft page</li>
+            
+                        <li>☐ . . .</li>
+                        
+                        
+                    </ul>
+                  </div>
         </div>
-		<div class="sidebar-section">
-          <div class="sidebar-title">✧.* Section Title</div>
-          <div class="site-button">
-		  	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
-			<textarea><a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a></textarea>
-		  </div>
-        </div>
+		
+		
       </aside>
 	
     
@@ -143,7 +169,7 @@ function headerHTML() {
         </div></div></div>
         
         
-        <img src="https://files.catbox.moe/ewrda9.PNG" style="max-width:13.5em; margin-left:-22px; margin-top:-30px;">
+        <img src="https://files.catbox.moe/kkamew.PNG" style="max-width:13.5em; margin-left:-22px; margin-top:-30px;">
         <div class="sidebar-section">
           <div class="sidebar-title-2">links ✧.* </div>
           <div style="padding:5px; border-style:dotted; border-radius:10%;">
