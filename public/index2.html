@@ -70,7 +70,17 @@
             xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=dufflebagdreamz", true);
             xhttp.send();
         </script>
-    
+    <script type="text/javascript">
+    let user = 'galissia_';
+    let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song';
+    let song = document.querySelector('#song');
+    fetch(url)
+        .then(function (response) {
+            return response.json()
+        }).then(function (json) {
+            song.innerHTML = json['track']['name'] + ' - ' + json['track']['artist']['#text'];
+        });
+</script>
     <!-- JavaScript: -->
     <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js" if this HTML file is in 2 subfolders, etc. -->
     <script src="./layout.js"></script>
@@ -103,19 +113,7 @@
                 transform: translateY(0);
             }
         }
-        #statuscafe {
-    padding: .5em;
-    
-   
-}
-#statuscafe-username {
-    margin-bottom: .5em;
-
-}
-#statuscafe-content {
-    margin: 0 1em 0.5em 1em;
-
-}
+        
     </style>
   </head>
   <body>
@@ -140,33 +138,20 @@
 
         <section>
 
-          <h1>WELCOME!</h1>
-          <div style="margin: 2em; border-style: dotted; padding: 2em; border-radius: 2em;"><img src="./images/mii.png" style="width:200px;"><div class="speech-bubble" id="floating" style="float:right; min-width:300px;"> <div style="padding:5px; border-style:dotted; border-radius:10%;">
-              <div id="statuscafe">
-                  <div id="statuscafe-username"></div>
-                  <div id="statuscafe-content"></div>
-              </div>
-              
-                                   
-              <hr
-                                        style="
-                                            border: dashed;
-                                            border-width: thin;
-                                            border-color: rgba(129, 119, 122, 0.4);
-                                            margin-top: -5px;
-                                            margin-bottom: 5px;
-                                        " />
+          
+            <center><div class="title"> <div class="title-text">welcome to my space!</div></div></center>
+              <h3>hello! My name is Molly. </h3>
+          <div style="margin: 2em; border-style: dotted; padding: 2em; border-radius: 2em;">
+              <div class="header__inner">
+    <p>&#127911; <span id="song">&#8987;</span></p>
+</div>
+              <div class="header__inner">
+    <p><small>latest played song on <a href="https://www.last.fm/user/galissia_" target="_blank">last.fm</a></small> | <small>powered by <a
+                href="https://github.com/biancarosa/lastfm-last-played"
+                target="_blank">@biancarosa/lastfm-last-played</a></small></p>
+                
+</div>
 
-                                    
-                                    <div style="text-align: center; margin-bottom: 5px; color: darkslategrey">
-                                        I am feeling...
-                                        <a href="https://www.imood.com/users/galissia_"
-                                            ><img
-                                                src="https://moods.imood.com/display/uname-galissia_/fg-6351C6/trans-1/imood.gif"
-                                                alt="The current mood of galissia_ at www.imood.com"
-                                                border="0"
-                                        /></a>
-  </div></div></div>
               
             </div>
           <p>This layout was generated with <a href="https://petrapixel.neocities.org/" target="_blank">petrapixel</a>'s layout generator. You may remove the credit in the footer, but please leave the credit in the code. Thank you!</p>

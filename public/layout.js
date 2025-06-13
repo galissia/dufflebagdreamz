@@ -117,7 +117,7 @@ function headerHTML() {
 	  
         <div class="sidebar-section">
           
-          <div class="speech-bubble" id="floating" <div style="padding:5px;"><div id="statuscafe">
+          <div class="speech-bubble" id="floating" style="padding:2px; border-style:solid; border-color:#f0f0ff;"><div id="statuscafe">
                                         <div id="statuscafe-username"></div>
                                         <div id="statuscafe-content"></div>
                                     </div>
@@ -143,7 +143,7 @@ function headerHTML() {
         </div></div></div>
         
         
-        
+        <img src="https://files.catbox.moe/ewrda9.PNG" style="max-width:14em; margin-left:-20px;">
         <div class="sidebar-section">
           <div class="sidebar-title-2">links ☄. *. ⋆ </div>
           <div style="padding:5px; border-style:dotted; border-radius:10%;">

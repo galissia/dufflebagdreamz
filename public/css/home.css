@@ -404,6 +404,28 @@ main h6 {
   font-size: 1.3em;
 }
 
+.title {
+background: #263EAB;
+  background-image: url('https://files.catbox.moe/dtsjn5.png');
+  background-position: left;
+background-size: cover;
+  font-size: 2.6em;
+  letter-spacing: 2px;
+  font-family: var(--heading-font);
+  color: white;
+  border-radius: 10px;
+  outline: solid;
+  outline-color: white;
+  outline-width: 2px;
+  text-align: center;
+  filter: drop-shadow(0px 0px 7px rgba(195, 164, 213, 0.71));
+  width: 90%;
+
+}
+.title-text {
+  filter: drop-shadow(0px 0px 7px rgba(24, 5, 35, 0.81));
+}
+
 /* COLUMNS: */
 
 .two-columns {
@@ -553,7 +575,9 @@ main h6 {
 
 }
 #statuscafe-content {
-    margin: 0 1em 0.5em 1em;
+    margin: 0 0.5em 0.5em 0.5em;
+  overflow-wrap: break-word;
+ 
 
 }
 .speech-bubble {
