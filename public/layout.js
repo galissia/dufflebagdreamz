@@ -31,8 +31,8 @@ function headerHTML() {
         <nav>
           <div class="sidebar-title">✧.* Navigation</div>
           <ul>
-            <li><a href="./PETRA(copy1).html">Home</a></li>
-            <li><a href="#">Page 1</a></li>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./websites.html">Resources & Links</a></li>
             <li><a href="#">Page 2</a></li>
             <li><a href="#">Page 3</a></li>
 			
@@ -149,13 +149,13 @@ function headerHTML() {
           <div style="padding:5px; border-style:dotted; border-radius:10%;">
           
           <center>
-          <a href="https://www.instagram.com/Galissia_/"><img alt="Instagram" src="https://file.garden/ZoMEF_reXgpHHpnb/Instagram.png"></a>
-          <a href="https://toyhou.se/Galissia_"><img alt="Toyhouse" src="https://file.garden/ZoMEF_reXgpHHpnb/Toyhou.se.png"></a>
-          <a href="https://www.tumblr.com/galissia-x"><img alt="Tumblr" src="https://file.garden/ZoMEF_reXgpHHpnb/Tumblr.png"></a>
-          <a href="https://artfight.net/~Galissia_"><img alt="Art Fight" src="https://file.garden/ZoMEF_reXgpHHpnb/ArtFight.png"></a>
-          <a href="https://www.deviantart.com/galissiax"><img alt="DeviantArt" src="https://file.garden/ZoMEF_reXgpHHpnb/DeviantArt.png"></a>
-          <a href="https://galissiacommissions.carrd.co/"><img alt="Carrd" src="https://file.garden/ZoMEF_reXgpHHpnb/Carrd.png"></a>
-          <a href="https://neocities.org/site/galissia"><img alt="Neocities Profile" src="./images/buttons/neocities-pink.gif"></a>
+          <a href="https://www.instagram.com/Galissia_/" target="_blank"><img alt="Instagram" src="https://file.garden/ZoMEF_reXgpHHpnb/Instagram.png" target="_blank"></a>
+          <a href="https://toyhou.se/Galissia_" target="_blank"><img alt="Toyhouse" src="https://file.garden/ZoMEF_reXgpHHpnb/Toyhou.se.png" target="_blank"></a>
+          <a href="https://www.tumblr.com/galissia-x" target="_blank"><img alt="Tumblr" src="https://file.garden/ZoMEF_reXgpHHpnb/Tumblr.png"></a>
+          <a href="https://artfight.net/~Galissia_" target="_blank"><img alt="Art Fight" src="https://file.garden/ZoMEF_reXgpHHpnb/ArtFight.png"></a>
+          <a href="https://www.deviantart.com/galissiax" target="_blank"><img alt="DeviantArt" src="https://file.garden/ZoMEF_reXgpHHpnb/DeviantArt.png"></a>
+          <a href="https://galissiacommissions.carrd.co/" target="_blank"><img alt="Carrd" src="https://file.garden/ZoMEF_reXgpHHpnb/Carrd.png"></a>
+          <a href="https://neocities.org/site/galissia" target="_blank"><img alt="Neocities Profile" src="./images/buttons/neocities-pink.gif"></a>
           </center>
           
           </div>
@@ -176,13 +176,13 @@ function headerHTML() {
             alt="cavitycollector.neocities.org"
             src="https://file.garden/ZoMEF_reXgpHHpnb/cavitycollector-button.gif"
         /></a>
-        <a href="https://strawbebby228.neocities.org/" target="_blank"><img src="./images/buttons/ButtonPink.gif" /></a>
+        <a href="https://strawbebby228.neocities.org/" target="_blank"><img alt="strawbebby228" src="./images/buttons/ButtonPink.gif" /></a>
          <a href="http://cepheus.xyz" target="_blank"
             ><img alt="click to visit cepheus" src="./images/buttons/cepheus.gif"
         /></a>
         
         <a href="https://jackisnotbright.neocities.org" target="_blank"
-            ><img src="./images/buttons/JACKISNOTBRIGHT.gif" /><img
+            ><img src="./images/buttons/JACKISNOTBRIGHT.gif" alt="jackisnotbright"/><img
         /></a>
         <a href="https://petrapixel.neocities.org/" target="_blank"
             ><img src="./images/buttons/petra.webp" alt="petrapixel"
