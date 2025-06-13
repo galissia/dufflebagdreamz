@@ -57,30 +57,7 @@ function headerHTML() {
         </div>
         <div class="sidebar-section">
           <div class="sidebar-title"> ☄. *.  Section Title</div>
-          <div style="padding:5px; border-style:dotted; border-radius:10%;"><div id="statuscafe">
-                                        <div id="statuscafe-username"></div>
-                                        <div id="statuscafe-content"></div>
-                                    </div>
-                                    <hr
-                                        style="
-                                            border: dashed;
-                                            border-width: thin;
-                                            border-color: rgba(129, 119, 122, 0.4);
-                                            margin-top: -5px;
-                                            margin-bottom: 5px;
-                                        " />
-
-                                    
-                                    <div style="text-align: center; margin-bottom: 5px">
-                                        I am feeling...
-                                        <a href="https://www.imood.com/users/galissia_"
-                                            ><img
-                                                src="https://moods.imood.com/display/uname-galissia_/fg-6351C6/trans-1/imood.gif"
-                                                alt="The current mood of galissia_ at www.imood.com"
-                                                border="0"
-                                        /></a>
-                                    </div>
-        </div></div>
+          
         <div class="sidebar-section">
           <div class="sidebar-title">Section Title</div>
           <ul>
@@ -139,22 +116,31 @@ function headerHTML() {
       <aside class="right-sidebar">
 	  
         <div class="sidebar-section">
-          <div class="sidebar-title-2">Select Theme ✿ .•°</div>
-          <form aria-label="styleswitcher">
-<select name="styleswitcher" onchange="changeStyle(this.value)">
-<option value="home">Starry (default) </option>
-<option value="carpet">Grassy</option>
-</select>
-</form>
-        </div>
-        <div class="sidebar-section">
-          <div class="sidebar-title-2">Section Title ✧.* </div>
-          <blockquote>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
-          </blockquote>
-        </div>
-        
+          
+          <div class="speech-bubble" id="floating" <div style="padding:5px;"><div id="statuscafe">
+                                        <div id="statuscafe-username"></div>
+                                        <div id="statuscafe-content"></div>
+                                    </div>
+                                    <hr
+                                        style="
+                                            border: dashed;
+                                            border-width: thin;
+                                            border-color: rgba(129, 119, 122, 0.4);
+                                            margin-top: -5px;
+                                            margin-bottom: 5px;
+                                        " />
+
+                                    
+                                    <div style="text-align: center; margin-bottom: 5px">
+                                        I am feeling...
+                                        <a href="https://www.imood.com/users/galissia_"
+                                            ><img
+                                                src="https://moods.imood.com/display/uname-galissia_/fg-6351C6/trans-1/imood.gif"
+                                                alt="The current mood of galissia_ at www.imood.com"
+                                                border="0"
+                                        /></a>
+                                    </div>
+        </div></div></div>
         
         
         

@@ -26,7 +26,6 @@
                             margin-left:-10px;
                             margin-top: 5px;
                         }</style>
-    <script src="https://status.cafe/current-status.js?name=galissia" defer></script>
     <script>
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
@@ -75,7 +74,7 @@
     <!-- JavaScript: -->
     <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js" if this HTML file is in 2 subfolders, etc. -->
     <script src="./layout.js"></script>
-
+<script src="https://status.cafe/current-status.js?name=galissia" defer></script>
     <script>
       // Template generated with petrapixel's layout generator.
       // (Please do not remove this credit.)
@@ -83,27 +82,7 @@
       console.log("%c https://petrapixel.neocities.org/coding/layout-generator", "font-size: 14pt;");
     </script>
     <style>
-    .speech-bubble {
-	position: relative;
-	background: #f0f0ff;
-	border-radius: .4em;
-      padding: 10px;
-      
-}
-
-.speech-bubble:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border: 26px solid transparent;
-	border-right-color: #f0f0ff;
-	border-left: 0;
-	margin-top: -26px;
-	margin-left: -26px;
-}
+    
     
     
     #floating {
@@ -124,6 +103,19 @@
                 transform: translateY(0);
             }
         }
+        #statuscafe {
+    padding: .5em;
+    
+   
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+
+}
     </style>
   </head>
   <body>
@@ -149,11 +141,14 @@
         <section>
 
           <h1>WELCOME!</h1>
-          <div style="margin: 2em; border-style: dotted; padding: 2em; border-radius: 2em;"><img src="./images/mii.png" style="width:200px;"><div class="speech-bubble" id="floating" style="float:right; min-width:300px;"> <div style="padding:5px; border-style:dotted; border-radius:10%;"><div id="statuscafe">
-                                        <div id="statuscafe-username"></div>
-                                        <div id="statuscafe-content"></div>
-                                    </div>
-                                    <hr
+          <div style="margin: 2em; border-style: dotted; padding: 2em; border-radius: 2em;"><img src="./images/mii.png" style="width:200px;"><div class="speech-bubble" id="floating" style="float:right; min-width:300px;"> <div style="padding:5px; border-style:dotted; border-radius:10%;">
+              <div id="statuscafe">
+                  <div id="statuscafe-username"></div>
+                  <div id="statuscafe-content"></div>
+              </div>
+              
+                                   
+              <hr
                                         style="
                                             border: dashed;
                                             border-width: thin;
@@ -163,7 +158,7 @@
                                         " />
 
                                     
-                                    <div style="text-align: center; margin-bottom: 5px">
+                                    <div style="text-align: center; margin-bottom: 5px; color: darkslategrey">
                                         I am feeling...
                                         <a href="https://www.imood.com/users/galissia_"
                                             ><img
@@ -171,7 +166,9 @@
                                                 alt="The current mood of galissia_ at www.imood.com"
                                                 border="0"
                                         /></a>
-  </div></div></div></div>
+  </div></div></div>
+              
+            </div>
           <p>This layout was generated with <a href="https://petrapixel.neocities.org/" target="_blank">petrapixel</a>'s layout generator. You may remove the credit in the footer, but please leave the credit in the code. Thank you!</p>
           <p>
             I will now show you how to use the most common HTML text elements:
