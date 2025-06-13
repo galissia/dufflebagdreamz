@@ -17,6 +17,7 @@
 
     <!-- CSS: -->
     <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css" if this HTML file is in 2 subfolders, etc. -->
+                         <link rel="stylesheet" href="https://magical-ring.neocities.org/ring-codes/magical-ring-simple.css">
     <link href="https://fonts.cdnfonts.com/css/elmono-2" rel="stylesheet" />
 <link href="https://fonts.cdnfonts.com/css/beginning-2" rel="stylesheet">
     <link href="./css/home.css" rel="stylesheet" />
@@ -25,7 +26,12 @@
                             font-size: 10px;
                             margin-left:-10px;
                             margin-top: 5px;
-                        }</style>
+                        }
+      </style>
+      <style>
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=IM+Fell+English:ital@0;1&display=swap');
+</style>
+      
     <script>
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
@@ -111,6 +117,49 @@
 .column {
   flex: 50%;
 }
+         magical-ring {
+    max-width: 50ch;
+    border:black 4px double;
+    display:grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    padding-top: 0.2em;
+    background-color:antiquewhite;
+  }
+  
+  magical-ring > * {
+    box-sizing: border-box;
+  }
+  
+  magical-ring div{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  magical-ring a,magical-ring a:visited {
+  color:black;
+  text-decoration: none;
+  }
+  
+  magical-ring .arrow {
+    text-decoration:underline;
+  }
+  
+  magical-ring h3, magical-ring.ring-name {
+    font-family: 'IM Fell English SC', serif;
+    
+  }
+  magical-ring p, magical-ring a {
+    font-family: 'Benne', serif;
+  }
+  magical-ring .picture {
+  
+  }
+  magical-ring p,magical-ring h3 {
+    margin: 0;
+    margin-bottom:0.1em;
+  }
     </style>
   </head>
   <body>
@@ -228,16 +277,16 @@
             <center><div class="sidebar-title-2">Cliques</div></center>
                 <center style="max-height:90px; overflow-y:scroll;">
                                         <a href="https://xandra.cc/patrons" target="_new">matron</a>
-                                        <img src="images/sun.gif" /> brigid<br /><br />
+                                        <img src="./images/sun.gif" /> brigid<br /><br />
                                         <a href="https://callmemanatee.neocities.org/who_clique">Companions</a>
-                                        <img style="width: 20px" src="/images/tardis2.gif" /> Gal is a companion of the
+                                        <img style="width: 20px" src="./images/tardis2.gif" /> Gal is a companion of the
                                         10th Doctor and Donna Noble.<br /><br />
                                         <a href="https://caffeinated.wings.nu/">caffeineNATION</a>
-                                        <img src="images/coffee.gif" /> caffe mocha<br /><br />
+                                        <img src="./images/coffee.gif" /> caffe mocha<br /><br />
                                         <a href="http://aromatic.wings.nu/">aromatic</a>
-                                        <img src="images/wave.gif" /> harbour mist <br /><br />
+                                        <img src="./images/wave.gif" /> harbour mist <br /><br />
                                         <a href="http://cliqued.wings.nu/">rock me</a>
-                                        <img src="/images/rockme.png" /> Hall & Oates<br /><br />
+                                        <img src="./images/rockme.png" /> Hall & Oates<br /><br />
                                         My favorite food is:
                                         <a href="https://frankie.fanacular.net/food" target="_blank">Gyros</a><br />
                                         <img
@@ -423,18 +472,18 @@
                                         <td>
                                             <a
                                                 href="https://webri.ng/webring/ladiesofthelinks/previous?via=https%3A%2F%2Fgalissia.neocities.org"
-                                                ><img src="images/ladiesofthelink1.gif"
+                                                ><img src="./images/buttons/ladiesofthelink1.gif"
                                             /></a>
                                         </td>
                                         <td>
                                             <a href="https://ladiesofthe.link/"
-                                                ><img src="images/ladiesofthelink.gif"
+                                                ><img src="./images/buttons/ladiesofthelink.gif"
                                             /></a>
                                         </td>
                                         <td>
                                             <a
                                                 href="https://webri.ng/webring/ladiesofthelinks/next?via=https%3A%2F%2Fgalissia.neocities.org"
-                                                ><img src="images/ladiesofthelink2.gif"
+                                                ><img src="./images/buttons/ladiesofthelink2.gif"
                                             /></a>
                                         </td>
                                     </tr>
@@ -468,7 +517,7 @@
                                     <a href="https://neo-neighborhoods.neocities.org/SoHo/"
                                         ><img src="https://neo-neighborhoods.neocities.org/SoHo/sohop88.gif" /></a
                                     ><br /><br />
-                                    <div id="magical-ring">
+                                    <div style="color: black;" id="magical-ring">
                                         <script
                                             type="text/javascript"
                                             src="https://magical-ring.neocities.org/js/onionring-variables.js"></script>
