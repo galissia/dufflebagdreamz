@@ -32,7 +32,7 @@ function headerHTML() {
           <div class="sidebar-title">✧.* Navigation</div>
           <ul>
             <li><a href="./home.html">Home</a></li>
-            <li><a href="./websites.html">Resources & Links</a></li>
+            <li><a href="./websites.html">Links</a></li>
             <li><a href="#">Page 2</a></li>
             <li><a href="#">Page 3</a></li>
 			
