@@ -149,12 +149,12 @@ function headerHTML() {
           <div style="padding:5px; border-style:dotted; border-radius:10%;">
           
           <center>
-          <a href="https://www.instagram.com/Galissia_/"><img alt="Instagram" src="https://file.garden/ZoMEF_reXgpHHpnb/Instagram.png"></a>
-          <a href="https://toyhou.se/Galissia_"><img alt="Toyhouse" src="https://file.garden/ZoMEF_reXgpHHpnb/Toyhou.se.png"></a>
-          <a href="https://www.tumblr.com/galissia-x"><img alt="Tumblr" src="https://file.garden/ZoMEF_reXgpHHpnb/Tumblr.png"></a>
-          <a href="https://artfight.net/~Galissia_"><img alt="Art Fight" src="https://file.garden/ZoMEF_reXgpHHpnb/ArtFight.png"></a>
-          <a href="https://www.deviantart.com/galissiax"><img alt="DeviantArt" src="https://file.garden/ZoMEF_reXgpHHpnb/DeviantArt.png"></a>
-          <a href="https://galissiacommissions.carrd.co/"><img alt="Carrd" src="https://file.garden/ZoMEF_reXgpHHpnb/Carrd.png"></a>
+          <a href="https://www.instagram.com/Galissia_/"><img alt="Instagram" src="./images/socials/instagram.png"></a>
+          <a href="https://toyhou.se/Galissia_"><img alt="Toyhouse" src="./images/socials/toyhou.se.png"></a>
+          <a href="https://www.tumblr.com/galissia-x"><img alt="Tumblr" src="./images/socials/tumblr.png"></a>
+          <a href="https://artfight.net/~Galissia_"><img alt="Art Fight" src="./images/socials/artfight.png"></a>
+          <a href="https://www.deviantart.com/galissiax"><img alt="DeviantArt" src="./images/socials/deviantart.png"></a>
+          <a href="https://galissiacommissions.carrd.co/"><img alt="Carrd" src="./images/socials/carrd.png"></a>
           <a href="https://neocities.org/site/galissia"><img alt="Neocities Profile" src="./images/buttons/neocities-pink.gif"></a>
           </center>
           
