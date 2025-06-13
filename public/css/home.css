@@ -14,13 +14,13 @@
   /* Text Colors: */
   --text-color: #e8e3fd;
   --sidebar-text-color: #9bafdd;
-  --link-color: #988df3;
+  --link-color: #8d7fff;
   --link-color-hover: #9e48ec;
 
   /* Text: */
   --font: 'Elmono', sans-serif;
   --heading-font: 'Beginning', sans-serif;
-  --font-size: 13px;
+  --font-size: 14px;
 
   /* Other Settings: */
   --margin: 20px;
@@ -61,9 +61,9 @@ body {
 
 mark {
   /* Text highlighted by using the <mark> element */
-  text-shadow: 1px 1px 4px var(--link-color);
-  background-color: inherit;
-  color: var(--text-color);
+  text-shadow: 1px 1px 5px #90bdff;
+  background-color: rgba(159, 156, 248, 0.25);
+  color: #a4c2ff;
 }
 
 /* Links: */
@@ -354,7 +354,7 @@ main center {
 
 main hr {
   border: 0;
-  border-top: var(--border);
+  border-top: dotted;
   margin: 1.5em 0;
 }
 
@@ -369,6 +369,7 @@ main h6 {
   font-family: var(--heading-font);
   margin-bottom: 0;
   line-height: 1.5;
+  font-weight: 200;
 }
 
 main h1:first-child,
@@ -403,7 +404,19 @@ main h5 {
 main h6 {
   font-size: 1.3em;
 }
+.subtitle {
+ background: #120422;
+background: linear-gradient(270deg, rgba(18, 4, 34, 1) 0%, rgba(38, 62, 171, 1) 30%, rgba(163, 111, 191, 1) 100%);
+  font-size: 2.6em;
+  letter-spacing: 2px;
+  font-family: var(--heading-font);
+  color: white;
+  border-radius: 10px;
+  outline-width: 2px;
+  text-align: center;
+  width: 80%;
 
+}
 .title {
 background: #263EAB;
   background-image: url('https://files.catbox.moe/dtsjn5.png');
@@ -419,7 +432,7 @@ background-size: cover;
   outline-width: 2px;
   text-align: center;
   filter: drop-shadow(0px 0px 7px rgba(195, 164, 213, 0.71));
-  width: 90%;
+  width: 95%;
 
 }
 .title-text {

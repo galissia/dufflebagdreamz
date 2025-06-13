@@ -59,7 +59,7 @@ function headerHTML() {
           <div class="sidebar-title"> ✧.*  Section Title</div>
           
         <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
+          <div class="sidebar-title">✧.* Section Title</div>
           <ul>
             <li>List</li>
             <li>List</li>
@@ -143,9 +143,9 @@ function headerHTML() {
         </div></div></div>
         
         
-        <img src="https://files.catbox.moe/ewrda9.PNG" style="max-width:14em; margin-left:-20px;">
+        <img src="https://files.catbox.moe/ewrda9.PNG" style="max-width:13.5em; margin-left:-22px; margin-top:-30px;">
         <div class="sidebar-section">
-          <div class="sidebar-title-2">links ☄. *. ⋆ </div>
+          <div class="sidebar-title-2">links ✧.* </div>
           <div style="padding:5px; border-style:dotted; border-radius:10%;">
           
           <center>
@@ -154,6 +154,8 @@ function headerHTML() {
           <a href="https://www.tumblr.com/galissia-x"><img src="./images/socials/tumblr.png"></a>
           <a href="https://artfight.net/~Galissia_"><img src="./images/socials/artfight.png"></a>
           <a href="https://www.deviantart.com/galissiax"><img src="./images/socials/deviantart.png"></a>
+          <a href="https://galissiacommissions.carrd.co/"><img src="./images/socials/carrd.png"></a>
+          <a href="https://neocities.org/site/galissia"><img src="./images/buttons/neocities-pink.gif"></a>
           </center>
           
           </div>
