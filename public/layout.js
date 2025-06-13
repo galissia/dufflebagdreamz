@@ -29,7 +29,7 @@ function headerHTML() {
       <aside class="left-sidebar">
 	  
         <nav>
-          <div class="sidebar-title">°•. ✿ Navigation</div>
+          <div class="sidebar-title">✧.* Navigation</div>
           <ul>
             <li><a href="./PETRA(copy1).html">Home</a></li>
             <li><a href="#">Page 1</a></li>
@@ -56,7 +56,7 @@ function headerHTML() {
           <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
         </div>
         <div class="sidebar-section">
-          <div class="sidebar-title"> ☄. *.  Section Title</div>
+          <div class="sidebar-title"> ✧.*  Section Title</div>
           
         <div class="sidebar-section">
           <div class="sidebar-title">Section Title</div>
@@ -68,7 +68,7 @@ function headerHTML() {
           </ul>
         </div>
 		<div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
+          <div class="sidebar-title">✧.* Section Title</div>
           <marquee scrollamount="4">
 		  	<span>
 <img src="./images/buttons/webdesign.png">
@@ -99,11 +99,11 @@ function headerHTML() {
 		  </marquee>
         </div>
 		<div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
+          <div class="sidebar-title">✧.* Section Title</div>
           <img class="full-width-image" src="https://picsum.photos/id/25/900/400">
         </div>
 		<div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
+          <div class="sidebar-title">✧.* Section Title</div>
           <div class="site-button">
 		  	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
 			<textarea><a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a></textarea>
@@ -164,8 +164,8 @@ function headerHTML() {
           
 		<div class="sidebar-section">
           <div class="sidebar-title-2">neat sites ✧.*</div>
-          <marquee scrollamount="4">
-		  	  <center>
+        
+		  	  <div style="max-height:200px; overflow-y:scroll;"> <center>
    <a href="https://dustedpink.neocities.org/" target="_blank"
           ><img alt="dustedpink.neocities.org" src="./images/buttons/dustedpink.gif"
         /></a>
@@ -227,7 +227,7 @@ function headerHTML() {
    
         
         </center>
-		  </marquee>
+		  
           
           
         </div>

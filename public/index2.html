@@ -70,16 +70,7 @@
             xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=dufflebagdreamz", true);
             xhttp.send();
         </script>
-    <script type="text/javascript">
-    let user = 'galissia_';
-    let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song';
-    let song = document.querySelector('#song');
-    fetch(url)
-        .then(function (response) {
-            return response.json()
-        }).then(function (json) {
-            song.innerHTML = json['track']['name'] + ' - ' + json['track']['artist']['#text'];
-        });
+    <script src="/LASTFM.js" type="text/javascript">
 </script>
     <!-- JavaScript: -->
     <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js" if this HTML file is in 2 subfolders, etc. -->
@@ -141,9 +132,9 @@
           
             <center><div class="title"> <div class="title-text">welcome to my space!</div></div></center>
               <h3>hello! My name is Molly. </h3>
-          <div style="margin: 2em; border-style: dotted; padding: 2em; border-radius: 2em;">
+          <div style="margin: 2em; border-style: dotted; padding: 2em; padding-bottom: 1em; border-radius: 2em; width: 70%">
               <div class="header__inner">
-    <p>&#127911; <span id="song">&#8987;</span></p>
+    <p style="margin-top: -30px; margin-bottom: 30px;"><img src="./images/beat.gif" style="width:25px; top:15px; position: relative; image-rendering: pixelated; filter: invert();"><iframe src="https://petrapixel.neocities.org/widgets/lastfm?center=1&font=Arial&fontSize=15px&color=ffffff&username=Galissia_&swapPositions=0&delimiter=-&underline=0" style="max-height:50px; max-width:589px; top: 30px; left:20px; position: relative;" frameborder="0" title="Last.Fm Status"></iframe></p>
 </div>
               <div class="header__inner">
     <p><small>latest played song on <a href="https://www.last.fm/user/galissia_" target="_blank">last.fm</a></small> | <small>powered by <a
@@ -151,6 +142,7 @@
                 target="_blank">@biancarosa/lastfm-last-played</a></small></p>
                 
 </div>
+              
 
               
             </div>
