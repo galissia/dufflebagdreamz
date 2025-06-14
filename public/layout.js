@@ -58,6 +58,12 @@ function headerHTML() {
         <div class="sidebar-section">
           <div class="sidebar-title"> ✧.*  Changelog</div>
           <div style="padding:5px; border-style:dotted; border-radius:5%; max-height:300px; overflow-y:scroll;">
+         
+                        <em style="color: #c7d6f8;">Jun 14 2025</em
+                        ><img
+                            style="padding-left: 7px; padding-right: 3px"
+                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
+                        Starting to translate pages from orginal layout into new layout.
          <hr
                             style="
                                 border: dashed;
@@ -116,19 +122,18 @@ function headerHTML() {
         <div class="sidebar-section">
           <div class="sidebar-title">✧.* To-do</div>
           <div style="padding:5px; border-style:dotted; border-radius:5%; max-height:200px; overflow-y:scroll;">
-          <ul style="list-style-image: none; position: relative; left:-15px; top:-5px;">
-                        <li><s>☑ make a to-do list </s></li>
-                        <li><s>☑ finish filling art gallery pages</s></li>
+          <ul style="list-style-image: none; position: relative; left:-18px; top:-5px;">
+                        
+                        <li><s>☑ figure out how github repositories work</s></li>
+                        <li><s>☑ make website responsive (to some compacity)</s> </li>
                         <li>☐ add click-to-enlarge on art gallery </li>
                         <li>☐ create a collection page (library, mlp collection, music...) </li>
                         <li>☐ create reading log page</li>
-                        <li>☐ make website responsive (to some compacity) </li>
                         <li>☐ finish credits page</li>
-                        <li>☐ figure out how github repositories work</li>
                         <li>☐ complete about me on witchcraft page</li>
-            
                         <li>☐ . . .</li>
-                        
+                        <li><s>☑ make a to-do list </s></li>
+                        <li><s>☑ finish filling art gallery pages</s></li>
                         
                     </ul>
                   </div>
