@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>2019 ✧˚ · .</title>
+        <style>
+            body {
+                background: rgb(78, 68, 114);
+                background: linear-gradient(270deg, rgba(222, 117, 146) 0%, rgba(78, 68, 114) 100%);
+            }
+
+            h1 {
+                font-family: "Freckle Face", sans-serif;
+                color: rgb(70, 122, 114);
+                font-size: 50px;
+                transition: 0.6s;
+                text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.74);
+            }
+            h2 a{font-family: "Averia Libre", sans-serif;
+                color: rgb(54, 26, 76);
+                transition: 0.6s;
+                text-decoration: none;
+                
+            }
+            a {
+                font-family: "Averia Libre", sans-serif;
+                color: rgb(165, 123, 198);
+                transition: 0.6s;
+                text-decoration: none;
+                
+             
+            }
+            a:hover {
+                transform: translateY(-15%);
+                transition: 0.2s;
+                background-color: transparent;
+                color: rgb(236, 168, 255);
+                display: inline-block;
+                text-decoration: underline;
+                text-decoration-style: wavy;
+            }
+            img {
+                filter: drop-shadow(3px 3px 3px rgba(65, 120, 124, 0.17));
+                width: 100%;
+                transition: .3s;
+                margin-top:15px;
+
+            }
+            img:hover{
+                transform: scale(1.02);
+                transition: .3s;
+            }
+            p {
+                font-family: "averia libre", sans-serif;
+                color: rgb(44, 76, 96);
+            }
+           
+            #footer {
+                width: 570px;
+                color: aliceblue;
+            }
+            #footer:hover {
+                color:rgb(236, 168, 255);
+            }
+            table {
+                background: white;
+                border-image-slice: 30;
+                border-image-width: 25px;
+                border-image-outset: 5px;
+                border-image-repeat: round;
+                border-image-source: url(/art/images/Border.png);
+                border-style: solid;
+                border-top: none;
+                height: auto;
+                width: 600px;
+                margin: 20px;
+                padding: 10px 10px;
+            }
+            .date{
+                color: #5b676f;
+                text-align: right;
+            }
+        </style>
+        <link rel="shortcut icon" type="image/x-icon" href="/images/monkey.gif" />
+        <script type="text/javascript">
+            // <![CDATA[
+            var colour = "white"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
+            var sparkles = 50;
+
+            /****************************
+             *  Tinkerbell Magic Sparkle *
+             *(c)2005-13 mf2fm web-design*
+             *  http://www.mf2fm.com/rv  *
+             * DON'T EDIT BELOW THIS BOX *
+             ****************************/
+            var x = (ox = 400);
+            var y = (oy = 300);
+            var swide = 800;
+            var shigh = 600;
+            var sleft = (sdown = 0);
+            var tiny = new Array();
+            var star = new Array();
+            var starv = new Array();
+            var starx = new Array();
+            var stary = new Array();
+            var tinyx = new Array();
+            var tinyy = new Array();
+            var tinyv = new Array();
+
+            window.onload = function () {
+                if (document.getElementById) {
+                    var i, rats, rlef, rdow;
+                    for (var i = 0; i < sparkles; i++) {
+                        var rats = createDiv(3, 3);
+                        rats.style.visibility = "hidden";
+                        rats.style.zIndex = "999";
+                        document.body.appendChild((tiny[i] = rats));
+                        starv[i] = 0;
+                        tinyv[i] = 0;
+                        var rats = createDiv(5, 5);
+                        rats.style.backgroundColor = "transparent";
+                        rats.style.visibility = "hidden";
+                        rats.style.zIndex = "999";
+                        var rlef = createDiv(1, 5);
+                        var rdow = createDiv(5, 1);
+                        rats.appendChild(rlef);
+                        rats.appendChild(rdow);
+                        rlef.style.top = "2px";
+                        rlef.style.left = "0px";
+                        rdow.style.top = "0px";
+                        rdow.style.left = "2px";
+                        document.body.appendChild((star[i] = rats));
+                    }
+                    set_width();
+                    sparkle();
+                }
+            };
+
+            function sparkle() {
+                var c;
+                if (Math.abs(x - ox) > 1 || Math.abs(y - oy) > 1) {
+                    ox = x;
+                    oy = y;
+                    for (c = 0; c < sparkles; c++)
+                        if (!starv[c]) {
+                            star[c].style.left = (starx[c] = x) + "px";
+                            star[c].style.top = (stary[c] = y + 1) + "px";
+                            star[c].style.clip = "rect(0px, 5px, 5px, 0px)";
+                            star[c].childNodes[0].style.backgroundColor = star[c].childNodes[1].style.backgroundColor =
+                                colour == "random" ? newColour() : colour;
+                            star[c].style.visibility = "visible";
+                            starv[c] = 50;
+                            break;
+                        }
+                }
+                for (c = 0; c < sparkles; c++) {
+                    if (starv[c]) update_star(c);
+                    if (tinyv[c]) update_tiny(c);
+                }
+                setTimeout("sparkle()", 40);
+            }
+
+            function update_star(i) {
+                if (--starv[i] == 25) star[i].style.clip = "rect(1px, 4px, 4px, 1px)";
+                if (starv[i]) {
+                    stary[i] += 1 + Math.random() * 3;
+                    starx[i] += ((i % 5) - 2) / 5;
+                    if (stary[i] < shigh + sdown) {
+                        star[i].style.top = stary[i] + "px";
+                        star[i].style.left = starx[i] + "px";
+                    } else {
+                        star[i].style.visibility = "hidden";
+                        starv[i] = 0;
+                        return;
+                    }
+                } else {
+                    tinyv[i] = 50;
+                    tiny[i].style.top = (tinyy[i] = stary[i]) + "px";
+                    tiny[i].style.left = (tinyx[i] = starx[i]) + "px";
+                    tiny[i].style.width = "2px";
+                    tiny[i].style.height = "2px";
+                    tiny[i].style.backgroundColor = star[i].childNodes[0].style.backgroundColor;
+                    star[i].style.visibility = "hidden";
+                    tiny[i].style.visibility = "visible";
+                }
+            }
+
+            function update_tiny(i) {
+                if (--tinyv[i] == 25) {
+                    tiny[i].style.width = "1px";
+                    tiny[i].style.height = "1px";
+                }
+                if (tinyv[i]) {
+                    tinyy[i] += 1 + Math.random() * 3;
+                    tinyx[i] += ((i % 5) - 2) / 5;
+                    if (tinyy[i] < shigh + sdown) {
+                        tiny[i].style.top = tinyy[i] + "px";
+                        tiny[i].style.left = tinyx[i] + "px";
+                    } else {
+                        tiny[i].style.visibility = "hidden";
+                        tinyv[i] = 0;
+                        return;
+                    }
+                } else tiny[i].style.visibility = "hidden";
+            }
+
+            document.onmousemove = mouse;
+            function mouse(e) {
+                if (e) {
+                    y = e.pageY;
+                    x = e.pageX;
+                } else {
+                    set_scroll();
+                    y = event.y + sdown;
+                    x = event.x + sleft;
+                }
+            }
+
+            window.onscroll = set_scroll;
+            function set_scroll() {
+                if (typeof self.pageYOffset == "number") {
+                    sdown = self.pageYOffset;
+                    sleft = self.pageXOffset;
+                } else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+                    sdown = document.body.scrollTop;
+                    sleft = document.body.scrollLeft;
+                } else if (
+                    document.documentElement &&
+                    (document.documentElement.scrollTop || document.documentElement.scrollLeft)
+                ) {
+                    sleft = document.documentElement.scrollLeft;
+                    sdown = document.documentElement.scrollTop;
+                } else {
+                    sdown = 0;
+                    sleft = 0;
+                }
+            }
+
+            window.onresize = set_width;
+            function set_width() {
+                var sw_min = 999999;
+                var sh_min = 999999;
+                if (document.documentElement && document.documentElement.clientWidth) {
+                    if (document.documentElement.clientWidth > 0) sw_min = document.documentElement.clientWidth;
+                    if (document.documentElement.clientHeight > 0) sh_min = document.documentElement.clientHeight;
+                }
+                if (typeof self.innerWidth == "number" && self.innerWidth) {
+                    if (self.innerWidth > 0 && self.innerWidth < sw_min) sw_min = self.innerWidth;
+                    if (self.innerHeight > 0 && self.innerHeight < sh_min) sh_min = self.innerHeight;
+                }
+                if (document.body.clientWidth) {
+                    if (document.body.clientWidth > 0 && document.body.clientWidth < sw_min)
+                        sw_min = document.body.clientWidth;
+                    if (document.body.clientHeight > 0 && document.body.clientHeight < sh_min)
+                        sh_min = document.body.clientHeight;
+                }
+                if (sw_min == 999999 || sh_min == 999999) {
+                    sw_min = 800;
+                    sh_min = 600;
+                }
+                swide = sw_min;
+                shigh = sh_min;
+            }
+
+            function createDiv(height, width) {
+                var div = document.createElement("div");
+                div.style.position = "absolute";
+                div.style.height = height + "px";
+                div.style.width = width + "px";
+                div.style.overflow = "hidden";
+                return div;
+            }
+
+            function newColour() {
+                var c = new Array();
+                c[0] = 255;
+                c[1] = Math.floor(Math.random() * 256);
+                c[2] = Math.floor(Math.random() * (256 - c[1] / 2));
+                c.sort(function () {
+                    return 0.5 - Math.random();
+                });
+                return "rgb(" + c[0] + ", " + c[1] + ", " + c[2] + ")";
+            }
+            // ]]>
+        </script>
+        <style type="text/css">
+            * {
+                cursor: url(/images/pencil2.png), auto !important;
+            }
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet" />
+    </head>
+    <body>
+        <center>
+            <div id="header">
+                <h2><a href="/art/gallery.html">back</a></h2>
+                <h2 style="font-size:16px; margin-top:-10px;"><a href="#footer">to bottom</a></h2>
+            </div>
+            
+            
+            
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/ryo.jpg">
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Dec 28, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/rainachristmas.jpg">
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Dec 28, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <video src="https://files.catbox.moe/pwx5j8.mp4" controls style="width: 99%;"></video>
+                            <br /><br />
+                            <p>[video] this is another guess-timation but I'm pretty sure it was around here because I think i remember thinking about this in driver's ed class</p>
+                            <p class="date">[ 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/ryokira.jpg">
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Nov 25, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/Snapinst.app_75341451_566101387264941_4343365739796849849_n_1080.jpg">
+                            <br /><br />
+                            <p>redraw of an old drawing</p>
+                            <p class="date">[ Oct 24, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/there_s_no_such_thing_as_love_by_galissiax_ddixs0i-pre.jpg">
+                            <br /><br />
+                            <p>idfc if he wiped out literally the entire human population I still love him and you’re not gonna change my mind.</p>
+                            <p class="date">[ Oct 24, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/catra_by_galissiax_ddesibu.png">
+                            <br /><br />
+                            <p>i just finished s3 of this show and it made me sad</p>
+                            <p class="date">[ Aug 24, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/azalea.jpg">
+                            <img src="/art/images/2019/oliver2.jpg">
+                            <br /><br />
+                            <p>things I did last night at 2 am
+woah</p>
+                            <p class="date">[ Aug 4, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/vera.jpg">
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Jul 16, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/olivereldrin.jpg">
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Jul 1, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/eldrin.png">
+                            <br /><br />
+                            <p>Made a design for Eldrin, really like how it turned out.</p>
+                            <p class="date">[ Jun 10, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/fantasmapandora.png">
+                            <br /><br />
+                            <p>father-daughter bonding time</p>
+                            <p class="date">[ Jun 8, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+             <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/ryokira%202019.jpg">
+                            <br /><br />
+                            <p>woah, anime characters??? oh my god !</p>
+                            <p class="date">[ Jun 6, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+             <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/oliverray.png">
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Jun 1, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/Screenshot%202025-01-25%20174604.png">
+                            <br /><br />
+                            <p>A panel from my first chapter of a comic on <a href="https://www.webtoons.com/en/canvas/legacies/list?title_no=297977">LINE WEBTOON.</a></p>
+                            <p class="date">[ Jun 1, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/azalealegacies.png">
+                            <br /><br />
+                            <p>The cover for a comic that I hope to start soon on <a href="https://www.webtoons.com/en/canvas/legacies/list?title_no=297977">LINE WEBTOON.</a> Don’t know how this will go lol .</p>
+                            <p class="date">[ May 26, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/galissiabanner.png">
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ May 23, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table> 
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <video src="https://files.catbox.moe/v94d5w.mp4" controls style="width:99%;"></video>
+                            <br /><br />
+                            <p>[video] i dont exactly remember the date for this but it must have been sometime this year</p>
+                            <p class="date">[ 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/oliver_and_ray_by_galissiax_dd6m98p-414w-2x.jpg">
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ May 10, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/oliver.png">
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Apr 27, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/luesiusref.png">
+                            <img src="/art/images/2019/luesius.png">
+                            <br /><br />
+                            <p>Meet Luesius, the God of Death!</p>
+                            <p class="date">[ Apr 27, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/jay.jpg">
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Apr 24, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/Moonswirl.png">
+                            <img src="/art/images/2019/starry.png">
+                            <br /><br />
+                            <p>redesigned my old pony characters! <a href="https://www.youtube.com/watch?v=hMT-7II2sss&t=172s">made a video about it</a></p>
+                            <p class="date">[ Apr 18, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/azaleademon.jpg">
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Mar 28, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/peepee.png">
+                            <br /><br />
+                            <p>rip peepee</p>
+                            <p class="date">[ Feb 16, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/raina.png">
+                            <br /><br />
+                            <p>I did Raina too because why not?</p>
+                            <p class="date">[ Feb 16, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/ray.jpg">
+                            <br /><br />
+                            <p>I tried colored pencils again to do this. Kinda wanted to change Ray's design slightly and I kinda did that I guess</p>
+                            <p class="date">[ Feb 16, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/2019/nightmareparade.gif">
+                            
+                            
+                            <br /><br />
+                            <p><a href="https://www.youtube.com/watch?v=LWp1aOraeC8">Nightmare Parade animation meme</a></p>
+                            <p class="date">[ Feb 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <center><video src="https://files.catbox.moe/7rb42i.mp4" controls style="width: 99%"></video></center>
+                            
+                            <br /><br />
+                            <p>[Video] pure imagination</p>
+                            <p class="date">[ Jan 29, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="/art/images/2019/calidia.jpg">
+                            <br /><br />
+                            <div style="box-shadow: 4px 4px 4px rgba(72, 79, 85, 0.28); border-radius:5%; background-color: #f7e9d9; width: fit-content;"><img style="width: 50px; float:inline-start; margin-top: -5px; margin-right: 10px;" src="https://file.toyhou.se/images/15987643_bvhutjRbgnwMYz3.png?1565855179"> <h3 style="font-family: Averia Libre; color: #975656">This Year's Favorite!</h3></div>
+                            <p>Low and behold, I didn't mess it up digitally!</p>
+                            <p class="date">[ Jan 5, 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <video src="https://files.catbox.moe/v7wqif.mp4" controls style="width: 99%;"></video>
+                            <br /><br />
+                            <p>[Video] fear & misery</p>
+                            <p class="date">[ Jan 2019 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <a id="footer" href="#header">back to top</a>
+        </center>
+        <br /><br /><br /><br />
+    </body>
+</html>

@@ -1,0 +1,471 @@
+<!doctype HTML>
+<html>
+<head>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+    // Replace the date with your own birthdate WITHIN the double quotation marks ("").
+// Do NOT remove those quotation marks!
+
+var dob = new Date("06/23/1991");
+var month_diff = Date.now() - dob.getTime();
+var age_dt = new Date(month_diff);
+var year = age_dt.getUTCFullYear();
+var age = Math.abs(year - 1970);
+document.getElementById("age").innerHTML = age;
+    </script>
+<style>
+
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(/images/scanlines.png);
+  z-index: 7;
+  pointer-events: none; 
+  opacity: 0.2;
+}
+</style>
+</head>
+<body>
+
+        <div id="container">
+            <div id="headerArea">
+                
+                
+            </div>
+
+            <div id="flex">
+                <aside id="leftSidebar">
+                    
+<p style="text-align: center;"><img src="https://files.catbox.moe/s5kp2i.gif" width="500px;"></p>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+    <h1>movies!</h1>
+    <ul>
+      <li>Back to the Future
+      <li>The Princess Bride
+      <li>Sweeney Todd
+      <li>Emperor's New Groove
+      </ul>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card"><h1>tv!</h1>
+    <ul>
+      <li>Doctor Who
+      <li>My Little Pony: Friendship is Magic
+      <li>Supernatural
+      <li>What We Do in the Shadows
+      </ul></div>
+  </div>
+  <div class="column">
+    <div class="card"><h1 style="font-size:45px">characters!</h1>
+    <ul>
+      <li>8th/10th/12th Doctor
+      <li>Henry Jekyll (TGS)
+      <li>Applejack
+      <li>Castiel
+    <li>Bigby Wolf</li>
+      </ul></div>
+  </div>
+  <div class="column">
+    <div class="card"><h1>other!</h1>
+    <ul>
+      <li>monkeys (squirrel and capuchin especially!)
+      <li>80's music
+      <li>werewolves
+      <li>autumn
+      </ul></div>
+  </div>
+  
+</div>
+                <br><br>
+                    
+                    <div style=" border-radius:25px; background-color:aliceblue"><center><br><h1 style="margin-bottom:-3px;">My Bag!</h1>(click to enlarge)<br><br></center>
+                        
+<center>
+<a href="images/me/mainbag1.jpg" target="_blank"><img src="images/me/mainbag1.jpg" height="450"></a>
+<a href="images/me/keychains.jpg" target="_blank"><img src="images/me/keychains.jpg" height="450"></a>
+<a href="images/me/pins.jpg" target="_blank"><img src="images/me/pins.jpg" height="450"></a>
+                    <a href="images/me/mainbag.png" target="_blank"><img src="images/me/mainbag.png" height="450"></a>
+                    <a href="images/me/pen.png" target="_blank"><img src="images/me/pen.png" height="450"></a>
+                    <a href="images/me/cosmetics.png" target="_blank"><img src="images/me/cosmetics.png" height="450"></a>
+                    </center>
+                    <br>
+                </div>
+                    <br>
+                    <center><a href="/babyphotos.html"><img src="images/cameraspin.gif" style="width:100px; image-rendering: pixelated;"></a></center><br>
+                </aside>
+                <main><img src="images/molly_about.png" style="float:left; width:250px; margin-right:10px;">
+                    <h1 style="margin-bottom: -20px; margin-top: -2px;">  Molly / Jay / Gal  </h1>
+                    <p style="margin-left: 30px; margin-bottom: 20px;"><strong>20yrs  ||  NJ  ||  SCAD 2026 Film & Tv</strong></p>
+                    <img src="https://i.imgur.com/SdzxIEQ.png" alt="She/They (Blue)">
+                    <img src="https://i.imgur.com/MtGlogH.png" alt="Aromantic (Aromantic flag)">
+                    <img src="https://i.imgur.com/hSzFNI7.png" alt="Nebularomantic (Nebularomantic flag)">
+                    <img src="https://i.imgur.com/mtHAEL4.png" alt="Bisexual (Bisexual flag)">
+                    <img src="https://i.imgur.com/WUigavW.png" alt="Aroallo (Aroallo flag)">
+                    <img src="https://i.imgur.com/ypcKWM0.png">
+                    <img src="https://i.imgur.com/jA5A7gu.png">
+                    <img src="https://i.imgur.com/fqaiLqt.png">
+                    <img src="https://i.imgur.com/4XRlTbW.png">
+                    <img src="https://i.imgur.com/amjweU8.png">
+                    <img src="https://i.imgur.com/bYSdYyu.png">
+                    <img src="https://i.imgur.com/g9AwY5X.png">
+                    <img src="https://i.imgur.com/WFpPzZn.png">
+                    <img src="https://i.imgur.com/bx7nz65.png">
+                    <img src="/images/tn.png">
+                   
+                    <br><br>
+                 
+                    
+                    <p style="margin-top:-1px">       hello, kind stranger! my name is Molly, but you can also call me Gal or Jay. I'm a <span id="age"></span> yr old film student from the NJ pine barrens with a passion for art & animation!</p>
+
+
+
+                    <p>I've had an interest in code for a while and I only recently (as of 2024) decided to actually learn how to code & make my own website. This is something I've been wanting to do for a while, and I think having a cool website to put whatever I want onto can be fun!</p>
+                    <p>I'm a film major & I'm hoping to pursue video and film editing or live broadcasting production in the future! I also have an animation minor and would also love to be a storyboard artist or animator as well. (but DAMN would that be a lot of work)</p>
+                    <p>I draw too! You can see most of my work on <a href="https://www.instagram.com/galissia_/" target="_blank">Instagram,</a> if you're interested, and you can view my characters & some information about them on my <a href="https://toyhou.se/Galissia_" target="_blank">ToyHouse</a> :)</p>
+
+                    <p></p>
+
+
+                </main>
+                
+            </div>
+            
+        </div>
+        <!-- THIS IS THE CSS !-->
+        <style>
+                            @import url('https://fonts.cdnfonts.com/css/levi-adobe-dia');
+</style>
+                
+        <style>
+            div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+            /* user styles */
+
+            /* styles are what change the color and sizes of stuff on your site. */
+
+            /* these are variables that are being used in the code
+    these tended to confuse some people, so I only kept 
+    the images as variables */
+
+            :root {
+                --header-image: url('https://sadhost.neocities.org/images/layouts/wp.jpeg');
+                --body-bg-image: url('https://sadhost.neocities.org/images/tiles/backstar.gif');
+
+                /* colors */
+                --content: #43256E;
+            }
+
+          
+.pony {
+    position: relative;
+    top: 20px;
+  }
+ 
+
+            body {
+              font-family: 'Levi Adobe Dia', sans-serif; 
+                margin: 0;
+                font-size: 25px;
+                background-color: #08031A;
+                /* you can delete the line below if you'd prefer to not use an image */
+                background-size:600px;
+                color: #fffff;
+                background-image: var(--body-bg-image);
+            } 
+
+            * {
+                box-sizing: border-box;
+            }
+
+            /* below this line is CSS for the layout */
+
+            /* this is a CSS comment
+    to uncomment a line of CSS, remove the * and the /
+    before and after the text */
+
+
+            /* the "container" is what wraps your entire website */
+            /* if you want something (like the header) to be Wider than
+    the other elements, you will need to move that div outside
+    of the container */
+            #container {
+                max-width: 900px;
+                /* this is the width of your layout! */
+                /* if you change the above value, scroll to the bottom
+      and change the media query according to the comment! */
+                margin: 0 auto;
+                /* this centers the entire page */
+            }
+
+            /* the area below is for all links on your page
+    EXCEPT for the navigation */
+            #container a {
+                color: #ED64F5;
+                font-weight: bold;
+                /* if you want to remove the underline
+      you can add a line below here that says:
+      text-decoration:none; */
+            }
+
+            #header {
+                width: 100%;
+                background-color: #5e4e8c;
+                /* header color here! */
+                height: 150px;
+                /* this is only for a background image! */
+                /* if you want to put images IN the header, 
+      you can add them directly to the <div id="header"></div> element! */
+                background-image: var(--header-image);
+                background-size: 100%;
+            }
+
+            /* navigation section!! */
+            #navbar {
+                height: 40px;
+                background-color: #13092D;
+                /* navbar color */
+                width: 100%;
+            }
+
+            #navbar ul {
+                display: flex;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                justify-content: space-evenly;
+            }
+
+            #navbar li {
+                padding-top: 10px;
+            }
+
+            /* navigation links*/
+            #navbar li a {
+                color: #ED64F5;
+                /* navbar text color */
+                font-weight: 800;
+                text-decoration: none;
+                /* this removes the underline */
+            }
+
+            /* navigation link when a link is hovered over */
+            #navbar li a:hover {
+                color: #a49cba;
+                text-decoration: underline;
+            }
+
+            #flex {
+                display: flex;
+            }
+
+            /* this colors BOTH sidebars
+    if you want to style them separately,
+    create styles for #leftSidebar and #rightSidebar */
+            aside {
+                background-color: #6ea3c4;
+                width: 200px;
+                padding: 20px;
+                font-size: smaller;
+                /* this makes the sidebar text slightly smaller */
+            }
+
+
+            /* this is the color of the main content area,
+    between the sidebars! */
+            main {
+                background-color: #ebfcff;
+                flex: 1;
+                padding: 20px;
+                order: 2;
+            }
+
+            /* what's this "order" stuff about??
+    allow me to explain!
+    if you're using both sidebars, the "order" value
+    tells the CSS the order in which to display them.
+    left sidebar is 1, content is 2, and right sidebar is 3! */
+
+            */ #leftSidebar {
+                order: 1;
+            }
+
+            #rightSidebar {
+                order: 3;
+            }
+
+            footer {
+                background-color: #13092D;
+                /* background color for footer */
+                width: 100%;
+                height: 40px;
+                padding: 10px;
+                text-align: center;
+                /* this centers the footer text */
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: #2c4673;
+                font-size: 40px;
+            }
+
+            h1 {
+                font-size: 50px;
+            }
+
+            strong {
+                /* this styles bold text */
+                color: #3a65b0;
+            }
+
+            /* this is just a cool box, it's the darker colored one */
+            .box {
+                background-color: #2d4673;
+                border: 1px solid #ffffff;
+                padding: 10px;
+            }
+
+            /* CSS for extras */
+
+            #topBar {
+                width: 100%;
+                height: 30px;
+                padding: 10px;
+                font-size: smaller;
+                background-color: #13092D;
+            }
+
+
+            /* BELOW THIS POINT IS MEDIA QUERY */
+
+            /* so you wanna change the width of your page? 
+    by default, the container width is 900px.
+    in order to keep things responsive, take your new height,
+    and then subtrack it by 100. use this new number as the 
+    "max-width" value below
+    */
+
+            @media only screen and (max-width: 800px) {
+                #flex {
+                    flex-wrap: wrap;
+                }
+
+                aside {
+                    width: 100%;
+                }
+
+                /* the order of the items is adjusted here for responsiveness!
+      since the sidebars would be too small on a mobile device.
+      feel free to play around with the order!
+      */
+                main {
+                    order: 1;
+                }
+
+                #leftSidebar {
+                    order: 2;
+                }
+
+                #rightSidebar {
+                    order: 3;
+                }
+
+                #navbar ul {
+                    flex-wrap: wrap;
+                }
+            }
+            /* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(17, 22, 89, .5); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #F0F1FF;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+ul {
+  list-style-image: url('/images/stars.gif');
+}
+        </style>
+

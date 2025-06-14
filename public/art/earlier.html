@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>earlier ✧˚ · .</title>
+        <style>
+            body {
+                background: rgb(166,221,208);
+background: linear-gradient(180deg, rgba(166,221,208,1) 0%, rgba(218,255,253,1) 100%);
+                background-attachment: fixed;
+            }
+
+            h1 {
+                font-family: "Freckle Face", sans-serif;
+                color: rgb(70, 122, 114);
+                font-size: 50px;
+                transition: 0.6s;
+                text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.74);
+            }
+            h2 a{font-family: "Averia Libre", sans-serif;
+                color: rgb(54, 26, 76);
+                transition: 0.6s;
+                text-decoration: none;
+                
+            }
+            a {
+                font-family: "Averia Libre", sans-serif;
+                color: rgb(165, 123, 198);
+                transition: 0.6s;
+                text-decoration: none;
+                
+             
+            }
+            a:hover {
+                transform: translateY(-15%);
+                transition: 0.2s;
+                background-color: transparent;
+                color: rgb(86, 124, 174);
+                display: inline-block;
+                text-decoration: underline;
+                text-decoration-style: wavy;
+            }
+            img {
+                filter: drop-shadow(3px 3px 3px rgba(65, 120, 124, 0.17));
+                width: 100%;
+                transition: .3s;
+                margin-top:15px;
+
+            }
+            img:hover{
+                transform: scale(1.02);
+                transition: .3s;
+            }
+            p {
+                font-family: "averia libre", sans-serif;
+                color: rgb(44, 76, 96);
+            }
+           
+            #footer {
+                width: 570px;
+            }
+            table {
+                background: white;
+                border-image-slice: 30;
+                border-image-width: 25px;
+                border-image-outset: 5px;
+                border-image-repeat: round;
+                border-image-source: url(/art/images/Border.png);
+                border-style: solid;
+                border-top: none;
+                height: auto;
+                width: 600px;
+                margin: 20px;
+                padding: 10px 10px;
+            }
+            .date{
+                color: #5b676f;
+                text-align: right;
+            }
+        </style>
+        <link rel="shortcut icon" type="image/x-icon" href="/images/monkey.gif" />
+        <script type="text/javascript">
+            // <![CDATA[
+            var colour = "white"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
+            var sparkles = 50;
+
+            /****************************
+             *  Tinkerbell Magic Sparkle *
+             *(c)2005-13 mf2fm web-design*
+             *  http://www.mf2fm.com/rv  *
+             * DON'T EDIT BELOW THIS BOX *
+             ****************************/
+            var x = (ox = 400);
+            var y = (oy = 300);
+            var swide = 800;
+            var shigh = 600;
+            var sleft = (sdown = 0);
+            var tiny = new Array();
+            var star = new Array();
+            var starv = new Array();
+            var starx = new Array();
+            var stary = new Array();
+            var tinyx = new Array();
+            var tinyy = new Array();
+            var tinyv = new Array();
+
+            window.onload = function () {
+                if (document.getElementById) {
+                    var i, rats, rlef, rdow;
+                    for (var i = 0; i < sparkles; i++) {
+                        var rats = createDiv(3, 3);
+                        rats.style.visibility = "hidden";
+                        rats.style.zIndex = "999";
+                        document.body.appendChild((tiny[i] = rats));
+                        starv[i] = 0;
+                        tinyv[i] = 0;
+                        var rats = createDiv(5, 5);
+                        rats.style.backgroundColor = "transparent";
+                        rats.style.visibility = "hidden";
+                        rats.style.zIndex = "999";
+                        var rlef = createDiv(1, 5);
+                        var rdow = createDiv(5, 1);
+                        rats.appendChild(rlef);
+                        rats.appendChild(rdow);
+                        rlef.style.top = "2px";
+                        rlef.style.left = "0px";
+                        rdow.style.top = "0px";
+                        rdow.style.left = "2px";
+                        document.body.appendChild((star[i] = rats));
+                    }
+                    set_width();
+                    sparkle();
+                }
+            };
+
+            function sparkle() {
+                var c;
+                if (Math.abs(x - ox) > 1 || Math.abs(y - oy) > 1) {
+                    ox = x;
+                    oy = y;
+                    for (c = 0; c < sparkles; c++)
+                        if (!starv[c]) {
+                            star[c].style.left = (starx[c] = x) + "px";
+                            star[c].style.top = (stary[c] = y + 1) + "px";
+                            star[c].style.clip = "rect(0px, 5px, 5px, 0px)";
+                            star[c].childNodes[0].style.backgroundColor = star[c].childNodes[1].style.backgroundColor =
+                                colour == "random" ? newColour() : colour;
+                            star[c].style.visibility = "visible";
+                            starv[c] = 50;
+                            break;
+                        }
+                }
+                for (c = 0; c < sparkles; c++) {
+                    if (starv[c]) update_star(c);
+                    if (tinyv[c]) update_tiny(c);
+                }
+                setTimeout("sparkle()", 40);
+            }
+
+            function update_star(i) {
+                if (--starv[i] == 25) star[i].style.clip = "rect(1px, 4px, 4px, 1px)";
+                if (starv[i]) {
+                    stary[i] += 1 + Math.random() * 3;
+                    starx[i] += ((i % 5) - 2) / 5;
+                    if (stary[i] < shigh + sdown) {
+                        star[i].style.top = stary[i] + "px";
+                        star[i].style.left = starx[i] + "px";
+                    } else {
+                        star[i].style.visibility = "hidden";
+                        starv[i] = 0;
+                        return;
+                    }
+                } else {
+                    tinyv[i] = 50;
+                    tiny[i].style.top = (tinyy[i] = stary[i]) + "px";
+                    tiny[i].style.left = (tinyx[i] = starx[i]) + "px";
+                    tiny[i].style.width = "2px";
+                    tiny[i].style.height = "2px";
+                    tiny[i].style.backgroundColor = star[i].childNodes[0].style.backgroundColor;
+                    star[i].style.visibility = "hidden";
+                    tiny[i].style.visibility = "visible";
+                }
+            }
+
+            function update_tiny(i) {
+                if (--tinyv[i] == 25) {
+                    tiny[i].style.width = "1px";
+                    tiny[i].style.height = "1px";
+                }
+                if (tinyv[i]) {
+                    tinyy[i] += 1 + Math.random() * 3;
+                    tinyx[i] += ((i % 5) - 2) / 5;
+                    if (tinyy[i] < shigh + sdown) {
+                        tiny[i].style.top = tinyy[i] + "px";
+                        tiny[i].style.left = tinyx[i] + "px";
+                    } else {
+                        tiny[i].style.visibility = "hidden";
+                        tinyv[i] = 0;
+                        return;
+                    }
+                } else tiny[i].style.visibility = "hidden";
+            }
+
+            document.onmousemove = mouse;
+            function mouse(e) {
+                if (e) {
+                    y = e.pageY;
+                    x = e.pageX;
+                } else {
+                    set_scroll();
+                    y = event.y + sdown;
+                    x = event.x + sleft;
+                }
+            }
+
+            window.onscroll = set_scroll;
+            function set_scroll() {
+                if (typeof self.pageYOffset == "number") {
+                    sdown = self.pageYOffset;
+                    sleft = self.pageXOffset;
+                } else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+                    sdown = document.body.scrollTop;
+                    sleft = document.body.scrollLeft;
+                } else if (
+                    document.documentElement &&
+                    (document.documentElement.scrollTop || document.documentElement.scrollLeft)
+                ) {
+                    sleft = document.documentElement.scrollLeft;
+                    sdown = document.documentElement.scrollTop;
+                } else {
+                    sdown = 0;
+                    sleft = 0;
+                }
+            }
+
+            window.onresize = set_width;
+            function set_width() {
+                var sw_min = 999999;
+                var sh_min = 999999;
+                if (document.documentElement && document.documentElement.clientWidth) {
+                    if (document.documentElement.clientWidth > 0) sw_min = document.documentElement.clientWidth;
+                    if (document.documentElement.clientHeight > 0) sh_min = document.documentElement.clientHeight;
+                }
+                if (typeof self.innerWidth == "number" && self.innerWidth) {
+                    if (self.innerWidth > 0 && self.innerWidth < sw_min) sw_min = self.innerWidth;
+                    if (self.innerHeight > 0 && self.innerHeight < sh_min) sh_min = self.innerHeight;
+                }
+                if (document.body.clientWidth) {
+                    if (document.body.clientWidth > 0 && document.body.clientWidth < sw_min)
+                        sw_min = document.body.clientWidth;
+                    if (document.body.clientHeight > 0 && document.body.clientHeight < sh_min)
+                        sh_min = document.body.clientHeight;
+                }
+                if (sw_min == 999999 || sh_min == 999999) {
+                    sw_min = 800;
+                    sh_min = 600;
+                }
+                swide = sw_min;
+                shigh = sh_min;
+            }
+
+            function createDiv(height, width) {
+                var div = document.createElement("div");
+                div.style.position = "absolute";
+                div.style.height = height + "px";
+                div.style.width = width + "px";
+                div.style.overflow = "hidden";
+                return div;
+            }
+
+            function newColour() {
+                var c = new Array();
+                c[0] = 255;
+                c[1] = Math.floor(Math.random() * 256);
+                c[2] = Math.floor(Math.random() * (256 - c[1] / 2));
+                c.sort(function () {
+                    return 0.5 - Math.random();
+                });
+                return "rgb(" + c[0] + ", " + c[1] + ", " + c[2] + ")";
+            }
+            // ]]>
+        </script>
+        <style type="text/css">
+            * {
+                cursor: url(/images/pencil2.png), auto !important;
+            }
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet" />
+    </head>
+    <body>
+        <center>
+            <div id="header">
+                <h2><a href="/art/gallery.html">back</a></h2>
+                <h2 style="font-size:16px; margin-top:-10px;"><a href="#footer">to bottom</a></h2>
+            </div>
+            
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="/art/images/fyi.png">
+                            
+                            <br /><br />
+                            <p>hello! This particular gallery page consists of multiple years and is sorted by best estimates as to when the art was created. it's by no means comprehensive or entirely accurate but it is just my best guess :)<br><br> it contains art from roughly 2015-2018</p>
+                            <p class="date">[ Jan 25, 2025 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/rain.png">
+                            
+                            
+                            
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Dec 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/oreo1.jpg">
+                            
+                            
+                            
+                            <br /><br />
+                            <p>Christmas Cat</p>
+                            <p class="date">[ Dec 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/calidia.png">
+                            
+                            
+                            <br /><br />
+                            <p><a href="https://www.youtube.com/watch?v=LWp1aOraeC8">Opinions animation meme</a></p>
+                            <p class="date">[ Dec 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/august_by_galissiax_dcv0ffn-pre.jpg">
+                            
+                            
+                            <br /><br />
+                            <p>August, Calidia's brother</p>
+                            <p class="date">[ Dec 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/meradora.jpg">
+                            
+                            
+                            
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Nov 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/rainaref.png">
+                            <img src="images/earlier/rayref.png">
+                            
+                            
+                            <br /><br />
+                            <p>Raina & Ray Refs</p>
+                            <p class="date">[ Nov 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/jay_reference_sheet_by_galissiax_dcr0zgx.png">
+                            
+                            
+                            <br /><br />
+                            <p>Jay Ref</p>
+                            <p class="date">[ Nov 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/calidiaref.png">
+                            
+                            
+                            <br /><br />
+                            <p>Calidia Ref</p>
+                            <p class="date">[ Oct 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/jay2.jpg">
+                            
+                            
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Sep 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/jay_by_galissiax_dcltxjt-fullview.jpg">
+                            
+                            
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Sep 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/self.png">
+                            
+                            
+                            <br /><br />
+                            <p>Self-Portrait!</p>
+                            <p class="date">[ Sep 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/blue_topaz_ref_by_galissiax_dclihf3.png">
+                            
+                            
+                            <br /><br />
+                            <p>My Steven Universe oc, Blue Topaz!</p>
+                            <p class="date">[ Aug 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/grrls-ezgif.com-video-to-gif-converter.gif">
+                            
+                            
+                            <br /><br />
+                            <p><a href="https://www.youtube.com/watch?v=LWp1aOraeC8">GRRLS animation meme</a></p>
+                            <p class="date">[ Mar 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <video src="https://files.catbox.moe/nnkok2.mp4" controls style="width:99%;"></video>
+                            
+                            
+                            <br /><br />
+                            <p>[Video] Scrapped Ticking animation meme ver. 2</p>
+                            <p class="date">[ 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <video src="https://files.catbox.moe/fpl7jx.mp4" controls style="width:99%;"></video>
+                            
+                            
+                            <br /><br />
+                            <p>[Video] Scrapped Ticking animation meme Ver. 1</p>
+                            <p class="date">[ 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/kanyw-ezgif.com-video-to-gif-converter.gif">
+                            
+                            
+                            <br /><br />
+                            <p><a href="https://www.youtube.com/watch?v=E94or5HOwwo">Kanye animation meme</a></p>
+                            <p class="date">[ Mar 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/62117672_d7RwrgJK1eIkbT3.gif">
+                            
+                            
+                            <br /><br />
+                            <p><a href="https://www.youtube.com/watch?v=dsXEeAVkydI">Sunset Lover animation meme</a></p>
+                            <p class="date">[ Feb 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/hotmilk.png">
+                            
+                            
+                            <br /><br />
+                            <p><a href="https://www.youtube.com/watch?v=Sex9i8IBP6s">Hot Milk animation meme</a></p>
+                            <p class="date">[ Feb 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/ehc.gif">
+                            
+                            
+                            <br /><br />
+                            <p><a href="https://www.youtube.com/watch?v=leVV5FpFSbE">Eyes Half Closed animation meme</a></p>
+                            <p class="date">[ Jan 2018 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/69654313_p7kltFxEE2LPPgr.png">
+                            
+                            
+                            <br /><br />
+                            <p><a href="https://www.youtube.com/watch?v=73l4Q5B2dUM">Speedpaint</a></p>
+                            <p class="date">[ Dec 2017 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/pandora2017.gif">
+                            
+                            
+                            <br /><br />
+                            <p><a href="https://www.youtube.com/watch?v=zEvJXIMqOrM&">Irresistible animation meme</a></p>
+                            <p class="date">[ Nov 2017 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/forget.png">
+                            <img src="images/earlier/forget.gif">
+                            
+                            <br /><br />
+                            <p><a href="https://www.youtube.com/watch?v=8FaLKUUa0G0">Forget animation meme</a></p>
+                            <p class="date">[ 2017 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="images/earlier/Logo.gif">
+                            
+                            <br /><br />
+                            <p>Logo animation!</p>
+                            <p class="date">[ 2017 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           
+                            <img src="images/earlier/meradora2017.gif">
+                            
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ 2017 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/62118076_1pkbdWeRAcTh6j8.png">
+                            
+                            <br /><br />
+                            <p><a href="https://toyhou.se/7641064.fantasma">Fantasma's</a> original reference sheet!</p>
+                            <p class="date">[ 2016-17 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <center><video src="https://files.catbox.moe/f8s4ne.mp4" controls style="width: 99%"></video></center>
+                            
+                            <br /><br />
+                            <p>[Video] an old map part</p>
+                            <p class="date">[ 2016 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/christmassunnycloud.jpg">
+                            
+                            <br /><br />
+                            <p>a card for my friend</p>
+                            <p class="date">[ 2016 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/sunnycloud_2016.jpg">
+                            
+                            <br /><br />
+                            <p>a rainbow powered ver. of a friend's oc</p>
+                            <p class="date">[ 2016 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/rainbowpoweredms2016.jpg">
+                            
+                            <br /><br />
+                            <p>a rainbow powered ver. of moonswirl</p>
+                            <p class="date">[ 2016 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/rdvalentine_2016.jpg">
+                            <img src="images/earlier/discordvalentgine2016.jpg">
+                            <img src="images/earlier/rarityvalentine2019.jpg">
+                            
+                            <br /><br />
+                            <p>some valentines i drew</p>
+                            <p class="date">[ 2016 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/2016moonswhine.jpg">
+                            
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ 2016 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/moonshine2017.jpg">
+                            
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ 2016 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/2016livicakez.jpg">
+                            
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ 2016 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/milkyway%202016.jpg">
+                            
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ 2016 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/christmas2015.jpg">
+                            
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ 2015 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/milkyway2.jpg">
+                            
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ 2015 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+    
+                           <img src="images/earlier/luna.jpg">
+                            
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ 2015 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a id="footer" href="#header">back to top</a>
+        </center>
+        <br /><br /><br /><br />
+    </body>
+</html>

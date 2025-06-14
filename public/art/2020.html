@@ -1,0 +1,1137 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>2020 ✧˚ · .</title>
+        <style>
+            body {
+                background: rgb(191, 255, 159);
+                background: linear-gradient(90deg, rgba(191, 255, 159, 1) 0%, rgba(58, 181, 93, 1) 100%);
+            }
+
+            h1 {
+                font-family: "Freckle Face", sans-serif;
+                color: rgb(70, 122, 114);
+                font-size: 50px;
+                transition: 0.6s;
+                text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.74);
+            }
+            h2 a {
+                font-family: "Averia Libre", sans-serif;
+                color: rgb(26, 77, 16);
+                transition: 0.6s;
+                text-decoration: none;
+            }
+            a {
+                font-family: "Averia Libre", sans-serif;
+                color: rgb(165, 123, 198);
+                transition: 0.6s;
+                text-decoration: none;
+            }
+            a:hover {
+                transform: translateY(-15%);
+                transition: 0.2s;
+                background-color: transparent;
+                color: rgb(83, 150, 62);
+                display: inline-block;
+                text-decoration: underline;
+                text-decoration-style: wavy;
+            }
+            img {
+                filter: drop-shadow(3px 3px 3px rgba(65, 120, 124, 0.17));
+                width: 100%;
+                transition: 0.3s;
+                margin-top: 15px;
+            }
+            img:hover {
+                transform: scale(1.02);
+                transition: 0.3s;
+            }
+            p {
+                font-family: "averia libre", sans-serif;
+                color: rgb(44, 76, 96);
+            }
+
+            #footer {
+                width: 570px;
+            }
+            table {
+                background: white;
+                border-image-slice: 30;
+                border-image-width: 25px;
+                border-image-outset: 5px;
+                border-image-repeat: round;
+                border-image-source: url(/art/images/Border.png);
+                border-style: solid;
+                border-top: none;
+                height: auto;
+                width: 600px;
+                margin: 20px;
+                padding: 10px 10px;
+            }
+            .date {
+                color: #5b676f;
+                text-align: right;
+            }
+            video {
+                width: 100%;
+            }
+            ul {
+                list-style-image: url(http://68.media.tumblr.com/eb427251fe5bf36228065de86abcf9a5/tumblr_inline_mkht9pK1ks1qz4rgp.png);
+            }
+
+            .collapsible {
+                background-color: #eee;
+                color: #444;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+            }
+
+            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            .active,
+            .collapsible:hover {
+                background-color: #ccc;
+            }
+
+            /* Style the collapsible content. Note: hidden by default */
+            .content {
+                padding: 0 18px;
+                display: none;
+                overflow: hidden;
+                background-color: #f1f1f1;
+            }
+        </style>
+
+        <link rel="shortcut icon" type="image/x-icon" href="/images/monkey.gif" />
+        <script type="text/javascript">
+            // <![CDATA[
+            var colour = "white"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
+            var sparkles = 50;
+
+            /****************************
+             *  Tinkerbell Magic Sparkle *
+             *(c)2005-13 mf2fm web-design*
+             *  http://www.mf2fm.com/rv  *
+             * DON'T EDIT BELOW THIS BOX *
+             ****************************/
+            var x = (ox = 400);
+            var y = (oy = 300);
+            var swide = 800;
+            var shigh = 600;
+            var sleft = (sdown = 0);
+            var tiny = new Array();
+            var star = new Array();
+            var starv = new Array();
+            var starx = new Array();
+            var stary = new Array();
+            var tinyx = new Array();
+            var tinyy = new Array();
+            var tinyv = new Array();
+
+            window.onload = function () {
+                if (document.getElementById) {
+                    var i, rats, rlef, rdow;
+                    for (var i = 0; i < sparkles; i++) {
+                        var rats = createDiv(3, 3);
+                        rats.style.visibility = "hidden";
+                        rats.style.zIndex = "999";
+                        document.body.appendChild((tiny[i] = rats));
+                        starv[i] = 0;
+                        tinyv[i] = 0;
+                        var rats = createDiv(5, 5);
+                        rats.style.backgroundColor = "transparent";
+                        rats.style.visibility = "hidden";
+                        rats.style.zIndex = "999";
+                        var rlef = createDiv(1, 5);
+                        var rdow = createDiv(5, 1);
+                        rats.appendChild(rlef);
+                        rats.appendChild(rdow);
+                        rlef.style.top = "2px";
+                        rlef.style.left = "0px";
+                        rdow.style.top = "0px";
+                        rdow.style.left = "2px";
+                        document.body.appendChild((star[i] = rats));
+                    }
+                    set_width();
+                    sparkle();
+                }
+            };
+
+            function sparkle() {
+                var c;
+                if (Math.abs(x - ox) > 1 || Math.abs(y - oy) > 1) {
+                    ox = x;
+                    oy = y;
+                    for (c = 0; c < sparkles; c++)
+                        if (!starv[c]) {
+                            star[c].style.left = (starx[c] = x) + "px";
+                            star[c].style.top = (stary[c] = y + 1) + "px";
+                            star[c].style.clip = "rect(0px, 5px, 5px, 0px)";
+                            star[c].childNodes[0].style.backgroundColor = star[c].childNodes[1].style.backgroundColor =
+                                colour == "random" ? newColour() : colour;
+                            star[c].style.visibility = "visible";
+                            starv[c] = 50;
+                            break;
+                        }
+                }
+                for (c = 0; c < sparkles; c++) {
+                    if (starv[c]) update_star(c);
+                    if (tinyv[c]) update_tiny(c);
+                }
+                setTimeout("sparkle()", 40);
+            }
+
+            function update_star(i) {
+                if (--starv[i] == 25) star[i].style.clip = "rect(1px, 4px, 4px, 1px)";
+                if (starv[i]) {
+                    stary[i] += 1 + Math.random() * 3;
+                    starx[i] += ((i % 5) - 2) / 5;
+                    if (stary[i] < shigh + sdown) {
+                        star[i].style.top = stary[i] + "px";
+                        star[i].style.left = starx[i] + "px";
+                    } else {
+                        star[i].style.visibility = "hidden";
+                        starv[i] = 0;
+                        return;
+                    }
+                } else {
+                    tinyv[i] = 50;
+                    tiny[i].style.top = (tinyy[i] = stary[i]) + "px";
+                    tiny[i].style.left = (tinyx[i] = starx[i]) + "px";
+                    tiny[i].style.width = "2px";
+                    tiny[i].style.height = "2px";
+                    tiny[i].style.backgroundColor = star[i].childNodes[0].style.backgroundColor;
+                    star[i].style.visibility = "hidden";
+                    tiny[i].style.visibility = "visible";
+                }
+            }
+
+            function update_tiny(i) {
+                if (--tinyv[i] == 25) {
+                    tiny[i].style.width = "1px";
+                    tiny[i].style.height = "1px";
+                }
+                if (tinyv[i]) {
+                    tinyy[i] += 1 + Math.random() * 3;
+                    tinyx[i] += ((i % 5) - 2) / 5;
+                    if (tinyy[i] < shigh + sdown) {
+                        tiny[i].style.top = tinyy[i] + "px";
+                        tiny[i].style.left = tinyx[i] + "px";
+                    } else {
+                        tiny[i].style.visibility = "hidden";
+                        tinyv[i] = 0;
+                        return;
+                    }
+                } else tiny[i].style.visibility = "hidden";
+            }
+
+            document.onmousemove = mouse;
+            function mouse(e) {
+                if (e) {
+                    y = e.pageY;
+                    x = e.pageX;
+                } else {
+                    set_scroll();
+                    y = event.y + sdown;
+                    x = event.x + sleft;
+                }
+            }
+
+            window.onscroll = set_scroll;
+            function set_scroll() {
+                if (typeof self.pageYOffset == "number") {
+                    sdown = self.pageYOffset;
+                    sleft = self.pageXOffset;
+                } else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+                    sdown = document.body.scrollTop;
+                    sleft = document.body.scrollLeft;
+                } else if (
+                    document.documentElement &&
+                    (document.documentElement.scrollTop || document.documentElement.scrollLeft)
+                ) {
+                    sleft = document.documentElement.scrollLeft;
+                    sdown = document.documentElement.scrollTop;
+                } else {
+                    sdown = 0;
+                    sleft = 0;
+                }
+            }
+
+            window.onresize = set_width;
+            function set_width() {
+                var sw_min = 999999;
+                var sh_min = 999999;
+                if (document.documentElement && document.documentElement.clientWidth) {
+                    if (document.documentElement.clientWidth > 0) sw_min = document.documentElement.clientWidth;
+                    if (document.documentElement.clientHeight > 0) sh_min = document.documentElement.clientHeight;
+                }
+                if (typeof self.innerWidth == "number" && self.innerWidth) {
+                    if (self.innerWidth > 0 && self.innerWidth < sw_min) sw_min = self.innerWidth;
+                    if (self.innerHeight > 0 && self.innerHeight < sh_min) sh_min = self.innerHeight;
+                }
+                if (document.body.clientWidth) {
+                    if (document.body.clientWidth > 0 && document.body.clientWidth < sw_min)
+                        sw_min = document.body.clientWidth;
+                    if (document.body.clientHeight > 0 && document.body.clientHeight < sh_min)
+                        sh_min = document.body.clientHeight;
+                }
+                if (sw_min == 999999 || sh_min == 999999) {
+                    sw_min = 800;
+                    sh_min = 600;
+                }
+                swide = sw_min;
+                shigh = sh_min;
+            }
+
+            function createDiv(height, width) {
+                var div = document.createElement("div");
+                div.style.position = "absolute";
+                div.style.height = height + "px";
+                div.style.width = width + "px";
+                div.style.overflow = "hidden";
+                return div;
+            }
+
+            function newColour() {
+                var c = new Array();
+                c[0] = 255;
+                c[1] = Math.floor(Math.random() * 256);
+                c[2] = Math.floor(Math.random() * (256 - c[1] / 2));
+                c.sort(function () {
+                    return 0.5 - Math.random();
+                });
+                return "rgb(" + c[0] + ", " + c[1] + ", " + c[2] + ")";
+            }
+            // ]]>
+        </script>
+        <script type="text/javascript">
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        </script>
+        <style type="text/css">
+            * {
+                cursor: url(/images/pencil2.png), auto !important;
+            }
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet" />
+    </head>
+    <body>
+        <center>
+            <div id="header">
+                <h2><a href="/art/gallery.html">back</a></h2>
+                <h2 style="font-size: 16px; margin-top: -10px"><a href="#footer">to bottom</a></h2>
+            </div>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/vivdixie.jpg" />
+
+                            <br /><br />
+                            <p>i love them sm</p>
+                            <p class="date">[ Nov 23, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/unus_annus.png" />
+
+                            <br /><br />
+                            <p>memento mori, unus annus</p>
+                            <p class="date">[ Nov 14, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/jayref.png" />
+
+                            <br /><br />
+                            <p>new reference for jay!</p>
+                            <p class="date">[ Nov 13, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <center>
+                                <object
+                                    type="application/pdf"
+                                    data="https://files.catbox.moe/kq2vcg.pdf"
+                                    width="500px;"
+                                    height="700px;"></object>
+                            </center>
+
+                            <br /><br />
+                            <p>A halloween collaboration between me and some mutuals! I drew pages 25 & 26.</p>
+
+                            <button type="button" class="collapsible">
+                                <img
+                                    src="http://68.media.tumblr.com/eb427251fe5bf36228065de86abcf9a5/tumblr_inline_mkht9pK1ks1qz4rgp.png"
+                                    style="
+                                        image-rendering: pixelated;
+                                        width: 30px;
+                                        position: relative;
+                                        top: 10px;
+                                        margin-top: -10px;
+                                    " />Participants
+                            </button>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        Pages 1-4: <a href="https://www.instagram.com/madame_spyder/">Madame_Spyder</a>
+                                    </li>
+                                    <li>Pages 5-9: <a href="https://www.instagram.com/jacearchive_/">Jace.xe</a></li>
+                                    <li>
+                                        Pages 10-14: Unknown, I couldn't find them, but I belive they went by Robin?
+                                    </li>
+                                    <li>Pages 15-18: <a href="https://www.instagram.com/abunni_iv/">abunni_iv</a></li>
+                                    <li>Pages 19-24: <a href="https://www.instagram.com/uso_ongaku/">uso_ongaku</a></li>
+                                    <li>Pages 25-26: me :3</li>
+                                    <li>Pages 27-28: <a href="https://www.instagram.com/i_mickdraw/">i_mickdraw</a></li>
+                                    <li>
+                                        Pages 29-33: <a href="https://www.instagram.com/capesch_arts/">capesch_arts</a>
+                                    </li>
+                                    <li>
+                                        Pages 34-41:
+                                        <a href="https://www.instagram.com/sophia_r_deluca/">sophia_r_deluca</a>
+                                    </li>
+                                    <li>Pages 42-46: <a href="https://www.instagram.com/leox_un/">leox_un</a></li>
+                                    <li>
+                                        Pages 47-49:
+                                        <a href="https://www.instagram.com/goblin_totties/">goblin_totties</a>
+                                    </li>
+                                    <li>
+                                        Extras 1-2:
+                                        <a href="https://www.instagram.com/sophia_r_deluca/">sophia_r_deluca</a>
+                                    </li>
+                                    <li>
+                                        Extras 3-5:
+                                        <a href="https://www.instagram.com/goblin_totties/">goblin_totties</a>
+                                    </li>
+                                    <li>
+                                        Extras 6-13: <a href="https://www.instagram.com/capesch_arts/">capesch_arts</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="date">[ Nov 9, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/artemisorion.png" />
+
+                            <br /><br />
+                            <p>rainbow horse angst amirite</p>
+                            <p class="date">[ Oct 16, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/jekyllhyde.png" />
+
+                            <br /><br />
+                            <p>
+                                hi i just finished this so here it is full body references for them plus their cat
+                                Herc!!!
+                            </p>
+                            <p class="date">[ Oct 10, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/jay.png" />
+
+                            <br /><br />
+                            <p>me as some ,,,,,sort of creature, I really don’t know what I was going for at all</p>
+                            <p class="date">[ Sep 18, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/jekyllutterson.png" />
+
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Sep 10, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img
+                                src="https://f2.toyhou.se/file/f2-toyhou-se/images/25746776_2SmWr15uzHBhYpQ.png?1672472722" />
+
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Aug 21, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/25709205_swPJsBVYV06N5XD.png" />
+
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Aug 20, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <video src="/art/images/2020/devilstrain.mp4" controls></video>
+
+                            <br /><br />
+                            <div
+                                style="
+                                    box-shadow: 4px 4px 4px rgba(72, 79, 85, 0.28);
+                                    border-radius: 5%;
+                                    background-color: #f7e9d9;
+                                    width: fit-content;
+                                ">
+                                <img
+                                    style="width: 50px; float: inline-start; margin-top: -5px; margin-right: 10px"
+                                    src="https://file.toyhou.se/images/15987643_bvhutjRbgnwMYz3.png?1565855179" />
+                                <h3 style="font-family: Averia Libre; color: #975656">This Year's Favorite!</h3>
+                            </div>
+                            <p>[video] The Devil's Train animatic</p>
+                            <p class="date">[ Aug 7th, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/selfportrait.jpg" />
+
+                            <br /><br />
+                            <p>Self Portait</p>
+                            <p class="date">[ Jul 29th, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/briarfern.png" />
+
+                            <br /><br />
+                            <p>
+                                Art Fight #14
+                                <a href="https://artfight.net/attack/1577225.youre-unbeleafable">[link]</a>
+                            </p>
+                            <p class="date">[ Jul 27th, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/meet%20the%20artist.png" />
+
+                            <br /><br />
+                            <p>Meet the Artist!!</p>
+                            <p class="date">[ Jul 21st, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/wilbur.png" />
+
+                            <br /><br />
+                            <p>Art Fight #13 <a href="https://artfight.net/attack/1479554.wilbur-soot">[link]</a></p>
+                            <p class="date">[ Jul 19th, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/angel.png" />
+
+                            <br /><br />
+                            <p>Art Fight #12 <a href="https://artfight.net/attack/1456822.hoohah">[link]</a></p>
+                            <p class="date">[ Jul 18th, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/stripes.png" />
+
+                            <br /><br />
+                            <p>Art Fight #11 <a href="https://artfight.net/attack/1456413.stripey-baby">[link]</a></p>
+                            <p class="date">[ Jul 18th, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/sundrop.png" />
+
+                            <br /><br />
+                            <p>Art Fight #10 <a href="https://artfight.net/attack/1337861.sun-drop">[link]</a></p>
+                            <p class="date">[ Jul 11th, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/claires.png" />
+
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Jul 10th, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/isaac.png" />
+
+                            <br /><br />
+                            <p>Art Fight #9 <a href="https://artfight.net/attack/1229369.sir-isaac">[link]</a></p>
+                            <p class="date">[ Jul 7th, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/sandbar.png" />
+
+                            <br /><br />
+                            <p>Art Fight #8 <a href="https://artfight.net/attack/1188024.sandbar">[link]</a></p>
+                            <p class="date">[ Jul 7th, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/echo.png" />
+
+                            <br /><br />
+                            <p>Art Fight #7 <a href="https://artfight.net/attack/1185707.blue-horn-lady">[link]</a></p>
+                            <p class="date">[ Jul 7th, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/yan.png" />
+                            <img src="/art/images/2020/yan2.png" />
+
+                            <br /><br />
+                            <p>Art Fight #6 <a href="https://artfight.net/attack/1149442.yan">[link]</a></p>
+                            <p class="date">[ Jul 6th, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/lee.png" />
+
+                            <br /><br />
+                            <p>Art Fight #5 <a href="https://artfight.net/attack/1144443.lee">[link]</a></p>
+                            <p class="date">[ Jul 6th, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/fang.png" />
+
+                            <br /><br />
+                            <p>Art Fight #4 <a href="https://artfight.net/attack/1095744.fang">[link]</a></p>
+                            <p class="date">[ Jul 5th, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/clove.png" />
+
+                            <br /><br />
+                            <p>Art Fight #3 <a href="https://artfight.net/attack/1049108.clove">[link]</a></p>
+                            <p class="date">[ Jul 4th, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/alina.png" />
+
+                            <br /><br />
+                            <p>Art Fight #2 <a href="https://artfight.net/attack/1051549.alina">[link]</a></p>
+                            <p class="date">[ Jul 4th, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/cher.png" />
+
+                            <br /><br />
+                            <p>Art Fight #1 <a href="https://artfight.net/attack/1034947.cher">[link]</a></p>
+                            <p class="date">[ Jul 3rd, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/idiot1.png" />
+                            <img src="/art/images/2020/idiot2.png" />
+                            <img src="/art/images/2020/idiot3.jpg" />
+
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Jun 21, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/jh_quensedilla.png" />
+
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Jun 13, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/hj.jpg" />
+
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Jun 13, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/eldrinbs.jpg" />
+
+                            <br /><br />
+                            <p>heathers quotes for the soul</p>
+                            <p class="date">[ Jun 11, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/oliver.png" />
+
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ May 30, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/pm1.jpg" />
+                            <img src="/art/images/2020/pm2.jpg" />
+
+                            <br /><br />
+                            <p>happy pride month</p>
+                            <p class="date">[ May 30, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/oeundertale.jpg" />
+
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ May 27, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/sanswirl.jpg" />
+
+                            <br /><br />
+                            <p>sansswirl</p>
+                            <p class="date">[ May 26, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <video
+                                src="/art/images/2020/touch-tone%20telephone%20(unfinished%20animation).mp4"
+                                controls></video>
+
+                            <br /><br />
+                            <p>[video] touch tone telephone</p>
+                            <p class="date">[ May 21, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/bdg.jpg" />
+
+                            <br /><br />
+                            <p>i love brian david gilbert</p>
+                            <p class="date">[ May 17, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/arttrade.jpg" />
+
+                            <br /><br />
+                            <p>art trade</p>
+                            <p class="date">[ May 17, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/burn.jpg" />
+
+                            <br /><br />
+                            <p>Burn</p>
+                            <p class="date">[ May 13, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/dontmine.jpg" />
+
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ May 8, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/birthdayjay2.png" />
+
+                            <br /><br />
+                            <p>16th birthday</p>
+                            <p class="date">[ May 7, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/jekyllhydeog.png" />
+
+                            <br /><br />
+                            <p>due to peer pressure these two now exist</p>
+                            <p class="date">[ Apr 16, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/IMG_0208.jpg" />
+
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Apr 2, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2021/confrontation.png" />
+
+                            <br /><br />
+                            <p>thumbnail for my confrontation animatic</p>
+                            <p class="date">[ Mar 31, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/ponies.jpg" />
+
+                            <br /><br />
+                            <p>ponies</p>
+                            <p class="date">[ Mar 26, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/fortnyte.jpg" />
+
+                            <br /><br />
+                            <p>a friend's oc, Fortnyte</p>
+                            <p class="date">[ Mar 18, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <video src="/art/images/2020/hey%20gamers.mp4" controls></video>
+                            <br /><br />
+                            <p>[video] hey gamers</p>
+                            <p class="date">[ Mar 15, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/henry.jpg" />
+                            <img src="/art/images/2020/hyde.jpg" />
+                            <br /><br />
+                            <p>jekyll jekyll hyde jekyll hyde hyde jekyll</p>
+                            <p class="date">[ Feb 22, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <center>
+                                <video src="https://files.catbox.moe/8h1rzu.mp4" controls style="width: 99%"></video>
+                            </center>
+
+                            <br /><br />
+                            <p>[Video] oliver taunts demons</p>
+                            <p class="date">[ Feb 20, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/shadowswirl.jpg" />
+                            <img src="/art/images/2020/shadowswirl2.jpg" />
+                            <br /><br />
+                            <p>what a glow up am i right</p>
+                            <p class="date">[ Feb 20, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/rayfeb8.png" />
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Feb 8, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/everett.jpg" />
+                            <img src="/art/images/2020/molly.jpg" />
+                            <br /><br />
+                            <p>pfps for me and my (at the time) boyfriend</p>
+                            <p class="date">[ Jan 19, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2020/azalearef.png" />
+
+                            <br /><br />
+                            <p>azalea reference!!</p>
+                            <p class="date">[ Jan 11, 2020 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a id="footer" href="#header">back to top</a>
+        </center>
+        <br /><br /><br /><br />
+    </body>
+</html>

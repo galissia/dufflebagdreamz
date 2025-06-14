@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Stamps</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/images/theme_assets/favicon.png" />
+  <link href="/style/iframe.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.cdnfonts.com/css/elmono-2" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css" />
+  <style>
+   .ff-container {
+    display: inline-flex;
+   }
+   .counter {
+    position: relative;
+    left: 45px;
+    bottom: 10px;
+    margin-bottom:;
+   }
+  </style>
+  <script src="https://unpkg.com/freezeframe@3.0.10/build/js/freezeframe.pkgd.min.js"></script>
+  <script>
+   $(function () {
+    third = new freezeframe(".freezeframe").capture().setup();
+    $(".play-gif").click(function (e) {
+     e.preventDefault();
+     third.trigger();
+    });
+    $(".stop-gif").click(function (e) {
+     e.preventDefault();
+     third.release();
+    });
+   });
+  </script>
+  <style>
+   /*********************************
+* Honeycomb Stamp Layouts v. 1.2 *
+* CSS by Mooeena                *
+* Free to use/modify w/ credit   *
+* http://mooeena.neocities.org   *
+* 15 widths and 2 preset layouts *
+* To use: include the classes    *
+* "honeycomb hc-[PICK LAYOUT]"   *
+* to your images' container div. *
+*********************************/
+   .honeycomb {
+    display: grid;
+    grid-auto-rows: 28px;
+    gap: 30px 18px;
+    padding: 0 32px 56px 0;
+   }
+   .hc-2 {
+    grid-template-columns: repeat(2, 32px);
+   } /*Infinite-length section 2 stamps wide*/
+   .hc-3 {
+    grid-template-columns: repeat(3, 32px);
+   } /*Infinite-length section 3 stamps wide*/
+   .hc-4 {
+    grid-template-columns: repeat(4, 32px);
+   } /*Infinite-length section 4 stamps wide*/
+   .hc-5 {
+    grid-template-columns: repeat(5, 32px);
+   } /*Infinite-length section 5 stamps wide*/
+   .hc-6 {
+    grid-template-columns: repeat(6, 32px);
+   } /*Infinite-length section 6 stamps wide*/
+   .hc-7 {
+    grid-template-columns: repeat(7, 32px);
+   } /*Infinite-length section 7 stamps wide*/
+   .hc-8 {
+    grid-template-columns: repeat(8, 32px);
+   } /*Infinite-length section 8 stamps wide*/
+   .hc-9 {
+    grid-template-columns: repeat(9, 32px);
+   } /*Infinite-length section 9 stamps wide*/
+   .hc-10 {
+    grid-template-columns: repeat(10, 32px);
+   } /*Infinite-length section 10 stamps wide*/
+   .hc-11 {
+    grid-template-columns: repeat(11, 32px);
+   } /*Infinite-length section 11 stamps wide*/
+   .hc-12 {
+    grid-template-columns: repeat(12, 32px);
+   } /*Infinite-length section 12 stamps wide*/
+   .hc-14 {
+    grid-template-columns: repeat(14, 32px);
+   } /*Infinite-length section 14 stamps wide*/
+   .hc-16 {
+    grid-template-columns: repeat(16, 32px);
+   } /*Infinite-length section 16 stamps wide*/
+   .hc-18 {
+    grid-template-columns: repeat(18, 32px);
+   } /*Infinite-length section 18 stamps wide*/
+   .hc-20 {
+    grid-template-columns: repeat(20, 32px);
+   } /*Infinite-length section 20 stamps wide*/
+   .hc-mini {
+    grid-template-columns: repeat(3, 32px);
+    padding-bottom: 28px;
+   } /*Hexagonal group of max 7 stamps*/
+   .hc-hive {
+    grid-template-columns: repeat(7, 32px);
+    padding-bottom: 28px;
+   } /*Oval-shaped group of max 17 stamps*/
+   /*The following concern the interlocking pattern of the grids:*/
+   .hc-2 > :nth-child(2n + 1),
+   .hc-4 > :nth-child(2n + 1),
+   .hc-6 > :nth-child(2n + 1),
+   .hc-8 > :nth-child(2n + 1),
+   .hc-10 > :nth-child(2n + 1),
+   .hc-12 > :nth-child(2n + 1),
+   .hc-14 > :nth-child(2n + 1),
+   .hc-16 > :nth-child(2n + 1),
+   .hc-18 > :nth-child(2n + 1),
+   .hc-20 > :nth-child(2n + 1) {
+    margin-top: 28px;
+   }
+   .hc-3 > :nth-child(6n + 1),
+   .hc-3 > :nth-child(6n + 3),
+   .hc-3 > :nth-child(6n + 4),
+   .hc-3 > :nth-child(6n) {
+    margin-top: 28px;
+   }
+   .hc-5 > :nth-child(10n + 1),
+   .hc-5 > :nth-child(10n + 3),
+   .hc-5 > :nth-child(10n + 5),
+   .hc-5 > :nth-child(10n + 6),
+   .hc-5 > :nth-child(10n + 8),
+   .hc-5 > :nth-child(10n) {
+    margin-top: 28px;
+   }
+   .hc-7 > :nth-child(14n + 1),
+   .hc-7 > :nth-child(14n + 3),
+   .hc-7 > :nth-child(14n + 5),
+   .hc-7 > :nth-child(14n + 7),
+   .hc-7 > :nth-child(14n + 8),
+   .hc-7 > :nth-child(14n + 10),
+   .hc-7 > :nth-child(14n + 12),
+   .hc-7 > :nth-child(14n) {
+    margin-top: 28px;
+   }
+   .hc-9 > :nth-child(18n + 1),
+   .hc-9 > :nth-child(18n + 3),
+   .hc-9 > :nth-child(18n + 5),
+   .hc-9 > :nth-child(18n + 7),
+   .hc-9 > :nth-child(18n + 9),
+   .hc-9 > :nth-child(18n + 10),
+   .hc-9 > :nth-child(18n + 12),
+   .hc-9 > :nth-child(18n + 14),
+   .hc-9 > :nth-child(18n + 16),
+   .hc-9 > :nth-child(18n) {
+    margin-top: 28px;
+   }
+   .hc-11 > :nth-child(22n + 1),
+   .hc-11 > :nth-child(22n + 3),
+   .hc-11 > :nth-child(22n + 5),
+   .hc-11 > :nth-child(22n + 7),
+   .hc-11 > :nth-child(22n + 9),
+   .hc-11 > :nth-child(22n + 11),
+   .hc-11 > :nth-child(22n + 12),
+   .hc-11 > :nth-child(22n + 14),
+   .hc-11 > :nth-child(22n + 16),
+   .hc-11 > :nth-child(22n + 18),
+   .hc-11 > :nth-child(22n + 20),
+   .hc-11 > :nth-child(22n) {
+    margin-top: 28px;
+   }
+   .hc-mini > :nth-child(1),
+   .hc-mini > :nth-child(3),
+   .hc-mini > :nth-child(4),
+   .hc-mini > :nth-child(6) {
+    margin-top: 28px;
+   }
+   .hc-mini > :nth-child(7) {
+    grid-area: 3/2;
+   }
+   .hc-hive > :nth-child(1),
+   .hc-hive > :nth-child(3),
+   .hc-hive > :nth-child(5),
+   .hc-hive > :nth-child(7),
+   .hc-hive > :nth-child(8),
+   .hc-hive > :nth-child(10),
+   .hc-hive > :nth-child(12),
+   .hc-hive > :nth-child(14) {
+    margin-top: 28px;
+   }
+   .hc-hive > :nth-child(15) {
+    grid-area: 3/2;
+   }
+   .hc-hive > :nth-child(16) {
+    grid-area: 3/4;
+   }
+   .hc-hive > :nth-child(17) {
+    grid-area: 3/6;
+   }
+   .hc-center {
+    margin: auto;
+    width: min-content;
+   } /* Add this class to center a group of stamps. */
+   .hc-center > * {
+    margin-left: -16px;
+   }
+  </style>
+ </head>
+ <body>
+  <div id="main">
+   <div class="mainboxes">
+    <div class="subheader"><h3 style="text-align: center">stamps & blinkies</h3></div>
+
+    <div class="mainboxescontent">
+     <br />
+     <div style="text-align: center">
+      ⚠ teeny flash warning for this page! there's nothing too severe, but stay safe!!<br />
+     </div>
+     <br />
+     <div style="text-align: center">
+      <button
+       class="play-gif"
+       style="
+        background-color: #6351c6;
+        color: white;
+        margin: 0 auto 1rem;
+        line-height: 1.25;
+        border: 2px solid #6351c6;
+        font-size: 1.2em;
+        font-family: &quot;Elmono&quot;, sans-serif;
+       ">
+       Play GIFs
+      </button>
+      <button
+       class="stop-gif"
+       style="
+        background-color: #6351c6;
+        color: white;
+        margin: 0 auto 1rem;
+        line-height: 1.25;
+        border: 2px solid #6351c6;
+        font-size: 1.2em;
+        font-family: &quot;Elmono&quot;, sans-serif;
+       ">
+       Stop GIFs
+      </button>
+     </div>
+
+     <!-- stamps -->
+     <div>
+      <p style="text-align: center">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/autism.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/adhd.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/neurodivergent.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/bisexual.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/aromantic.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/shethey.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/nebula.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/cis.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/add.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/anxiety.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/autism2.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(659).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/werewolf.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(462).png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/TGS-ezgif.com-webp-to-gif-converter.gif">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/jekyll.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/hyde.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/JEKYLLSTAMP.png" width="99" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/HYDESTAMP.png" width="99" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/wacom.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/celtic.jpg" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(477).png">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/pagan.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/moonstamp.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/witch.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/languagelearning.gif" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/irish.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/nightperson.gif" class="freezeframe" max-width="99px;" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/olainngaelige.png" width="" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/assassin_s_creed_by_legomykeyblade_d1i7tya.gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/undertale.gif">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/daleks.gif" class="freezeframe" width="" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/ilovedw.gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(59).png" width="100" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(60).png" width="100" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/4thdoc.jpg" width="100" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/8thdoc.jpg" width="100" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/10thdoc.jpg" width="100" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/11thdoc.jpg" width="100" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/donnadoctor.gif" class="freezeframe">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/medievalcat.jpg" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/theeeper.gif" class="freezeframe">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/pets.gif" class="freezeframe">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/catbop.gif" class="freezeframe">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/corncat.gif" class="freezeframe" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/nyumnyum.gif" class="freezeframe">
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(565).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(542).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(552).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(574).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(593).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(602).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(611).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(634).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(643).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(654).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(661).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(669).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(677).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(689).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(798).png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(966).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(526).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(416).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(437).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(513).png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(1078).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(1084).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/tumblr_12a962277458b2839a78ebe63bf340e0_8bbcb099_100.png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(1116).gif" />
+
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/moonlover.png" width="" />
+
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/jermadunkin.png">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/jermaexplosion.gif" class="freezeframe" width="99" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/jermaattack.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/jerma1.gif" class="freezeframe" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/jerma2.gif" class="freezeframe" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/jerma1.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/jerma2.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/sparkleon.png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/jermadance.gif">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/akira.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/ryo.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/taurus.jpg" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/selfdx.png" width="" />
+       
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/stars.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(610).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/dancinkittycat.gif" class="freezeframe">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/dancingcat.gif" class="freezeframe" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/rotatingpinkcat.gif" class="freezeframe"> 
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/realitykillsdreams.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/nighttime.gif" class="freezeframe" width="" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/stardust.gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/starsparkles.gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(383).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(392).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(401).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(915).png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(1277).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(1270).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(1272).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(2128).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(1152).png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(964).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(1112).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(415).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(1068).png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(1575).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(585).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/starrystamp.gif" class="freezeframe" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/continue_anyway.jpg" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/lifeisok.jpg" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/oldweb.png" />
+
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/pixelcity.png" width="" />
+       <img class="freezeframe" src="images/stamps/ceilingcat.gif" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/reanimator.jpg" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/reanimator.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/ilmlpg4artstamp.png">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/ilmlpg3artstamp.png">
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(472).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(469).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/princesslunastamp.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/twilightstamp.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/twi.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/aj.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/flutterpsycho.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/mlp.gif" class="freezeframe" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/derpy.png" width="" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/derpy.gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/drhooves.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/nmm.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(4583).png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/nightmaremoon.gif" class="freezeframe" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/princessluna.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/sunsetshimmer.png" width="" />
+
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(4470).gif" width="" class="freezeframe" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/discord.png" width="" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(3255).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(3610).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(3627).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(4044).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/tinyapplejack.png">
+        <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/girllssss.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/a74.png" class="freezeframe">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/3dsowner.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/htmlsucks.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/htmlstamptime.png">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/man.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/tbh.png" width="99" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/yourownwebsite.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/doofenshmirtz_evil_logo_stamp_by_da__bogeyman_d3ki55u-fullview.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/perryrules.png" width="" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(139).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/courage.gif">
+      
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/pentagrams.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/phoenixcoffee.gif" class="freezeframe" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/a49.gif" class="freezeframe">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/a19.png" class="freezeframe">
+       
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/h17.png" class="freezeframe">
+      
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/digitalartists.gif" class="freezeframe" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/kittycatdance.gif" class="freezeframe" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/magic.gif" class="freezeframe" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/cringeculture.png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/catwalk.gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/weirdalstamp.gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/wii.png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/wii.gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/ds.gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/toby.gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/evil.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/sillayyyyy.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/da9omsp-3fe4cd57-801c-4408-ab04-600ff0434372.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/takecare.png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(1).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(14).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(484).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(490).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/awil.gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(497).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/inigomontoya.png" class="freezeframe">
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(590).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(858).png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(30).gif" />
+       <img arc="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(181).png">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(383).png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(841).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(797).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(1577).gif" class="freezeframe">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(883).png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(965).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(1108).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/plantkeyboard.png">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(2027).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(2611).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(2625).png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(2411).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(2924).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(2423).png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(2812).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(66).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(162).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(161).png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(215).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(411).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(524).gif" class="freezeframe">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(137).png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(105).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(353).png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(186).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(4443).png" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(4286).gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(4238).gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(4105).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(4109).png"/>
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/STAMP%20(4430).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/new_jersey_stamp_by_bvbnmcrfan_d3jqwn5-fullview.jpg" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/alwaystired.png" />
+       <img
+        class="freezeframe"
+            style="width: 99px;"
+        src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/canwegetmuchhigher.gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/mcdaisy.png">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/iheartmybrick.jpg">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/cheeselover.gif" class="freezeframe">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/tumblr_a6f1cc4f371c7608452e4a44aeb18c32_f26a4c18_100.gif" class="freezeframe">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/SRTNgw5.gif" class="freezeframe">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/94790271_9uhfY9g9ndCoiET.png" class="freezeframe" width="99px;">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/95942850_mtY.png" class="freezeframe">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/91307532_JwmFF6VpTZhlz1U.png" class="freezeframe">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/tumblr_c3ee642fc2999b7dc8eba144b0107b2d_331644ba_100.gif" class="freezeframe">
+      </p>
+     </div>
+     <!--honeycomb-->
+     <a href="https://mooeena.neocities.org/honeycomb"
+      ><div style="justify-content: center" class="honeycomb hc-10">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/13_plus.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/adult.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/No%20NSFW%20Stamp.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/she_her%20(1).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/bisexual%20(1).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/aromantic%20(1).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/autism%20(1).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/adhd%20(1).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/carpet_07.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/confused.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/firealpaca%20(1).png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/procreate.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/Honeycomb%20blueberries.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/Honeycomb%20oranges.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/Honeycomb%20lemon.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/Honeycomb%20strawberries.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/HoneycombTemplate%20night%20lights.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/pastel_05.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/pastel_06.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/holo_04.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/holo_07.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/Honeycomb%20crystals.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/html.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/Honeycomb%20purple%20wave.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/hexstamp%20nandor.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/hexstamp%20nimona.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/Win98dialup.gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/Win98internetclick.gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/Win98mycomp.png" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/Win98paint.png" />
+      </div>
+     </a>
+     <hr class="dotted" />
+
+     <!-- big guys-->
+     <div>
+      <p style="text-align: center">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/irishbeginner.jpg" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/germanbeginner.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/italian.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/englishnative.png" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/werewolvesarebetter.jpg" width="" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/heslying.png" width="25%" />
+       <a href="https://www.deviantart.com/yatsuos/art/my-father-died-725960604"
+        ><img class="freezeframe" src="/images/ryo.gif" width="80px;"
+       /></a>
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/tumblr_d94ed88d165dbc951a760eed46e5ae85_e3f553c0_250.jpg" width="100px;">
+       <br />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/banned.png" width="300" />
+       <a href="https://www.tumblr.com/januscorner/752961158735085568/made-these-cus-i-was-pissed-feel-free-to-use-with"
+        ><img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/amatornormativity.jpeg" width="300px;"
+       /></a>
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/karlach.jpg" width="300px;" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/gale.jpg" width="300px;" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/shadowheart.jpg" width="300px;" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/astarion.jpg" width="300px;" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/busyguy.jpg" width="300px;" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/eepy.jpg" width="300px;" />
+       <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/68458310_jwTWPdUtysRqvEf.png" width="300px;">
+       <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/68458270_MNB99G8b8590pPu.png" width="300px;">
+       <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/68674406_r1mtT4BOx61zkiS.png" width="300px;">
+       <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/68590182_MzQZYyBPN2XlBV9.png" width="300px;">
+       <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/81005456_umlB2XYFiZEz9Ls.png" width="300px;">
+       
+       <img src="" width="300px;">
+       <img src="" width="300px;">
+       <img src="" width="300px;">
+       <br> <br>
+       <a href="https://kreepykeys.boo"
+        ><img src="https://kreepykeys.boo/trickortreat/candycert2024.gif" class="freezeframe" width="350px;"
+       /></a>
+
+       <br /><br /><br />
+      </p>
+     </div>
+
+     <!-- blinkies -->
+     <div class="freezeframe" style="text-align: center">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/werefrom.gif">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/jerseybaby.gif">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/andyourenot.gif">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/piracy.gif">
+      <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/2004.gif" class="freezeframe">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/silliness.gif">
+      <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/catchorus.gif" class="freezeframe"> 
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/peace.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/kirbywalk.gif" />
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/aromanticpride.gif" class="freezeframe">
+       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/bipride2.gif" class="freezeframe">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/dvd.gif" width="" />
+      <img style="width:150px;" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/shitty200stech.gif" class="freezeframe">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/tea-drinker.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/waterdrinker.gif">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/taurus-sun.gif" width="" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/cap-moon.gif" width="" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/scorpio-asc.gif" width="" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/jermablinkie.gif" width="" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/moonbeamsandstardust.gif" width="" />
+<img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/stargaze2.gif">
+      <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/protected.gif" class="freezeframe">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/steal.gif" width="" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/eeper.gif" width="" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/c39.gif">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/d52.gif">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/foreverweed.gif" width="" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/foreverweed2.gif" width="" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/tardigrade.gif" width="" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/capitalismkills.gif" width="" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/acab.gif" width="" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/destroythestate.gif" width="" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/legalize.gif" width="" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/pinkipepie.gif" width="" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/abolishprisons.gif" width="" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/icollectponies.gif">
+      
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/autumn.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/werewolfblinkie.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/usedbookstores.gif">
+      
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/viewsource.gif" />
+      <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/waa.gif" class="freezeframe">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/helloworld.gif">
+      <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/imgnotfound.gif" class="freezeframe">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/tumblr_2c30aa31c3fcbca00d435bff46eabe0e_1afabc21_250.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/inigomontoya.gif" />
+      <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/thisiswet.gif" class="freezeframe">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/night.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/embracethemoon.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/sweet.gif" />
+      <a href="https://www.youtube.com/watch?v=o84vJH19toI"
+       ><img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/explode.gif"
+      /></a>
+
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/floor.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/lycanthrope.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/bewarethemoon.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/werewolflover.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/derealization.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/strawberries.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/kiwi.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/carnivore.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/macncheesy.gif" />
+      <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/normal.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/stargazer.gif" />
+      <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/prozac.gif" />
+      <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/nap.gif" />
+
+      <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/dwfan.gif" />
+      <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/pinkandyellow.gif" />
+      <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/halloween.gif" />
+      <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/rest.webp" />
+      <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/garlic.gif" />
+      <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/downer.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/reanimator.gif" width="" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/imissmywifetails.gifv" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/qixfe1.gifv" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/wallace.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/tumblr_d9cb99111a26ed82622731071cbe6bee_a5be2058_250.gif" />
+
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/19.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/barbiecoredrwhofan.gifv" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/blinkgone.gifv" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/certifiedtimetraveller.gifv" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/drwho.gifv" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/lastofthetimelords.gifv" />
+      <img class="freezeframe" src="images/stamps/black8.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/mlp2.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/devilman.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/toyhouse.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/popcorn.gif" />
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/water.gif" />
+     <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/c12.gif">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/b51.gif">
+      
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/d86.gif">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/d90.gif">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/e75.gif">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/v77.gif">
+      <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/s11.gif">
+      <img class="freezeframe" width="150" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/tumblr_e837644cb40e3810169a29c9f4fd6948_61688946_500.gif">
+      <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/sucklet.gif" class="freezeframe">
+      <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/spellcasting.gif" class="freezeframe">
+      <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/toontown.gif" class="freezeframe">
+      <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/mcdonaldsaddict.gif" class="freezeframe">
+     
+      
+     
+     
+     </div>
+     <!-- art fight-->
+     <div style="text-align: center">
+      <br /><br /><br />
+      <a href="https://toyhou.se/16586814.blinkies-stamps-etc-f2u/21934560.blinkies">
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/dream.gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/spice.gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/steam.gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/bloom.gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/werewolf2023.gif" />
+       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/stardust2024.gif"
+      /></a>
+      <br /><br />
+     </div>
+     <!-- meat grinder-->
+     <div class="freezeframe" style="margin-top: 30px; text-align: center">
+      <a href="https://www.tumblr.com/jenderenvy985/723402655026774016?source=share">
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/okay.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/chop.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/meatgrinder.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/onlything.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/comesout.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/thatsleft.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/eyeball.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/probablydead.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/probably.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/going.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/notyou.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/justsayin.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/like.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/ifyou.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/ifsomebody.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/tolike.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/pushyou.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/meatgrinder2.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/andlike.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/fingerbones.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/intact.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/notgonna.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/pickitup.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/wellsee.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/itwasnt.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/thatlethal.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/itwasnt2.gif" />
+       <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/instakill.gif" />
+      </a>
+     </div>
+     <br /><br />
+    </div>
+   </div>
+  </div>
+  <br />
+ </body>
+</html>

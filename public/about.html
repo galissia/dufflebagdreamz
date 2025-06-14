@@ -1,0 +1,702 @@
+<html lang="en"><head>
+    
+<script updateTitle = false; src="https://melonking.net/scripts/frame-link.js"></script>
+<script type="text/javascript"
+        src="https://panzi.github.io/Browser-Ponies/browserponies.js"></script>
+<script type="text/javascript"
+        src="https://galissia.neocities.org/scripts/your-ponies.js"></script>
+	<title> gal's desktop</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=0.1">
+	<link rel="shortcut icon" type="image/x-icon" href="/images/theme_assets/floppy.gif"> 
+<style>@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+.button, button, select {
+	display: inline-block; /* well just screw browsers that don't support this */
+	font-weight: bold;
+	margin: 2px;
+	color: #585454;
+    text-decoration: none;
+
+	
+	text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.71);
+
+
+	cursor: hand;
+	cursor: pointer;
+
+
+}
+body, html {
+	padding: 0;
+	margin: 0;
+	font-size: 13px;
+	background: teal;
+	color: lime;
+	font-family: 'Source Code Pro', monospace;
+	font-size: 12px;
+    overflow: hidden;
+
+}
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(https://static.doomworld.com/monthly_2019_05/scanlines.png.2859237ac5e64816bb01978e0707b2db.png);
+  z-index: 10000;
+  pointer-events: none; 
+  opacity: 0.2;
+}
+
+img {
+	max-width: 100%;
+}
+
+.page {
+	padding: 24px;
+}
+
+.page h1:first-child {
+	margin-top: 0;
+}
+#winamp-container {
+    width: 280px;
+    height:380px;
+    position: fixed;
+    bottom: 250px;
+    right: 120px;
+    padding: 0;
+    margin: 0;
+    z-index: -1;
+}
+
+.header-image {
+	height: 200px;
+	margin: auto;
+	display: block;
+}
+
+.wrapper {
+	margin: auto;
+	margin-top: 24px;
+	width: 753px;
+}
+
+.menu {
+	text-align: center;
+	margin-bottom: 24px;
+	margin-top: 24px;
+}
+
+.menu a {
+	color: lime;
+}
+
+.main {
+	height: 600px;
+	width: 8000px;
+	
+	position: relative;
+}
+
+
+    
+#ads {
+        display: none;
+    
+    }
+    
+h1, h2, h3, h4, h5 {
+	font-size: 12px;
+}
+
+h1 {
+	border-bottom: 1px solid lime;
+}
+
+h2 {
+	border-bottom: 1px dotted lime;
+}
+
+a {
+	color: red;
+}
+.footbar {
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 28px
+  }
+  .appstable {
+      padding: 0;
+      border-spacing: 0;
+      border-collapse: collapse;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: 10px;
+      margin-top: 10px;
+  }
+  .apps {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    margin: 0;
+  }
+  .pony {
+    position: relative;
+    top: 85px;
+  }
+    #ad1 {
+        position: fixed;
+        top: 45px;
+	left: 145px;
+	width: 2000px;
+	height: 5px;
+        z-index:998;
+    }
+    #ad2 {
+        position: fixed;
+	top: 460px;
+	left: 350px;
+	width: 4500px;
+	height: 2px;
+    z-index:999;
+    }
+  
+  </style>
+<style>
+    
+#main {
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+}
+
+#mainheader {
+  cursor: move;
+  z-index: 10;  
+}
+#main iframe{
+        position: absolute;
+	top: 44px;
+	left: 5px;
+	width: 783px;
+	height: 546px;
+    }
+    
+</style>
+    <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/games/gam-2/gam188.cur), auto !important;}</style>
+<style>
+#video {
+  position: absolute;
+  z-index: 1000;
+  text-align: center;
+    display:none;
+    max-height:600px;
+ 
+}
+
+#videoheader {
+  cursor: move;
+  z-index: -1;
+}
+        #moms {
+  position: absolute;
+  z-index: 9;
+  
+  text-align: center;
+
+max-height:450px;
+    
+}
+
+#momsheader {
+  
+  cursor: move;
+  z-index: 10;
+  
+}
+    #kingdom {
+  position: absolute;
+  z-index: 9;
+  
+  text-align: center;
+  
+max-height:450px;
+    
+}
+
+#kingdomheader {
+  
+  cursor: move;
+  z-index: 10;
+  
+}
+</style>
+    </head>
+<body>
+    <div id="ads">
+    <div id="ad1">
+        <div id="moms">
+  <div id="momsheader"><img src="/images/momshatehim.png" title="this is draggable :)"></div>
+  <img src="/images/jermad.webp" style="position:relative; pointer-events: none; bottom:407px;">
+</div>
+    </div>
+    <div id="ad2">
+<div id="kingdom">
+  <div id="kingdomheader"><img src="/images/JERMAKINGDOM.png" title="this is draggable :)"></div>
+</div>
+</div>
+      </div>  
+    
+    
+<script>
+function myFunction() {
+  var x = document.getElementById("overlay");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+ <script>
+        function changeImage(filename) {
+          let img = document.querySelector('#windowimage');
+            img.setAttribute('src', filename);
+        }
+            function pets() {
+  document.getElementById("windowimage").src = "/petsgallery.html";
+}
+            function about() {
+  document.getElementById("windowimage").src = "/aboutgeneral.html";
+}
+            function personas() {
+  document.getElementById("windowimage").src = "/personascontent.html";
+}
+     function wibblywobbly() {
+  document.getElementById("windowimage").src = "/binglebongle.html";
+}
+
+        </script>
+
+    <div id="video">
+  <div id="videoheader"><img src="/images/VIDEOWINDOW.png" style="width:500px;"></div>
+  <iframe style="position:relative; bottom:410px; width:480px; height:300px;" src="https://www.youtube.com/embed/videoseries?si=XEPussszsxIenbTo&amp;list=PLq2KlAazbyQh1h1doVQN3geB6d5tEzu_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+    
+    <script>
+    
+//Make the DIV element draggagle:
+dragElement(document.getElementById("video"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+        
+</script>
+<div id="overlay"></div>
+
+<table class="appstable">
+        <tbody><tr class="apps">
+            <td class="apps">
+                <a href="/index.html"><img src="/images/main.png"></a>
+            </td>
+            
+            <td class="apps">
+                <img src="/images/toggle.png" onclick="myFunction()">
+                
+            </td>
+        </tr>
+        <tr class="apps">
+            <td class="apps">
+                <a href="/aboutgeneral.html" target="mainframe"><img onclick="about(); changeImage('/images/aboutmeframe.png')" src="/images/aboutme.png"></a>
+            </td>
+            <td class="apps">
+                <a href="https://galissia.neocities.org/binglebongle" target="mainframe"><img onclick="wibblywobbly(); changeImage('/images/wibblywobbly.png')" src="/images/tardis.gif"></a>
+            </td>
+        </tr>
+        <tr class="apps">
+            <td class="apps">
+                <a href="/petsgallery.html" target="mainframe"><img onclick="pets(); changeImage('/images/petpictures.png')" src="images/folder.png"></a>
+            </td>
+        </tr>
+            <tr class="apps">
+            <td class="apps">
+                <a href="/personascontent.html" target="mainframe"><img onclick="personas(); changeImage('/images/ocs.png')" src="/images/personas.png"></a>
+            </td>
+        </tr>
+            <tr class="apps">
+            <td class="apps">
+                <img onclick="showvideo();" src="/images/videoplayer.png">
+            </td>
+        </tr>
+        <tr class="apps">
+            <td class="apps">
+                <a href="#" id="webamp-icon"><img src="/images/winamp.png"></a>
+            </td>
+        </tr>
+            
+        <tr class="apps">
+            <td class="apps">
+                <img onclick="showjerma()" src="/images/jermacraft.png" >
+            </td>
+        </tr>
+        <tr class="apps">
+            
+            
+        </tr>
+        <tr class="apps">
+            
+        </tr>
+        
+        <div id="winamp-container"><div id="app"></div>
+<script src="https://unpkg.com/webamp"></script>
+<script>
+    function showvideo() {
+  var x = document.getElementById("video");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+    function showjerma() {
+  var x = document.getElementById("ads");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+    
+    
+        const Winamp = window.Webamp;
+
+        // All configuration options are optional.
+        const webamp = new Webamp({
+            // Optional.
+            initialTracks: [{
+                    metaData: {
+                        artist: "a-ha",
+                        title: "Take On Me [8-bit]",
+                    },
+                    url: "https://files.catbox.moe/9l6b2s.mp3",
+                }, 
+                
+                {
+                    metaData: {
+                        artist: "Tears for Fears",
+                        title: "Everybody Wants to Rule the World [8-bit]",
+                    },
+                    url: "https://files.catbox.moe/fiqxd9.mp3",
+                },
+                
+                {
+                    metaData: {
+                        artist: "Journey",
+                        title: "Don't Stop Believin' [8-bit]",
+                    },
+                    url: "https://files.catbox.moe/wnh4e7.mp3",
+                },
+                {
+                    metaData: {
+                        artist: "Huey Lewis and the News",
+                        title: "The Power of Love [8-bit]",
+                    },
+                    url: "https://files.catbox.moe/sthwgp.mp3",
+                },
+
+
+                {
+                    metaData: {
+                        artist: "Bon Jovi",
+                        title: "Livin' on a Prayer [8-bit]",
+                    },
+                    url: "https://files.catbox.moe/pnbbl2.mp3",
+                },
+                {
+                    metaData: {
+                        artist: "Hall & Oates",
+                        title: "Out of Touch [8-bit]",
+                    },
+                    url: "https://files.catbox.moe/lydaec.mp3",
+                },
+                {
+                    metaData: {
+                        artist: "Kakariko [8-bit]",
+                        title: "The Legend of Zelda: Ocarina of Time",
+                    },
+                    url: "https://files.catbox.moe/cp3xqw.mp3",
+                },
+                {
+                  metaData: {
+                        artist: "Song of Storms [ 8-bit]",
+                        title: "The Legend of Zelda: Ocarina of Time",
+                    },
+                    url: "https://files.catbox.moe/nkgtyw.mp3",
+                }, 
+              
+                
+                {
+                    metaData: {
+                        artist: "Title Theme [8-bit]",
+                        title: "The Legend of Zelda: Ocarina of Time",
+                    },
+                    url: "https://files.catbox.moe/mvnf40.mp3",
+                },
+                {
+                    metaData: {
+                        artist: "Bill Withers and Grover Washington Jr",
+                        title: "Just the Two of Us [Meowsynth]",
+                    },
+                    url: "https://files.catbox.moe/m816pq.mp3",
+                },
+                {
+                  metaData: {
+                        artist: "Kero Kero Bonito",
+                        title: "Flamingo [Meowsynth]",
+                    },
+                    url: "https://files.catbox.moe/csxwgd.mp3",
+                }, 
+              
+                    
+                
+                {
+                    metaData: {
+                        artist: "Jack Stauber",
+                        title: "Two Time [Meowsynth]",
+                    },
+                    url: "https://files.catbox.moe/qpv9vp.mp3",
+                }
+
+            ],
+            initialSkin: {
+                url: "https://cdn.webampskins.org/skins/ece4ffbb0d5e4624a5c144dbc64fa58f.wsz"
+            },
+        });
+        // Render after the skin has loaded.
+        webamp.renderWhenReady(document.getElementById('winamp-container'));
+
+        const icon = document.getElementById('webamp-icon');
+
+        webamp.onClose(() => {
+            icon.addEventListener('click', () => {
+                webamp.reopen();
+            });
+        })
+
+        
+        webamp.play();
+        
+
+    </script>
+        </div>
+       
+        
+    </table>
+    
+
+	<div class="wrapper">
+		<div class="spacing">
+			
+			<br><br><br><br>
+		</div>
+        <script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("moms"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+    <script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("kingdom"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+        
+		
+
+        <div class="main">
+<div id="main">
+  <div id="mainheader"><img id="windowimage" src="/images/aboutmeframe.png"></div>
+  <iframe id="mainframe" name="mainframe" title="mainframe" src="aboutgeneral.html"></iframe>
+</div>
+</div>
+<script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("main"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+
+
+	</div>
+    
+<div class="footbar" style="z-index:9999; bottom:-5px; left: 180px;">
+		<a class="button" href="javascript:BrowserPonies.stop();void(0)" title="Stop Pony">■</a>
+                <a class="button" href="javascript:BrowserPonies.start();void(0)" title="Start Pony">▶</a>
+    </div>	
+<img src="/images/98bg2.png" class="footbar">
+<img src="/images/98barL.png" style="position:fixed; left:0px; bottom:0px;">
+<img src="/images/98barR.png" style="position:fixed; right:0px; bottom:0px;">
+</body></html>

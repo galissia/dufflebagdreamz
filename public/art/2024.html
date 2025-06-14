@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>2024 ✧˚ · .</title>
+        <style>
+            body {
+                background: rgb(107, 128, 223);
+                background: linear-gradient(90deg, rgba(107, 128, 223, 1) 0%, rgba(208, 179, 255, 1) 100%);
+            }
+
+            h1 {
+                font-family: "Freckle Face", sans-serif;
+                color: rgb(70, 122, 114);
+                font-size: 50px;
+                transition: 0.6s;
+                text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.74);
+            }
+            h2 a {
+                font-family: "Averia Libre", sans-serif;
+                color: rgb(54, 26, 76);
+                transition: 0.6s;
+                text-decoration: none;
+            }
+            a {
+                font-family: "Averia Libre", sans-serif;
+                color: rgb(165, 123, 198);
+                transition: 0.6s;
+                text-decoration: none;
+            }
+            a:hover {
+                transform: translateY(-15%);
+                transition: 0.2s;
+                background-color: transparent;
+                color: rgb(245, 173, 255);
+                display: inline-block;
+                text-decoration: underline;
+                text-decoration-style: wavy;
+            }
+            img {
+                filter: drop-shadow(3px 3px 3px rgba(65, 120, 124, 0.17));
+                width: 100%;
+                transition: 0.3s;
+                margin-top: 15px;
+            }
+            img:hover {
+                transform: scale(1.02);
+                transition: 0.3s;
+            }
+            p {
+                font-family: "averia libre", sans-serif;
+                color: rgb(44, 76, 96);
+            }
+
+            #footer {
+                width: 570px;
+            }
+            table {
+                background: white;
+                border-image-slice: 30;
+                border-image-width: 25px;
+                border-image-outset: 5px;
+                border-image-repeat: round;
+                border-image-source: url(/art/images/Border.png);
+                border-style: solid;
+                border-top: none;
+                height: auto;
+                width: 600px;
+                margin: 20px;
+                padding: 10px 10px;
+            }
+            .date {
+                color: #5b676f;
+                text-align: right;
+            }
+        </style>
+        <link rel="shortcut icon" type="image/x-icon" href="/images/monkey.gif" />
+        <script type="text/javascript">
+            // <![CDATA[
+            var colour = "white"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
+            var sparkles = 50;
+
+            /****************************
+             *  Tinkerbell Magic Sparkle *
+             *(c)2005-13 mf2fm web-design*
+             *  http://www.mf2fm.com/rv  *
+             * DON'T EDIT BELOW THIS BOX *
+             ****************************/
+            var x = (ox = 400);
+            var y = (oy = 300);
+            var swide = 800;
+            var shigh = 600;
+            var sleft = (sdown = 0);
+            var tiny = new Array();
+            var star = new Array();
+            var starv = new Array();
+            var starx = new Array();
+            var stary = new Array();
+            var tinyx = new Array();
+            var tinyy = new Array();
+            var tinyv = new Array();
+
+            window.onload = function () {
+                if (document.getElementById) {
+                    var i, rats, rlef, rdow;
+                    for (var i = 0; i < sparkles; i++) {
+                        var rats = createDiv(3, 3);
+                        rats.style.visibility = "hidden";
+                        rats.style.zIndex = "999";
+                        document.body.appendChild((tiny[i] = rats));
+                        starv[i] = 0;
+                        tinyv[i] = 0;
+                        var rats = createDiv(5, 5);
+                        rats.style.backgroundColor = "transparent";
+                        rats.style.visibility = "hidden";
+                        rats.style.zIndex = "999";
+                        var rlef = createDiv(1, 5);
+                        var rdow = createDiv(5, 1);
+                        rats.appendChild(rlef);
+                        rats.appendChild(rdow);
+                        rlef.style.top = "2px";
+                        rlef.style.left = "0px";
+                        rdow.style.top = "0px";
+                        rdow.style.left = "2px";
+                        document.body.appendChild((star[i] = rats));
+                    }
+                    set_width();
+                    sparkle();
+                }
+            };
+
+            function sparkle() {
+                var c;
+                if (Math.abs(x - ox) > 1 || Math.abs(y - oy) > 1) {
+                    ox = x;
+                    oy = y;
+                    for (c = 0; c < sparkles; c++)
+                        if (!starv[c]) {
+                            star[c].style.left = (starx[c] = x) + "px";
+                            star[c].style.top = (stary[c] = y + 1) + "px";
+                            star[c].style.clip = "rect(0px, 5px, 5px, 0px)";
+                            star[c].childNodes[0].style.backgroundColor = star[c].childNodes[1].style.backgroundColor =
+                                colour == "random" ? newColour() : colour;
+                            star[c].style.visibility = "visible";
+                            starv[c] = 50;
+                            break;
+                        }
+                }
+                for (c = 0; c < sparkles; c++) {
+                    if (starv[c]) update_star(c);
+                    if (tinyv[c]) update_tiny(c);
+                }
+                setTimeout("sparkle()", 40);
+            }
+
+            function update_star(i) {
+                if (--starv[i] == 25) star[i].style.clip = "rect(1px, 4px, 4px, 1px)";
+                if (starv[i]) {
+                    stary[i] += 1 + Math.random() * 3;
+                    starx[i] += ((i % 5) - 2) / 5;
+                    if (stary[i] < shigh + sdown) {
+                        star[i].style.top = stary[i] + "px";
+                        star[i].style.left = starx[i] + "px";
+                    } else {
+                        star[i].style.visibility = "hidden";
+                        starv[i] = 0;
+                        return;
+                    }
+                } else {
+                    tinyv[i] = 50;
+                    tiny[i].style.top = (tinyy[i] = stary[i]) + "px";
+                    tiny[i].style.left = (tinyx[i] = starx[i]) + "px";
+                    tiny[i].style.width = "2px";
+                    tiny[i].style.height = "2px";
+                    tiny[i].style.backgroundColor = star[i].childNodes[0].style.backgroundColor;
+                    star[i].style.visibility = "hidden";
+                    tiny[i].style.visibility = "visible";
+                }
+            }
+
+            function update_tiny(i) {
+                if (--tinyv[i] == 25) {
+                    tiny[i].style.width = "1px";
+                    tiny[i].style.height = "1px";
+                }
+                if (tinyv[i]) {
+                    tinyy[i] += 1 + Math.random() * 3;
+                    tinyx[i] += ((i % 5) - 2) / 5;
+                    if (tinyy[i] < shigh + sdown) {
+                        tiny[i].style.top = tinyy[i] + "px";
+                        tiny[i].style.left = tinyx[i] + "px";
+                    } else {
+                        tiny[i].style.visibility = "hidden";
+                        tinyv[i] = 0;
+                        return;
+                    }
+                } else tiny[i].style.visibility = "hidden";
+            }
+
+            document.onmousemove = mouse;
+            function mouse(e) {
+                if (e) {
+                    y = e.pageY;
+                    x = e.pageX;
+                } else {
+                    set_scroll();
+                    y = event.y + sdown;
+                    x = event.x + sleft;
+                }
+            }
+
+            window.onscroll = set_scroll;
+            function set_scroll() {
+                if (typeof self.pageYOffset == "number") {
+                    sdown = self.pageYOffset;
+                    sleft = self.pageXOffset;
+                } else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+                    sdown = document.body.scrollTop;
+                    sleft = document.body.scrollLeft;
+                } else if (
+                    document.documentElement &&
+                    (document.documentElement.scrollTop || document.documentElement.scrollLeft)
+                ) {
+                    sleft = document.documentElement.scrollLeft;
+                    sdown = document.documentElement.scrollTop;
+                } else {
+                    sdown = 0;
+                    sleft = 0;
+                }
+            }
+
+            window.onresize = set_width;
+            function set_width() {
+                var sw_min = 999999;
+                var sh_min = 999999;
+                if (document.documentElement && document.documentElement.clientWidth) {
+                    if (document.documentElement.clientWidth > 0) sw_min = document.documentElement.clientWidth;
+                    if (document.documentElement.clientHeight > 0) sh_min = document.documentElement.clientHeight;
+                }
+                if (typeof self.innerWidth == "number" && self.innerWidth) {
+                    if (self.innerWidth > 0 && self.innerWidth < sw_min) sw_min = self.innerWidth;
+                    if (self.innerHeight > 0 && self.innerHeight < sh_min) sh_min = self.innerHeight;
+                }
+                if (document.body.clientWidth) {
+                    if (document.body.clientWidth > 0 && document.body.clientWidth < sw_min)
+                        sw_min = document.body.clientWidth;
+                    if (document.body.clientHeight > 0 && document.body.clientHeight < sh_min)
+                        sh_min = document.body.clientHeight;
+                }
+                if (sw_min == 999999 || sh_min == 999999) {
+                    sw_min = 800;
+                    sh_min = 600;
+                }
+                swide = sw_min;
+                shigh = sh_min;
+            }
+
+            function createDiv(height, width) {
+                var div = document.createElement("div");
+                div.style.position = "absolute";
+                div.style.height = height + "px";
+                div.style.width = width + "px";
+                div.style.overflow = "hidden";
+                return div;
+            }
+
+            function newColour() {
+                var c = new Array();
+                c[0] = 255;
+                c[1] = Math.floor(Math.random() * 256);
+                c[2] = Math.floor(Math.random() * (256 - c[1] / 2));
+                c.sort(function () {
+                    return 0.5 - Math.random();
+                });
+                return "rgb(" + c[0] + ", " + c[1] + ", " + c[2] + ")";
+            }
+            // ]]>
+        </script>
+        <style type="text/css">
+            * {
+                cursor: url(https://galissia.neocities.org/images/pencil2.png), auto !important;
+            }
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet" />
+    </head>
+    <body>
+        <center>
+            <div id="header">
+                <h2><a href="/art/gallery.html">back</a></h2>
+                <h2 style="font-size: 16px; margin-top: -10px"><a href="#footer">to bottom</a></h2>
+            </div>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/mschristmas.png" />
+                            <br /><br />
+                            
+                            
+                            <p>MERRY SWIRLMAS</p>
+                            <p class="date">[ Dec 20, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/hair.png" />
+                            <br /><br />
+                            <p>got my hair cut and it got me thinking about past hairstyles so i doodled a timeline</p>
+                            <p class="date">[ Nov 22, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/luedenza.jpg" />
+                            <img src="/art/images/2024/luesius.jpg" />
+                            <br /><br />
+                            <p>them</p>
+                            <p class="date">[ Oct 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/msheadturn.gif" />
+                            <br /><br />
+                            <p>done for animation class!</p>
+                            <p class="date">[ Oct 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/halloween.png" />
+                            <br /><br />
+                            <p>BOO IT'S HALLOWEEN!!!</p>
+                            <p class="date">[ Oct 20, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/msmeme.png" />
+                            <br /><br />
+                            <p>who tf did <em>your</em> hair</p>
+                            <p class="date">[ Oct 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/side1.png" />
+                            <img src="/art/images/2024/side2.png" />
+                            <br /><br />
+                            <p>
+                                Jekyll & Hyde Keychain design!!! the actual thing looks so cool im so happy with it.
+                                <a href="https://www.instagram.com/p/DAwWoLfPZ4-/?img_index=1">x</a>
+                            </p>
+                            <p class="date">[ Oct 5, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/lisa.png" />
+                            <br /><br />
+                            <p>
+                                Jekyll's older sister, Anneliese! (Nickname Lisa or Lise [pronounced lease]) she is a
+                                girlboss and i love her
+                            </p>
+                            <p class="date">[ Sep 30, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/jekylls.png" />
+                            <br /><br />
+                            <p>Jekyll's family</p>
+                            <p class="date">[ Sep 30, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/camdenkeychain.png" />
+                            <br /><br />
+                            <p>Camden!!!!!</p>
+                            <p class="date">[ Sep 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <center>
+                                <video style="width: 99%" src="https://files.catbox.moe/fue30u.mp4" controls></video>
+                            </center>
+                            <br /><br />
+                            <p>[video] work in progress animatic!!</p>
+                            <p class="date">[ Sep 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/spiderman.png" />
+                            <br /><br />
+                            <p>my sonas lol</p>
+                            <p class="date">[ Sep 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/ryoakira.jpg" />
+                            <br /><br />
+                            <div style="box-shadow: 4px 4px 4px rgba(72, 79, 85, 0.28); border-radius:5%; background-color: #f7e9d9; width: fit-content;"><img style="width: 50px; float:inline-start; margin-top: -5px; margin-right: 10px;" src="https://file.toyhou.se/images/15987643_bvhutjRbgnwMYz3.png?1565855179"> <h3 style="font-family: Averia Libre; color: #975656">This Year's Favorite!</h3></div>
+                            <p>i love toxic demon yaoi</p>
+                            <p class="date">[ Aug 24, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/verajade.png" />
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Aug 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/af2.png" />
+                            <br /><br />
+                            <p>Art Fight #7 <a href="https://artfight.net/attack/8505296.mirra">(link)</a></p>
+                            <p class="date">[ Jul 31, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/afjekyll.png" />
+                            <br /><br />
+                            <p>Art Fight #6 <a href="https://artfight.net/attack/8303346.hissy-fit">(link)</a></p>
+                            <p class="date">[ Jul 27, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/af3.png" />
+                            <br /><br />
+                            <p>Art Fight #5 <a href="https://artfight.net/attack/8140369.coffee-date">(link)</a></p>
+                            <p class="date">[ Jul 24, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/luna.png" />
+                            <br /><br />
+                            <p>
+                                Art Fight #4
+                                <a href="https://artfight.net/attack/7992539.princess-of-the-moon">(link)</a>
+                            </p>
+                            <p class="date">[ Jul 21, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/guys.png" />
+                            <br /><br />
+                            <p>
+                                Art Fight #3
+                                <a href="https://artfight.net/attack/6952574.a-gaggle-of-little-guys">(link)</a>
+                            </p>
+                            <p class="date">[ Jul 7, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/af4.png" />
+                            <br /><br />
+                            <p>Art Fight #2 <a href="https://artfight.net/attack/6938448.sunbeam-glory-3">(link)</a></p>
+                            <p class="date">[ Jul 7, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/tardis.png" />
+                            <br /><br />
+                            <p>
+                                Art Fight #1 <a href="https://artfight.net/attack/5997101.oops-all-doctors">(link)</a>
+                            </p>
+                            <p class="date">[ Jul 3, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/ms.png" />
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ May 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/mlp%20confrontation.png" />
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ May 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/gooning.png" />
+                            <br /><br />
+                            <p>gooning is magic 💤</p>
+                            <p class="date">[ May 24, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/flatjay.png" />
+                            <br /><br />
+                            <p>flat bitch</p>
+                            <p class="date">[ Apr 16, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img style="width: 80%; margin-left: 70px" src="/art/images/2024/IMG_1122.jpg" />
+                            <video
+                                style="width: 80%; margin-left: 70px"
+                                controls
+                                src="/art/images/2024/doctor.mp4"></video>
+                            <br /><br />
+                            <p>he's projecting</p>
+                            <p class="date">[ Mar 26, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/fluttercordkids.png" />
+
+                            <br /><br />
+                            <p>
+                                fluttercord kids! Mayhem, Razzle "Raz" Dazzle, and Posey. Raz is actually an
+                                <a href="https://toyhou.se/26297607.razzle-raz-dazzle#79151763">old oc</a> i redesigned
+                            </p>
+                            <p class="date">[ Mar 17, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/sugar_at.png" />
+                            <br /><br />
+                            <p>
+                                An art trade with <a href="https://toyhou.se/Sugar0612">Sugar0612</a>. Had lotsa fun
+                                drawing the boys!
+                            </p>
+                            <p class="date">[ Mar 13, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/pony%20siblings.png" />
+
+                            <br /><br />
+                            <p>Quick concepts of my brothers as ponies + my ponysona</p>
+                            <p class="date">[ Feb 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/artemis.png" />
+                            <img src="/art/images/2024/apollo.png" />
+                            <br /><br />
+                            <p>
+                                Apollo and Artemis! They're Celestia & Luna's children, born when the Princesses gave up
+                                a significant portion of their magic to create heirs.
+                            </p>
+                            <p class="date">[ Feb 14, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/IMG_2208.png" />
+                            <br /><br />
+                            <p>Twitch banner i made for a friend!!</p>
+                            <p class="date">[ Feb 13, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/twfamily.png" />
+                            <img src="/art/images/2024/derpydoc.png" />
+                            <img src="/art/images/2024/derpydoc2.jpg" />
+                            <br /><br />
+                            <p>me when i draw ponies</p>
+                            <p class="date">[ Feb 14, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/auntmin.png" />
+                            <br /><br />
+                            <p>Auntie Min!</p>
+                            <p class="date">[ Feb 12, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/may1.png" />
+                            <img src="/art/images/2024/MAY.png" />
+                            <img src="/art/images/2024/May%20Gallifrey.png" />
+                            <br /><br />
+                            <p>
+                                i made a doctor who persona because im so so obsessed again thanks to the 60th
+                                anniversary specials
+                            </p>
+                            <p>she’s a renegade time lord who fled gallifrey in the early years of the Time War :)</p>
+                            <p>
+                                i also gave her an original incanation and did an INSANE amount of DW lore research to
+                                flesh out her character (and it’s not even that fleshed out :sobbing: )
+                            </p>
+                            <p class="date">[ Feb 2, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/may_ollie.png" /><br /><br />
+                            <p>⌛️✨space wives ✨⌛️</p>
+                            <p>I made a doctor who sona guys :3 and my friend made one too :3</p>
+
+                            <p>
+                                when I made this character I did an insane amount of research into doctor who lore and
+                                more specifically time lord lore for her and it was all unnecessary 😭 but hey at least
+                                now I know that they’ve got houses like fuckin Harry Potter
+                            </p>
+                            <p>
+                                I also wrote their names (Ollie and May) in circular Gallifreyan which was actually kind
+                                of fun to figure out how to do :)
+                            </p>
+                            <p class="date">[ Feb 2, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/camden.png" />
+                            <br /><br />
+                            <p>RAAAHHH ITS MY NEW FURSONA!!</p>
+                            <p>she’s a Jersey Devil because i love the jersey devil and im from new jersey and</p>
+                            <p class="date">[ Jan 28, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/selenica.png" />
+                            <br /><br />
+                            <p>my Princess Luna / Nightmare Moon kinsona :3</p>
+                            <p class="date">[ Jan 23, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2024/banner.png" />
+                            <br /><br />
+                            <p>my new banner!!!!!!!</p>
+                            <p class="date">[ Jan 7, 2024 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a id="footer" href="#header">back to top</a>
+        </center>
+        <br /><br /><br /><br />
+    </body>
+</html>

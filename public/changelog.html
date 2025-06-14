@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gal's Corner</title>
+    <link href="/style/iframe.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.cdnfonts.com/css/elmono-2" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/theme_assets/favicon.png" />
+
+    <script>
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          var site_data = JSON.parse(this.responseText);
+          var num_arr = site_data.info.views.toString().split("");
+          var num_str = "";
+          for (i = 0; i < num_arr.length; i++) {
+            num_str += num_arr[i];
+            if ((num_arr.length - 1 - i) % 3 == 0 && num_arr.length - 1 - i != 0) {
+              num_str += ",";
+            }
+            var date_str = site_data.info.last_updated;
+            var date_obj = new Date(site_data.info.last_updated);
+            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var months = [
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+              "August",
+              "September",
+              "October",
+              "November",
+              "December"
+            ];
+            document.getElementById("lastupdate").innerHTML =
+              days[date_obj.getDay()] +
+              " " +
+              months[date_obj.getMonth()] +
+              " " +
+              date_obj.getDate() +
+              ", " +
+              date_obj.getFullYear();
+          }
+          document.getElementById("hitcount").innerHTML = num_str;
+        }
+      };
+      xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=galissia", true);
+      xhttp.send();
+    </script>
+  </head>
+  <body>
+    <div id="main">
+      <div class="mainboxes">
+        <div class="subheader"><h3 style="text-align: center">changelog</h3></div>
+
+        <div class="mainboxescontent">
+          <p style="clear: right">
+            <img
+              src="https://media.tenor.com/Huqypeil3P4AAAAi/cat-yawn.gif"
+              width="200px"
+              style="float: left; margin: 5px" /><br />
+            <br /><br />just a good old fashioned changelog. i guarantee i will forget to update this but i'll try my
+            best to remember :)
+          </p><small> note to self: remember to update the RSS feed!! <a href="/utilities/rss_changelog.xml"><img src="/images/rss_button.png"></a></small>
+          <br /><br />
+        .
+          <hr class="dotted" id="jan425"><br>
+          <h3> January 21, 2025 </h3>
+          <p>  Posted <a href="/zonelets/posts/2025-01-21-New-Year-Updates.html">New Year Updates</a> to blog. Also created <a href="/art/2025.html">2025 Gallery page</a> + added the first piece of the year! Small tweaks to marquee on index page.</p>
+<br>
+          <hr class="dotted" id="jan425"><br>
+          <h3> January 14, 2025 </h3>
+          <p> Completed first draft of website credits page. Added second column of boxes on index. Also added a comment box to blog posts!!</p>
+<br>
+          <hr class="dotted" id="jan425"><br>
+          <h3> January 7, 2025 </h3>
+          <p>Returned site to regular theme, archived Christmas theme. Finished 2020-2024 art gallery pages.</p>
+<br>
+          <hr class="dotted"><br>
+          <h3> December 13, 2024 </h3>
+          <p>Created & rolled out Christmas theme!</p>
+<br>
+          <hr class="dotted"><br>
+          <h3> December 12, 2024 </h3>
+          <p>Created and implemented RSS feed for Changelog and Blog pages. Modified Index nav, and created archives of v1 index and halloween '24 theme.</p>
+<br>
+          <hr class="dotted"><br>
+          <h3> October 18, 2024 </h3>
+          <p>Tweaked witchcraft page. Completed first section of about page there. </p>
+<br>
+          <hr class="dotted"><br>
+          <h3> October 15, 2024 </h3>
+          <p>created & applied Halloween theme! added NavLink Ads</p>
+<br>
+              <hr class="dotted"><br>
+          <h3> October 8, 2024 </h3>
+          <p>fixed new boxes on index so they scale with the rest of the page content. drafted the start of the TGS Shrine</p>
+<br>
+
+    <hr class="dotted"><br>
+<h3> October 7, 2024 </h3>
+          <p>added 'quick updates' & 'latest art' boxes onto the index page. will need some fiddling with later, to keep from sticking to the viewport as you zoom in + out.</p>
+<br>
+
+    <hr class="dotted"><br>
+          <h3> October 5, 2024 </h3>
+          <ul><li>started uploading the edited html files from my desktop to neocities. trying to catch up with what little changes I made throughout the summer. </li>
+          <li>updated 2024 art gallery page with recent art</li>
+          <li>uploaded drafts of interest pages (music, characters, etc...)</li></ul>
+<br>
+
+    <hr class="dotted"><br>
+<h3> June 10, 2024 </h3>
+<ul><li>added chatbox on main page</li>
+<li>set up and completed zonelets implementation</li>
+<li>added quick copy & paste code for my button on homepage</li>
+</ul>
+
+          <hr class="dotted" />
+          <br />
+          <h3>June 9, 2024</h3>
+          <p>
+            Added a video player to the About page & turned the main content frame and jerma ads into draggable divs
+            (finally!!) also figured out why the window image wasn't changing anymore. updated the resources/links page
+            as well.
+          </p>
+
+          <hr class="dotted" />
+          <br />
+          <h3>May 26, 2024</h3>
+          <p>
+            Added iframes to the index page & converted & styled all pages accordingly. Added DesktopPonies Moonswirl to
+            the about page. Drafted toggle switch.
+          </p>
+
+          <hr class="dotted" />
+          <br />
+          <h3>May 15, 2024</h3>
+          <p>
+            Combined <a href="/about.html">About</a> and all its subpages into one using iframes to reduce memory issues
+            on site & allow faster loading. Autoplay has been added back, with a warning on homepage.
+          </p>
+
+          <hr class="dotted" />
+          <br />
+          <h3>May 9, 2024</h3>
+          <p>
+            Applied new dimensions to most pages. added a stop/start gif function to stamps page. added visitor counter
+            in footer.
+          </p>
+
+          <hr class="dotted" />
+          <br />
+          <h3>May 8, 2024</h3>
+          <p>
+            Created <a href="https://galissia.neocities.org/map"> Sitemap</a> page. Modified home page. Added CRT
+            overlay & corresponding toggle to About & Pets page.
+          </p>
+          <hr class="dotted" />
+          <br />
+          <h3>May 5, 2024</h3>
+          <p>
+            Created <a href="https://galissia.neocities.org/friendcodes"> friend code</a> page. Added a few more stamps
+            and trinkets on various pages. Created a button!!
+          </p>
+          <center><img src="/images/sitebutton.gif" /></center>
+          <hr class="dotted" />
+          <br />
+          <h3>April 20, 2024</h3>
+          <p>
+            Polished <a href="https://galissia.neocities.org/about"> about</a> page. Set up
+            <a href="https://galissia.neocities.org/pets">Pets</a> page.
+          </p>
+          <hr class="dotted" />
+          <br />
+          <h3>April 18, 2024</h3>
+          <p>
+            Reworked <a href="https://galissia.neocities.org/index">home</a> and
+            <a href="https://galissia.neocities.org/about"> about</a> pages. Set up
+            <a href="https://galissia.neocities.org/blog">blog</a> page. Created
+            <a href="https://galissia.neocities.org/toybox">toybox page.</a> Need to sync home page sidebar with all
+            pages.
+          </p>
+          <hr class="dotted" />
+          <br />
+          <h3>April 17, 2024</h3>
+          <p>
+            Reworked <a href="https://galissia.neocities.org/stamps">Stamps</a> and
+            <a href="https://galissia.neocities.org/websites"> Cool sites</a> pages, and sidebar navigation. Started
+            index redesign. Created <a href="https://galissia.neocities.org/not_found">error page.</a>
+          </p>
+          <hr class="dotted" />
+          <br />
+          <h3>May 26, 2023</h3>
+          <p>Created <a href="/old/characters.html">Character Playlists</a> page. Finished home page.</p>
+          <hr class="dotted" />
+          <br />
+          <h3>May 22, 2023</h3>
+          <p>Created <a href="https://galissia.neocities.org/stamps">Stamps</a> page.</p>
+          <hr class="dotted" />
+          <br />
+          <h3>May 21, 2023</h3>
+          <p>Created & coded Media, Music, Movies, and TV pages. Added pagedoll & music player. <br /><br /></p>
+
+          <hr class="dotted" />
+          <br />
+          <h3>May 20, 2023</h3>
+          <p>
+            Overhauled website. Applied theme #12 by <a href="https://repth.neocities.org">Repth.</a> Customized
+            sidebars. <br /><br />
+          </p>
+
+          <hr class="dotted" />
+          <br />
+          <h3>August 8, 2020</h3>
+          <p>
+            Website created. <br /><br />
+            <a href="#main"> <p style="text-align: center">back to top</p></a>
+          </p>
+        </div>
+      </div>
+
+      <br />
+    </div>
+  </body>
+</html>
+   

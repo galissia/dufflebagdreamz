@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>2022 ✧˚ · .</title>
+        <style>
+            body {
+                background: rgb(121, 40, 101);
+                background: linear-gradient(90deg, rgba(121, 40, 101, 1) 0%, rgba(255, 162, 187, 1) 100%);
+            }
+
+            h1 {
+                font-family: "Freckle Face", sans-serif;
+                color: rgb(70, 122, 114);
+                font-size: 50px;
+                transition: 0.6s;
+                text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.74);
+            }
+            h2 a {
+                font-family: "Averia Libre", sans-serif;
+                color: rgb(54, 26, 76);
+                transition: 0.6s;
+                text-decoration: none;
+            }
+            a {
+                font-family: "Averia Libre", sans-serif;
+                color: rgb(165, 123, 198);
+                transition: 0.6s;
+                text-decoration: none;
+            }
+            a:hover {
+                transform: translateY(-15%);
+                transition: 0.2s;
+                background-color: transparent;
+                color: rgb(243, 165, 224);
+                display: inline-block;
+                text-decoration: underline;
+                text-decoration-style: wavy;
+            }
+            img {
+                filter: drop-shadow(3px 3px 3px rgba(65, 120, 124, 0.17));
+                width: 100%;
+                transition: 0.3s;
+                margin-top: 15px;
+            }
+            img:hover {
+                transform: scale(1.02);
+                transition: 0.3s;
+            }
+            p {
+                font-family: "averia libre", sans-serif;
+                color: rgb(44, 76, 96);
+            }
+
+            #footer {
+                width: 570px;
+            }
+            table {
+                background: white;
+                border-image-slice: 30;
+                border-image-width: 25px;
+                border-image-outset: 5px;
+                border-image-repeat: round;
+                border-image-source: url(/art/images/Border.png);
+                border-style: solid;
+                border-top: none;
+                height: auto;
+                width: 600px;
+                margin: 20px;
+                padding: 10px 10px;
+            }
+            .date {
+                color: #5b676f;
+                text-align: right;
+            }
+        </style>
+        <link rel="shortcut icon" type="image/x-icon" href="/images/monkey.gif" />
+        <script type="text/javascript">
+            // <![CDATA[
+            var colour = "white"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
+            var sparkles = 50;
+
+            /****************************
+             *  Tinkerbell Magic Sparkle *
+             *(c)2005-13 mf2fm web-design*
+             *  http://www.mf2fm.com/rv  *
+             * DON'T EDIT BELOW THIS BOX *
+             ****************************/
+            var x = (ox = 400);
+            var y = (oy = 300);
+            var swide = 800;
+            var shigh = 600;
+            var sleft = (sdown = 0);
+            var tiny = new Array();
+            var star = new Array();
+            var starv = new Array();
+            var starx = new Array();
+            var stary = new Array();
+            var tinyx = new Array();
+            var tinyy = new Array();
+            var tinyv = new Array();
+
+            window.onload = function () {
+                if (document.getElementById) {
+                    var i, rats, rlef, rdow;
+                    for (var i = 0; i < sparkles; i++) {
+                        var rats = createDiv(3, 3);
+                        rats.style.visibility = "hidden";
+                        rats.style.zIndex = "999";
+                        document.body.appendChild((tiny[i] = rats));
+                        starv[i] = 0;
+                        tinyv[i] = 0;
+                        var rats = createDiv(5, 5);
+                        rats.style.backgroundColor = "transparent";
+                        rats.style.visibility = "hidden";
+                        rats.style.zIndex = "999";
+                        var rlef = createDiv(1, 5);
+                        var rdow = createDiv(5, 1);
+                        rats.appendChild(rlef);
+                        rats.appendChild(rdow);
+                        rlef.style.top = "2px";
+                        rlef.style.left = "0px";
+                        rdow.style.top = "0px";
+                        rdow.style.left = "2px";
+                        document.body.appendChild((star[i] = rats));
+                    }
+                    set_width();
+                    sparkle();
+                }
+            };
+
+            function sparkle() {
+                var c;
+                if (Math.abs(x - ox) > 1 || Math.abs(y - oy) > 1) {
+                    ox = x;
+                    oy = y;
+                    for (c = 0; c < sparkles; c++)
+                        if (!starv[c]) {
+                            star[c].style.left = (starx[c] = x) + "px";
+                            star[c].style.top = (stary[c] = y + 1) + "px";
+                            star[c].style.clip = "rect(0px, 5px, 5px, 0px)";
+                            star[c].childNodes[0].style.backgroundColor = star[c].childNodes[1].style.backgroundColor =
+                                colour == "random" ? newColour() : colour;
+                            star[c].style.visibility = "visible";
+                            starv[c] = 50;
+                            break;
+                        }
+                }
+                for (c = 0; c < sparkles; c++) {
+                    if (starv[c]) update_star(c);
+                    if (tinyv[c]) update_tiny(c);
+                }
+                setTimeout("sparkle()", 40);
+            }
+
+            function update_star(i) {
+                if (--starv[i] == 25) star[i].style.clip = "rect(1px, 4px, 4px, 1px)";
+                if (starv[i]) {
+                    stary[i] += 1 + Math.random() * 3;
+                    starx[i] += ((i % 5) - 2) / 5;
+                    if (stary[i] < shigh + sdown) {
+                        star[i].style.top = stary[i] + "px";
+                        star[i].style.left = starx[i] + "px";
+                    } else {
+                        star[i].style.visibility = "hidden";
+                        starv[i] = 0;
+                        return;
+                    }
+                } else {
+                    tinyv[i] = 50;
+                    tiny[i].style.top = (tinyy[i] = stary[i]) + "px";
+                    tiny[i].style.left = (tinyx[i] = starx[i]) + "px";
+                    tiny[i].style.width = "2px";
+                    tiny[i].style.height = "2px";
+                    tiny[i].style.backgroundColor = star[i].childNodes[0].style.backgroundColor;
+                    star[i].style.visibility = "hidden";
+                    tiny[i].style.visibility = "visible";
+                }
+            }
+
+            function update_tiny(i) {
+                if (--tinyv[i] == 25) {
+                    tiny[i].style.width = "1px";
+                    tiny[i].style.height = "1px";
+                }
+                if (tinyv[i]) {
+                    tinyy[i] += 1 + Math.random() * 3;
+                    tinyx[i] += ((i % 5) - 2) / 5;
+                    if (tinyy[i] < shigh + sdown) {
+                        tiny[i].style.top = tinyy[i] + "px";
+                        tiny[i].style.left = tinyx[i] + "px";
+                    } else {
+                        tiny[i].style.visibility = "hidden";
+                        tinyv[i] = 0;
+                        return;
+                    }
+                } else tiny[i].style.visibility = "hidden";
+            }
+
+            document.onmousemove = mouse;
+            function mouse(e) {
+                if (e) {
+                    y = e.pageY;
+                    x = e.pageX;
+                } else {
+                    set_scroll();
+                    y = event.y + sdown;
+                    x = event.x + sleft;
+                }
+            }
+
+            window.onscroll = set_scroll;
+            function set_scroll() {
+                if (typeof self.pageYOffset == "number") {
+                    sdown = self.pageYOffset;
+                    sleft = self.pageXOffset;
+                } else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+                    sdown = document.body.scrollTop;
+                    sleft = document.body.scrollLeft;
+                } else if (
+                    document.documentElement &&
+                    (document.documentElement.scrollTop || document.documentElement.scrollLeft)
+                ) {
+                    sleft = document.documentElement.scrollLeft;
+                    sdown = document.documentElement.scrollTop;
+                } else {
+                    sdown = 0;
+                    sleft = 0;
+                }
+            }
+
+            window.onresize = set_width;
+            function set_width() {
+                var sw_min = 999999;
+                var sh_min = 999999;
+                if (document.documentElement && document.documentElement.clientWidth) {
+                    if (document.documentElement.clientWidth > 0) sw_min = document.documentElement.clientWidth;
+                    if (document.documentElement.clientHeight > 0) sh_min = document.documentElement.clientHeight;
+                }
+                if (typeof self.innerWidth == "number" && self.innerWidth) {
+                    if (self.innerWidth > 0 && self.innerWidth < sw_min) sw_min = self.innerWidth;
+                    if (self.innerHeight > 0 && self.innerHeight < sh_min) sh_min = self.innerHeight;
+                }
+                if (document.body.clientWidth) {
+                    if (document.body.clientWidth > 0 && document.body.clientWidth < sw_min)
+                        sw_min = document.body.clientWidth;
+                    if (document.body.clientHeight > 0 && document.body.clientHeight < sh_min)
+                        sh_min = document.body.clientHeight;
+                }
+                if (sw_min == 999999 || sh_min == 999999) {
+                    sw_min = 800;
+                    sh_min = 600;
+                }
+                swide = sw_min;
+                shigh = sh_min;
+            }
+
+            function createDiv(height, width) {
+                var div = document.createElement("div");
+                div.style.position = "absolute";
+                div.style.height = height + "px";
+                div.style.width = width + "px";
+                div.style.overflow = "hidden";
+                return div;
+            }
+
+            function newColour() {
+                var c = new Array();
+                c[0] = 255;
+                c[1] = Math.floor(Math.random() * 256);
+                c[2] = Math.floor(Math.random() * (256 - c[1] / 2));
+                c.sort(function () {
+                    return 0.5 - Math.random();
+                });
+                return "rgb(" + c[0] + ", " + c[1] + ", " + c[2] + ")";
+            }
+            // ]]>
+        </script>
+        <style type="text/css">
+            * {
+                cursor: url(/images/pencil2.png), auto !important;
+            }
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet" />
+    </head>
+    <body>
+        <center>
+            <div id="header">
+                <h2><a href="/art/gallery.html">back</a></h2>
+                <h2 style="font-size: 16px; margin-top: -10px"><a href="#footer">to bottom</a></h2>
+            </div>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/happy%20holidays%202022.png" />
+
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Dec 18, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/time%20warp%20reference.png" />
+                            <img src="/art/images/2022/twsheet.png" />
+                            <img src="/art/images/2022/tardiscrew.png" />
+                            <img src="/art/images/2022/mstw.png" />
+
+                            <br /><br />
+                            <p>my baby, Time Warp. He's a derpy x doctor kid</p>
+                            <p class="date">[ Dec 14, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/hydemirror.jpg" />
+
+                            <br /><br />
+                            <div style="box-shadow: 4px 4px 4px rgba(72, 79, 85, 0.28); border-radius:5%; background-color: #f7e9d9; width: fit-content;"><img style="width: 50px; float:inline-start; margin-top: -5px; margin-right: 10px;" src="https://file.toyhou.se/images/15987643_bvhutjRbgnwMYz3.png?1565855179"> <h3 style="font-family: Averia Libre; color: #975656">This Year's Favorite!</h3></div>
+                            <p>first transformation</p>
+                            <p class="date">[ Dec 7, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/istg.png" />
+
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Dec 1, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/cadenza19.png" />
+
+                            <br /><br />
+                            <p>It's her 19th birthday on the 18th!!</p>
+                            <p class="date">[ Dec 1, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/john.png" />
+
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Nov 22, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/sylnan2.jpg" />
+                            <img src="/art/images/2022/monkey.jpg" />
+                            <img src="/art/images/2022/kate.jpg" />
+                            <br /><br />
+                            <p>a few doodles</p>
+                            <p class="date">[ Nov 20, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/watercolorms.jpg" />
+
+                            <br /><br />
+                            <p>watercolor!</p>
+                            <p class="date">[ Nov 15, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/jaygif.gif" />
+
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Nov 8, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/mschair.jpg" />
+                            <img src="/art/images/2022/businessman.png" />
+                            <img src="/art/images/2022/drawover2.png" />
+                            <img src="/art/images/2022/shewantstoorder.png" />
+                            <img src="/art/images/2022/table.png" />
+
+                            <br /><br />
+                            <p>silly draw-overs</p>
+                            <p class="date">[ Oct 25, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/inktober.jpg" />
+
+                            <br /><br />
+                            <p>Inktober: Haunted</p>
+                            <p class="date">[ Oct 13, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/msflower.png" />
+
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ Oct 11, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/moore.jpg" />
+
+                            <br /><br />
+                            <p>MOORE PONY!</p>
+                            <p class="date">[ Oct 11, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <center>
+                                <video controls style="width: 80%" src="/art/images/2022/how%20old%20r%20u.mp4"></video>
+                            </center>
+
+                            <br /><br />
+                            <p>[video] it's funny 'cause he's 36</p>
+                            <p class="date">[ Oct 1, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/jayhalloween.png" />
+
+                            <br /><br />
+                            <p>From an unfinished Halloween collab</p>
+                            <p class="date">[ Oct 1, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/jhu.jpg" />
+
+                            <br /><br />
+                            <p>
+                                Utterson, Jekyll, and Hyde in the MaZM art style because i played thru the jekyll and
+                                hyde game in one sitting and i loved it
+                            </p>
+                            <p class="date">[ Sep 18, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/legacies_jnh.png" />
+
+                            <br /><br />
+                            <p>my ocs if they were in the jekyll and hyde musical :3</p>
+                            <p class="date">[ Sep 18, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/this%20is%20a%20stickup.png" />
+
+                            <br /><br />
+                            <p>this is a stickup</p>
+                            <p class="date">[ Sep 14, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/werewolf.png" />
+
+                            <br /><br />
+                            <div style="box-shadow: 4px 4px 4px rgba(72, 79, 85, 0.28); border-radius:5%; background-color: #f7e9d9; width: fit-content;"><img style="width: 50px; float:inline-start; margin-top: -5px; margin-right: 10px;" src="https://file.toyhou.se/images/15987643_bvhutjRbgnwMYz3.png?1565855179"> <h3 style="font-family: Averia Libre; color: #975656">This Year's Favorite!</h3></div>
+                            <p>wake up babes new dnd character story arc just dropped</p>
+                            <p class="date">[ Aug 27, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/lanyon.png" />
+
+                            <br /><br />
+                            <p>Hastie Lanyon</p>
+                            <p class="date">[ Aug 25, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/raina-jade.png" />
+
+                            <br /><br />
+                            <p>my fantasy lesbians <3</p>
+                            <p class="date">[ Aug 1, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/adel.png" />
+
+                            <br /><br />
+                            <p>Art Fight #7 <a href="https://artfight.net/attack/4027418.adel">(link)</a></p>
+                            <p class="date">[ Jul 31, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/hazelpaw.png" />
+
+                            <br /><br />
+                            <p>Art Fight #6 <a href="https://artfight.net/attack/3749814.hazelpaw">(link)</a></p>
+                            <p class="date">[ Jul 21, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/midnight.png" />
+
+                            <br /><br />
+                            <p>Art Fight #5 <a href="https://artfight.net/attack/3748183.geologist">(link)</a></p>
+                            <p class="date">[ Jul 21, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/jekyllhydeaf.png" />
+
+                            <br /><br />
+                            <p>
+                                Art Fight #4
+                                <a href="https://artfight.net/attack/3566304.science-guy-and-murder-man">(link)</a>
+                            </p>
+                            <p class="date">[ Jul 16, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/ernest.png" />
+
+                            <br /><br />
+                            <p>
+                                Art Fight #3
+                                <a href="https://artfight.net/attack/3525352.ernest-is-best-frankenstein-no-contest"
+                                    >(link)</a
+                                >
+                            </p>
+                            <p class="date">[ Jul 14, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/afjekyll.png" />
+
+                            <br /><br />
+                            <p>
+                                Art Fight #2
+                                <a href="https://artfight.net/attack/2728457.lmao-what-a-fuckin-nerd">(link)</a>
+                            </p>
+                            <p class="date">[ Jul 2, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/musical.png" />
+
+                            <br /><br />
+                            <p>Art Fight #1 <a href="https://artfight.net/attack/2728016.music-horse">(link)</a></p>
+                            <p class="date">[ Jul 2, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/ray-jade%202022.jpg" />
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ June 30, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/jh.png" />
+                            <br /><br />
+                            <p></p>
+                            <p class="date">[ June 28, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/af.jpg" />
+                            <br /><br />
+                            <p>ART FIGHT SONA!!!</p>
+                            <p class="date">[ June 27, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/lucy.png" />
+                            <br /><br />
+                            <p>Lucy Harris!</p>
+                            <p class="date">[ June 24, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/graduation.png" />
+                            <br /><br />
+                            <p>i graduated high school</p>
+                            <p class="date">[ June 18, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/akemi.png" />
+                            <br /><br />
+                            <p>An older comm for my friend Lin!</p>
+                            <p class="date">[ May 28, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/john2.png" />
+                            <br /><br />
+                            <p>
+                                John Utterson! My version is a combinaton of Gabriel Utterson from Jekyll & Hyde and
+                                Johnathan Harker from Dracula.
+                            </p>
+                            <p class="date">[ May 18, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/shutter.png" />
+                            <br /><br />
+                            <p>My new secondary ponysona, Shutter Sprocket!</p>
+                            <p class="date">[ May 9, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/confrontation1.jpg" />
+                            <img src="/art/images/2022/confrontation2.png" />
+                            <img src="/art/images/2022/confrontation3.png" />
+                            <img src="/art/images/2022/confrontation4.png" />
+                            <br /><br />
+                            <p>Some newer frames for my Confrontation animatic</p>
+                            <p class="date">[ Jan 30, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/glamrockjay.png" />
+                            <br /><br />
+                            <p>GLAMROCK JAY!</p>
+                            <p class="date">[ Jan 25, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/art/images/2022/everestandtoad.jpg" /><br /><br />
+                            <p>commission for my friend cheerio :)</p>
+
+                            <p class="date">[ Jan 11, 2022 ]</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a id="footer" href="#header">back to top</a>
+        </center>
+        <br /><br /><br /><br />
+    </body>
+</html>
