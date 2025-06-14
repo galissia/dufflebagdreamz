@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-
     <!-- Change your site title: (It is shown in the tab) -->
     <title>Gal's Space!</title>
 
@@ -9,7 +8,7 @@
     <meta content="Molly's cozy little corner of the internet" name="description" />
 
     <!-- Setting character encoding and viewport size. Do not remove. -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- FavIcon (small image in tab), change to any image you want: -->
@@ -17,71 +16,70 @@
 
     <!-- CSS: -->
     <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css" if this HTML file is in 2 subfolders, etc. -->
-                         <link rel="stylesheet" href="https://magical-ring.neocities.org/ring-codes/magical-ring-simple.css">
+    <link rel="stylesheet" href="https://magical-ring.neocities.org/ring-codes/magical-ring-simple.css" />
     <link href="https://fonts.cdnfonts.com/css/elmono-2" rel="stylesheet" />
-<link href="https://fonts.cdnfonts.com/css/beginning-2" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/beginning-2" rel="stylesheet" />
     <link href="./css/home.css" rel="stylesheet" />
     <style>
       #time {
-                            font-size: 10px;
-                            margin-left:-10px;
-                            margin-top: 5px;
-                        }
-      </style>
-      <style>
-@import url('https://fonts.googleapis.com/css2?family=Benne&family=IM+Fell+English:ital@0;1&display=swap');
-</style>
-      
+        font-size: 10px;
+        margin-left: -10px;
+        margin-top: 5px;
+      }
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Benne&family=IM+Fell+English:ital@0;1&display=swap");
+    </style>
+
     <script>
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    var site_data = JSON.parse(this.responseText);
-                    var num_arr = site_data.info.views.toString().split("");
-                    var num_str = "";
-                    for (i = 0; i < num_arr.length; i++) {
-                        num_str += num_arr[i];
-                        if ((num_arr.length - 1 - i) % 3 == 0 && num_arr.length - 1 - i != 0) {
-                            num_str += ",";
-                        }
-                        var date_str = site_data.info.last_updated;
-                        var date_obj = new Date(site_data.info.last_updated);
-                        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-                        var months = [
-                            "January",
-                            "February",
-                            "March",
-                            "April",
-                            "May",
-                            "June",
-                            "July",
-                            "August",
-                            "September",
-                            "October",
-                            "November",
-                            "December"
-                        ];
-                        document.getElementById("lastupdate").innerHTML =
-                            days[date_obj.getDay()] +
-                            " " +
-                            months[date_obj.getMonth()] +
-                            " " +
-                            date_obj.getDate() +
-                            ", " +
-                            date_obj.getFullYear();
-                    }
-                    document.getElementById("hitcount").innerHTML = num_str;
-                }
-            };
-            xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=dufflebagdreamz", true);
-            xhttp.send();
-        </script>
-    <script src="/LASTFM.js" type="text/javascript">
-</script>
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          var site_data = JSON.parse(this.responseText);
+          var num_arr = site_data.info.views.toString().split("");
+          var num_str = "";
+          for (i = 0; i < num_arr.length; i++) {
+            num_str += num_arr[i];
+            if ((num_arr.length - 1 - i) % 3 == 0 && num_arr.length - 1 - i != 0) {
+              num_str += ",";
+            }
+            var date_str = site_data.info.last_updated;
+            var date_obj = new Date(site_data.info.last_updated);
+            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var months = [
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+              "August",
+              "September",
+              "October",
+              "November",
+              "December"
+            ];
+            document.getElementById("lastupdate").innerHTML =
+              days[date_obj.getDay()] +
+              " " +
+              months[date_obj.getMonth()] +
+              " " +
+              date_obj.getDate() +
+              ", " +
+              date_obj.getFullYear();
+          }
+          document.getElementById("hitcount").innerHTML = num_str;
+        }
+      };
+      xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=dufflebagdreamz", true);
+      xhttp.send();
+    </script>
+    <script src="/LASTFM.js" type="text/javascript"></script>
     <!-- JavaScript: -->
-    <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js" if this HTML file is in 2 subfolders, etc. -->
+
     <script src="./scripts/layout.js"></script>
-<script src="https://status.cafe/current-status.js?name=galissia" defer></script>
+    <script src="https://status.cafe/current-status.js?name=galissia" defer></script>
     <script>
       // Template generated with petrapixel's layout generator.
       // (Please do not remove this credit.)
@@ -89,93 +87,93 @@
       console.log("%c https://petrapixel.neocities.org/coding/layout-generator", "font-size: 14pt;");
     </script>
     <style>
-    
-   .hvr-grow {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-}
-.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
-  -webkit-transform: scale(1.03) rotate(1deg);
-  transform: scale(1.03) rotate(1deg);
-}
- 
-    
-    #floating {
-           
-            animation: float 5s ease-in-out infinite;
+      .hvr-grow {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+      }
+      .hvr-grow:hover,
+      .hvr-grow:focus,
+      .hvr-grow:active {
+        -webkit-transform: scale(1.03) rotate(1deg);
+        transform: scale(1.03) rotate(1deg);
+      }
+
+      #floating {
+        animation: float 5s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
         }
 
-        @keyframes float {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-15px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
+        50% {
+          transform: translateY(-15px);
         }
-        .row {
-  display: flex;
- 
-}
 
-.column {
-  flex: 50%;
-}
-         magical-ring {
-    max-width: 50ch;
-    border:black 4px double;
-    display:grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    padding-top: 0.2em;
-    background-color:antiquewhite;
-  }
-  
-  magical-ring > * {
-    box-sizing: border-box;
-  }
-  
-  magical-ring div{
-    display:flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  magical-ring a,magical-ring a:visited {
-  color:black;
-  text-decoration: none;
-  }
-  
-  magical-ring .arrow {
-    text-decoration:underline;
-  }
-  
-  magical-ring h3, magical-ring.ring-name {
-    font-family: 'IM Fell English SC', serif;
-    
-  }
-  magical-ring p, magical-ring a {
-    font-family: 'Benne', serif;
-  }
-  magical-ring .picture {
-  
-  }
-  magical-ring p,magical-ring h3 {
-    margin: 0;
-    margin-bottom:0.1em;
-  }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      .row {
+        display: flex;
+      }
+
+      .column {
+        flex: 50%;
+      }
+      magical-ring {
+        max-width: 50ch;
+        border: black 4px double;
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        padding-top: 0.2em;
+        background-color: antiquewhite;
+      }
+
+      magical-ring > * {
+        box-sizing: border-box;
+      }
+
+      magical-ring div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      magical-ring a,
+      magical-ring a:visited {
+        color: black;
+        text-decoration: none;
+      }
+
+      magical-ring .arrow {
+        text-decoration: underline;
+      }
+
+      magical-ring h3,
+      magical-ring.ring-name {
+        font-family: "IM Fell English SC", serif;
+      }
+      magical-ring p,
+      magical-ring a {
+        font-family: "Benne", serif;
+      }
+      magical-ring .picture {
+      }
+      magical-ring p,
+      magical-ring h3 {
+        margin: 0;
+        margin-bottom: 0.1em;
+      }
     </style>
   </head>
   <body>
@@ -183,13 +181,12 @@
     <a href="#content" id="skip-to-content-link">Skip to content</a>
 
     <div class="layout">
-      
       <!-- =============================================== -->
       <!-- Header (and Sidebars) will be loaded per JavaScript! Edit layout.js to change. -->
       <!-- =============================================== -->
 
-  
-      <main id="content"> <!-- Do NOT remove the ID here -->
+      <main id="content">
+        <!-- Do NOT remove the ID here -->
 
         <noscript>Please enable JavaScript to view this website!</noscript>
 
@@ -197,619 +194,552 @@
         <!-- MAIN CONTENT -->
         <!-- =============================================== -->
 
-
         <section>
+          <!-- UPDATE BOXES -->
+          <center>
+            <div class="title"><div class="title-text">welcome to my space!</div></div>
+          </center>
+          <br />
+          <div style="border-style: dotted; padding: 1.5em; border-radius: 2em">
+            <p>
+              <mark>Hiya!</mark> Welcome to my humble little website. This is my space away from mainstream social media
+              where I can practice my coding skills and also be a little silly and cringe.
+            </p>
+            <p>
+              You can find a bunch of random junk on this site, like a seldom-updaded blog, my collections, internet
+              shrines, a witchcraft page, and a few other miscellaneous things I thought would be fun to make.
+            </p>
+            <p>
+              I also have a list of <a href="./websites.html">website resources</a> for others to use in building their
+              own websites! It's a forever-expanding list as I find and bookmark more and more cool sites i think are
+              useful. I am always willing to help if ya ever have a question about coding or just want to chat!!
+            </p>
+            <p>
+              You are encouraged to use <mark>inspect element</mark> if you see something you like! feel totally free to
+              dive into my code and really get in there. (it will not be neat)
+            </p>
+            <p>hope you enjoy my little internet abode :)</p>
+          </div>
 
           <!-- UPDATE BOXES -->
-            <center><div class="title"> <div class="title-text">welcome to my space!</div></div></center>
-             <br>
-            <div style="border-style: dotted; padding: 1.5em; border-radius: 2em;"><p><mark>Hiya!</mark> Welcome to my humble little website. This is my space away from mainstream social media where I can practice my coding skills and also be a little silly and cringe.  </p>
-                <p>You can find a bunch of random junk on this site, like a seldom-updaded blog, my collections, internet shrines, a witchcraft page, and a few other miscellaneous things I thought would be fun to make.</p>
-                <p> I also have a list of <a href="./websites.html">website resources</a> for others to use in building their own websites! It's a forever-expanding list as I find and bookmark more and more cool sites i think are useful. I am always willing to help if ya ever have a question about coding or just want to chat!!</p>
-          <p>
-            You are encouraged to use <mark>inspect element</mark> if you see something you like! feel totally free to dive into my code and really get in there. (it will not be neat)
-          </p>
-          <p>hope you enjoy my little internet abode :)</p>
-            </div>
-            
-          
-          
-          <!-- UPDATE BOXES -->
-          
+
           <div class="row">
-            <div class="column"><div style="margin: 2em; border-style: dotted; padding: 0.5em; padding-bottom: 1em; border-radius: 2em; width: 90%">
-            <center><div CLASS="sidebar-title-2"> ⤑Latest Art</div></center>
-              <a href="./art/gallery.html"><img class="hvr-grow" style="padding:1em; width:100%;" src="./art/images/2025/jekyllhyde.png"></a>
-            </div>
-            </div>
-        
             <div class="column">
-            <div style="margin: 2em; margin-left:1em; border-style: dotted; padding: 5px; border-radius: 2em; width: 90%">
-            <center><div class="sidebar-title-2">⤑ Updates</div></center>
-               <div style="padding: 1em; padding-top:0.3em; max-height: 230px; overflow-block: scroll;"><!-- copy + paste-->
-                        <em style="color: rgba(255, 255, 255, 0.54)">Jun 14 2025</em
-                        ><img
-                            style="padding-left: 7px; padding-right: 3px"
-                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
-                       Began translating pages from old layout to new layout
-                        <hr
-                            style="
-                                border: dashed;
-                                border-width: thin;
-                                border-color: rgba(129, 119, 122, 0.4);
-                                margin-top: 15px;
-                                margin-bottom: 15px;
-                            " />
-                        <!-- copy + paste-->
-                        <!-- copy + paste-->
-                        <em style="color: rgba(255, 255, 255, 0.54)">Apr 9 2025</em
-                        ><img
-                            style="padding-left: 7px; padding-right: 3px"
-                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
-                        Created <a href="/witch/altars/altars.html">Altars</a> pages in witchcraft section
-                        <hr
-                            style="
-                                border: dashed;
-                                border-width: thin;
-                                border-color: rgba(129, 119, 122, 0.4);
-                                margin-top: 15px;
-                                margin-bottom: 15px;
-                            " />
-                        <!-- copy + paste-->
-                        <em style="color: rgba(255, 255, 255, 0.54)">Mar 27 2025</em
-                        ><img
-                            style="padding-left: 7px; padding-right: 3px"
-                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
-                        Added "this year's favorite" indication on the art gallery pages
-                        <hr
-                            style="
-                                border: dashed;
-                                border-width: thin;
-                                border-color: rgba(129, 119, 122, 0.4);
-                                margin-top: 15px;
-                                margin-bottom: 15px;
-                            " />
-                        <!-- copy + paste-->
-                        <em style="color: rgba(255, 255, 255, 0.54)">Feb 14 2025</em
-                        ><img
-                            style="padding-left: 7px; padding-right: 3px"
-                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
-                        Removed chatbox on index
-                        <hr
-                            style="
-                                border: dashed;
-                                border-width: thin;
-                                border-color: rgba(129, 119, 122, 0.4);
-                                margin-top: 15px;
-                                margin-bottom: 15px;
-                            " />
-                        <!-- copy + paste-->
-                        <!-- copy + paste-->
-                        <em style="color: rgba(255, 255, 255, 0.54)">Jan 20 2025</em
-                        ><img
-                            style="padding-left: 7px; padding-right: 3px"
-                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
-                        Posted <a href="/zonelets/posts/2025-01-21-New-Year-Updates.html">New Year Updates</a> to blog. Also created <a href="art/2025.html">2025 Gallery</a> page + added the first piece of the year!
-                        <hr
-                            style="
-                                border: dashed;
-                                border-width: thin;
-                                border-color: rgba(129, 119, 122, 0.4);
-                                margin-top: 15px;
-                                margin-bottom: 15px;
-                            " />
-                        <!-- copy + paste-->
-                        <em style="color: rgba(255, 255, 255, 0.54)">Jan 14 2025</em
-                        ><img
-                            style="padding-left: 7px; padding-right: 3px"
-                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
-                        Added to-do list & funny picture boxes :) also added a comment box to blog posts!!
-                        <hr
-                            style="
-                                border: dashed;
-                                border-width: thin;
-                                border-color: rgba(129, 119, 122, 0.4);
-                                margin-top: 15px;
-                                margin-bottom: 15px;
-                            " />
-                        <!-- copy + paste-->
-                        <em style="color: rgba(255, 255, 255, 0.54)">Jan 7 2025</em
-                        ><img
-                            style="padding-left: 7px; padding-right: 3px"
-                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
-                        Archived <a href="/old/christmas24/index.html">Christmas theme</a>
-                        <hr
-                            style="
-                                border: dashed;
-                                border-width: thin;
-                                border-color: rgba(129, 119, 122, 0.4);
-                                margin-top: 15px;
-                                margin-bottom: 15px;
-                            " />
-                        <!-- copy + paste-->
-                        <em style="color: rgba(255, 255, 255, 0.54)">Dec 20 2024</em
-                        ><img
-                            style="padding-left: 7px; padding-right: 3px"
-                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
-                        Finished most new <a href="/art/gallery.html">art gallery</a> pages
-                        <hr
-                            style="
-                                border: dashed;
-                                border-width: thin;
-                                border-color: rgba(129, 119, 122, 0.4);
-                                margin-top: 15px;
-                                margin-bottom: 15px;
-                            " />
-                        <!-- copy + paste-->
-                        <em style="color: rgba(255, 255, 255, 0.54)">Dec 13 2024</em
-                        ><img
-                            style="padding-left: 7px; padding-right: 3px"
-                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
-                        Christmas theme is now live!!
-                        <hr
-                            style="
-                                border: dashed;
-                                border-width: thin;
-                                border-color: rgba(129, 119, 122, 0.4);
-                                margin-top: 15px;
-                                margin-bottom: 15px;
-                            " />
-                        <!-- copy + paste-->
-                        <em style="color: rgba(255, 255, 255, 0.54)">Dec 12 2024</em
-                        ><img
-                            style="padding-left: 7px; padding-right: 3px"
-                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
-                        Added RSS Feeds for <a href="/utilities/rss_blog.xml">Blog</a> and
-                        <a href="/utilities/rss_changelog.xml">Changelog</a>. Also created archive for
-                        <a href="https://galissia.neocities.org/old/indexv1/index.html">Index V1</a> and
-                        <a href="https://galissia.neocities.org/old/halloween24/index.html">Halloween '24</a>
-                        <hr
-                            style="
-                                border: dashed;
-                                border-width: thin;
-                                border-color: rgba(129, 119, 122, 0.4);
-                                margin-top: 15px;
-                                margin-bottom: 15px;
-                            " />
-                        <!-- copy + paste-->
-                        <em style="color: rgba(255, 255, 255, 0.54)">Nov 4 2024</em
-                        ><img
-                            style="padding-left: 7px; padding-right: 3px"
-                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
-                        Returned site to regular theme
-                        <hr
-                            style="
-                                border: dashed;
-                                border-width: thin;
-                                border-color: rgba(129, 119, 122, 0.4);
-                                margin-top: 15px;
-                                margin-bottom: 15px;
-                            " />
-                        <!-- copy + paste-->
-                        <em style="color: rgba(255, 255, 255, 0.54)">Oct 17 2024</em
-                        ><img
-                            style="padding-left: 7px; padding-right: 3px"
-                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
-                        Posted
-                        <a href="https://galissia.neocities.org/zonelets/posts/2024-10-17-On-a-Student-Film-Set"
-                            >On a Student Film Set</a
-                        >
-                        to the blog
-                        <hr
-                            style="
-                                border: dashed;
-                                border-width: thin;
-                                border-color: rgba(129, 119, 122, 0.4);
-                                margin-top: 15px;
-                                margin-bottom: 15px;
-                            " />
-                        <!-- copy + paste-->
-                        <em style="color: rgba(255, 255, 255, 0.54)">Oct 15 2024</em
-                        ><img
-                            style="padding-left: 7px; padding-right: 3px"
-                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
-                        Halloween theme is now live!
-                        <hr
-                            style="
-                                border: dashed;
-                                border-width: thin;
-                                border-color: rgba(129, 119, 122, 0.4);
-                                margin-top: 15px;
-                                margin-bottom: 15px;
-                            " />
-                        <!-- copy + paste-->
-                        <em style="color: rgba(255, 255, 255, 0.54)">Oct 7 2024</em
-                        ><img
-                            style="padding-left: 7px; padding-right: 3px"
-                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
-                        Coded these cool lil side boxes to display extra info!
-                        <hr
-                            style="
-                                border: dashed;
-                                border-width: thin;
-                                border-color: rgba(129, 119, 122, 0.4);
-                                margin-top: 15px;
-                                margin-bottom: 15px;
-                            " />
+              <div
+                style="
+                  margin: 2em;
+                  border-style: dotted;
+                  padding: 0.5em;
+                  padding-bottom: 1em;
+                  border-radius: 2em;
+                  width: 90%;
+                ">
+                <center><div class="sidebar-title-2">⤑Latest Art</div></center>
+                <a href="./art/gallery.html"
+                  ><img class="hvr-grow" style="padding: 1em; width: 100%" src="./art/images/2025/jekyllhyde.png"
+                /></a>
+              </div>
+            </div>
 
-                        <!-- copy + paste-->
-                        <em style="color: rgba(255, 255, 255, 0.54)">Oct 6 2024</em
-                        ><img
-                            style="padding-left: 7px; padding-right: 3px"
-                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
-                        Posted
-                        <a href="/zonelets/posts/2024-10-06-Neocities-100-Questions.html">Neocities 100 questions</a> to
-                        blog
-                        <hr
-                            style="
-                                border: dashed;
-                                border-width: thin;
-                                border-color: rgba(129, 119, 122, 0.4);
-                                margin-top: 28px;
-                                margin-bottom: 15px;
-                            " />
-
-                        <em style="color: rgba(255, 255, 255, 0.54);">Oct 5 2024</em
-                        ><img
-                            style="padding-left: 7px; padding-right: 3px"
-                            src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
-                        Posted <a href="/zonelets/posts/2024-10-05-Fall-Updates.html">Fall Updates</a> to blog 
-                 </div>
+            <div class="column">
+              <div
+                style="
+                  margin: 2em;
+                  margin-left: 1em;
+                  border-style: dotted;
+                  padding: 5px;
+                  border-radius: 2em;
+                  width: 90%;
+                ">
+                <center><div class="sidebar-title-2">⤑ Updates</div></center>
+                <div style="padding: 1em; padding-top: 0.3em; max-height: 230px; overflow-block: scroll">
+                  <!-- copy + paste-->
+                  <em style="color: rgba(255, 255, 255, 0.54)">Jun 14 2025</em
+                  ><img
+                    style="padding-left: 7px; padding-right: 3px"
+                    src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
+                  Began translating pages from old layout to new layout
+                  <hr
+                    style="
+                      border: dashed;
+                      border-width: thin;
+                      border-color: rgba(129, 119, 122, 0.4);
+                      margin-top: 15px;
+                      margin-bottom: 15px;
+                    " />
+                  <!-- copy + paste-->
+                  <!-- copy + paste-->
+                  <em style="color: rgba(255, 255, 255, 0.54)">Apr 9 2025</em
+                  ><img
+                    style="padding-left: 7px; padding-right: 3px"
+                    src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
+                  Created <a href="./witch/altars/altars.html">Altars</a> pages in witchcraft section
+                  <hr
+                    style="
+                      border: dashed;
+                      border-width: thin;
+                      border-color: rgba(129, 119, 122, 0.4);
+                      margin-top: 15px;
+                      margin-bottom: 15px;
+                    " />
+                  <!-- copy + paste-->
+                  <em style="color: rgba(255, 255, 255, 0.54)">Mar 27 2025</em
+                  ><img
+                    style="padding-left: 7px; padding-right: 3px"
+                    src="https://pixelsafari.neocities.org/favicon/nature/star/star106.gif" />
+                  Added "this year's favorite" indication on the art gallery pages
+                  <hr
+                    style="
+                      border: dashed;
+                      border-width: thin;
+                      border-color: rgba(129, 119, 122, 0.4);
+                      margin-top: 15px;
+                      margin-bottom: 15px;
+                    " />
+                  
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-          
-          <!-- ABOUT -->
-          
-            <center><div class="subtitle"> About Me</div></center>
-            <div style="border-style: dotted; padding: 1.5em; border-radius: 2em;">
-               
-                <div class="row">
-                   
-  <div class="column"><img src="./images/molly_about.png" style="max-width:100%;"></div>
-  <div class="column">
-      
-      <center>
-    <h3 style=" margin-left:-10px; margin-top: -10px; line-height: 25px;">Molly / Gal  ⭒ 21 yrs ⭒ she/her  ISFP ⭒ True Neutral ⭒ 9w1</h3> </center>
-    <p style="padding: 5px">
-    I'm a film student from the New Jersey Pine Barrens with a passion for web  design and illustration! I'm a pretty go-with-the-flow type person and I would say I'm pretty friendly! read more <a href="">here</a>
-      </p>
-      <hr style="width: 100%; color: rgba(255, 255, 255, 0.43);">
-      <center><img src="https://f2.toyhou.se/file/f2-toyhou-se/images/56671178_zGwxEn5lXuTg8gj.png" title="Bisexual" alt="Bisexual Flag" style="width:70px; margin: 5px;">
-      <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/56671148_untQnMDCeRjv7HL.png" title="Aromantic" alt="Aromantic Flag" style="width:70px; margin: 5px;">
-      <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/60101917_uiNGEkVNWMviVqT.png" title="Nebularomantic" alt="Nebularomantic Flag" style="width:70px; margin: 5px;">
-      <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/57254565_ik5esurt7mimFH7.png" title="Autistic" alt="Autistic" style="width:50px; margin: 5px;">
-      <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/62785192_YUX17cyOCBTLo2s.png" title="ADHD (Inattentive Type)" alt="ADHD (Inattentive Type)" style="width:50px; margin: 5px;">
-      </center>
-</div>  
-</div>   
 
-                <div class="row">
-                <div class="column" style="padding: 5px;">
-                    <div>
-                        <div class="sidebar-title-2"> 
-                         ✧ Likes
-                        </div>
-                        <ul style="max-height:150px; overflow-y:scroll; list-style-image:url(http://68.media.tumblr.com/bc54e512f3b791e10f5d4891e4765dc0/tumblr_inline_niyn9xJyRL1ry72eo.gif)">
-                            <li>Doctor Who</li>
-                            <li>My Little Pony</li>
-                            <li>The Glass Scientists</li>
-                            <li>Gothic Literature</li>
-                            <li>Supernatural</li>
-                            <li>Baldur's Gate 3</li>
-                            <li>Dungeons & Dragons</li>
-                            <li>The Elder Scrolls</li>
-                            <li> Tomatoes</li>
-                            <li>Monkeys</li>
-                            <li>Witchcraft</li>
-                        </ul>
-                    </div>
-                    
-                </div>
-                    <div class="column" style="padding: 5px;">
-                    <div >
-                        <div class="sidebar-title-2"> 
-                         ✧ Hobbies
-                        </div>
-                        <ul style="max-height:150px; overflow-y:scroll; list-style-image:url(http://68.media.tumblr.com/bc54e512f3b791e10f5d4891e4765dc0/tumblr_inline_niyn9xJyRL1ry72eo.gif)">
-                            <li>Coding</li>
-                            <li>Drawing</li>
-                            <li>Journaling</li>
-                            <li>Collecting MLP</li>
-                            <li>Film Editing</li>
-                            <li>Making lists n stuff </li>
-                            
-                        </ul>
-                    </div>
-                    </div>
-                </div>
+          <!-- ABOUT -->
+
+          <center><div class="subtitle">About Me</div></center>
+          <div style="border-style: dotted; padding: 1.5em; border-radius: 2em">
+            <div class="row">
+              <div class="column"><img src="./images/molly_about.png" style="max-width: 100%" /></div>
+              <div class="column">
+                <center>
+                  <h3 style="margin-left: -10px; margin-top: -10px; line-height: 25px">
+                    Molly / Gal ⭒ 21 yrs ⭒ she/her ISFP ⭒ True Neutral ⭒ 9w1
+                  </h3>
+                </center>
+                <p style="padding: 5px">
+                  I'm a film student from the New Jersey Pine Barrens with a passion for web design and illustration!
+                  I'm a pretty go-with-the-flow type person and I would say I'm pretty friendly! read more
+                  <a href="">here</a>
+                </p>
+                <hr style="width: 100%; color: rgba(255, 255, 255, 0.43)" />
+                <center>
+                  <img
+                    src="https://f2.toyhou.se/file/f2-toyhou-se/images/56671178_zGwxEn5lXuTg8gj.png"
+                    title="Bisexual"
+                    alt="Bisexual Flag"
+                    style="width: 70px; margin: 5px" />
+                  <img
+                    src="https://f2.toyhou.se/file/f2-toyhou-se/images/56671148_untQnMDCeRjv7HL.png"
+                    title="Aromantic"
+                    alt="Aromantic Flag"
+                    style="width: 70px; margin: 5px" />
+                  <img
+                    src="https://f2.toyhou.se/file/f2-toyhou-se/images/60101917_uiNGEkVNWMviVqT.png"
+                    title="Nebularomantic"
+                    alt="Nebularomantic Flag"
+                    style="width: 70px; margin: 5px" />
+                  <img
+                    src="https://f2.toyhou.se/file/f2-toyhou-se/images/57254565_ik5esurt7mimFH7.png"
+                    title="Autistic"
+                    alt="Autistic"
+                    style="width: 50px; margin: 5px" />
+                  <img
+                    src="https://f2.toyhou.se/file/f2-toyhou-se/images/62785192_YUX17cyOCBTLo2s.png"
+                    title="ADHD (Inattentive Type)"
+                    alt="ADHD (Inattentive Type)"
+                    style="width: 50px; margin: 5px" />
+                </center>
+              </div>
             </div>
-        <div class="row">
-            <div class="column"><div style="margin: 2em; border-style: dotted; padding: 2em; padding-bottom: 1em; border-radius: 2em; width: 90%">
-              <div class="header__inner">
-    <p style="margin-top: -40px; margin-bottom: 30px;"><img src="./images/beat.gif" style="width:25px; top:45px; position: relative; image-rendering: pixelated; filter: invert();"><iframe src="https://petrapixel.neocities.org/widgets/lastfm?left=1&font=Arial&fontSize=15px&color=ffffff&username=Galissia_&swapPositions=0&delimiter=-&underline=1" style="height:55px; max-width:200px; top: 20px; left:40px; position: relative;" frameborder="0" title="Last.Fm Status"></iframe></p>
-</div>
-                <hr style="margin:-10px; color: rgba(255, 255, 255, 0.14);">
-              <div class="header__inner">
-    <p><small>latest played song on <a href="https://www.last.fm/user/galissia_" target="_blank">last.fm</a></small> | <small>powered by <a
-                href="https://github.com/biancarosa/lastfm-last-played"
-                target="_blank">@biancarosa/lastfm-last-played</a></small></p>
-                
-</div>  
+
+            <div class="row">
+              <div class="column" style="padding: 5px">
+                <div>
+                  <div class="sidebar-title-2">✧ Likes</div>
+                  <ul
+                    style="
+                      max-height: 150px;
+                      overflow-y: scroll;
+                      list-style-image: url(http://68.media.tumblr.com/bc54e512f3b791e10f5d4891e4765dc0/tumblr_inline_niyn9xJyRL1ry72eo.gif);
+                    ">
+                    <li>Doctor Who</li>
+                    <li>My Little Pony</li>
+                    <li>The Glass Scientists</li>
+                    <li>Gothic Literature</li>
+                    <li>Supernatural</li>
+                    <li>Baldur's Gate 3</li>
+                    <li>Dungeons & Dragons</li>
+                    <li>The Elder Scrolls</li>
+                    <li>Tomatoes</li>
+                    <li>Monkeys</li>
+                    <li>Witchcraft</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="column" style="padding: 5px">
+                <div>
+                  <div class="sidebar-title-2">✧ Hobbies</div>
+                  <ul
+                    style="
+                      max-height: 150px;
+                      overflow-y: scroll;
+                      list-style-image: url(http://68.media.tumblr.com/bc54e512f3b791e10f5d4891e4765dc0/tumblr_inline_niyn9xJyRL1ry72eo.gif);
+                    ">
+                    <li>Coding</li>
+                    <li>Drawing</li>
+                    <li>Journaling</li>
+                    <li>Collecting MLP</li>
+                    <li>Film Editing</li>
+                    <li>Making lists n stuff</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-                
-            <div style="margin: 2em; border-style: dotted; padding: 5px; border-radius: 2em; width: 90%">
-            <center><div class="sidebar-title-2">⤑ Cliques</div></center>
-                <center style="max-height:90px; overflow-y:scroll;">
-                                        <a href="https://xandra.cc/patrons" target="_new">matron</a>
-                                        <img src="./images/sun.gif" /> brigid<br /><br />
-                                        <a href="https://callmemanatee.neocities.org/who_clique">Companions</a>
-                                        <img style="width: 20px" src="./images/tardis2.gif" /> Gal is a companion of the
-                                        10th Doctor and Donna Noble.<br /><br />
-                                        <a href="https://caffeinated.wings.nu/">caffeineNATION</a>
-                                        <img src="./images/coffee.gif" /> caffe mocha<br /><br />
-                                        <a href="http://aromatic.wings.nu/">aromatic</a>
-                                        <img src="./images/wave.gif" /> harbour mist <br /><br />
-                                        <a href="http://cliqued.wings.nu/">rock me</a>
-                                        <img src="./images/rockme.png" /> Hall & Oates<br /><br />
-                                        My favorite food is:
-                                        <a href="https://frankie.fanacular.net/food" target="_blank">Gyros</a><br />
-                                        <img
-                                            src="https://i.imgur.com/W1LAoXq.png"
-                                            style="
-                                                width: 30px;
-                                                position: relative;
-                                                top: 20px;
-                                                image-rendering: pixelated;
-                                            " />
-                                        I am learning
-                                        <a href="https://dedicated.mysticwater.org/index.php" target="_blank">Irish</a>
-                                    </center>
-            </div></div>
+          </div>
+          <div class="row">
             <div class="column">
-            
-            <div style="margin: 2em; border-style: dotted; padding: 5px; border-radius: 2em; width: 70%">
-            <center><div class="sidebar-title-2">Fanlistings</div></center><center style="max-height:285px; overflow-y:scroll;">
-        <a target="_blank" href="http://fanique.altervista.org/moon/buttons.php"
-          ><img src="./images/fanlistings/moon.png" alt="Moon" title="The Moon"
-        /></a>
-        <a target="_blank" href="http://www.marheavenj.net/picture/index.php"
-          ><img src="./images/fanlistings/dorian.jpg" alt="Dorian Gray" title="The Picture of Dorian Gray"
-        /></a>
-        <a target="_blank" href="http://fanimated.net/mylittlepony/"
-          ><img src="./images/fanlistings/mlp.gif" alt="My Little Pony" title="My Little Pony"
-        /></a>
-        <a
-          target="_blank"
-          href="http://www.noonvale.net/scoobydoo/"
-          ><img src="./images/fanlistings/scooby.gif" alt="Scooby Doo: Mystery Incorporated" title="Scooby Doo: Mystery Incorporated"
-        /></a>
-        <a target="_blank" href="http://www.royal-drama.net/scoobydoo/"
-          ><img src="./images/fanlistings/scooby2.png" alt="Scooby Doo, Where Are You!" title="Scooby Doo, Where Are You!"
-        /></a>
-        <a target="_blank" href="https://yerfej.org/moulin/" title="Moulin Rouge!"><img src="./images/fanlistings/moulin.png"></a>
-        <a target="_blank" href="http://theatregirl.net/jekyll&hyde"
-          ><img src="./images/fanlistings/jekyllhyde.png" title="Jekyll and Hyde (Musical)" alt="Jekyll and Hyde (Musical)"
-        /></a>
-        <a target="_blank" href="https://theatregirl.net/jhsoundtrack/index.php"
-          ><img src="./images/fanlistings/jekyllhyde4.png" title="Jekyll and Hyde (Soundtrack)" alt="Jekyll and Hyde (Soundtrack)"
-        /></a>
-        <a target="_blank" href="https://theatregirl.net/hyde/index.php"
-          ><img src="./images/fanlistings/jekyllhyde3.png" alt="Jekyll and Hyde (Character)" title="Jekyll and Hyde (Character)"
-        /></a>
-        
-        <a target="_blank" href="http://movies.i-heart-you.net/bttf."
-          ><img src="./images/fanlistings/bttf.gif" alt="Back To The Future" border="0" title="Back to the Future"
-        /></a>
-        <a href="https://fan.redcrown.net/bride"
-          ><img src="./images/fanlistings/tpb.png" alt="The Princess Bride fanlisting" title="The Princess Bride"
-        /></a>
-        <a target="_blank" href="http://www.ladyrose.buruma.net/animaniacs/1993"
-          ><img src="./images/fanlistings/animaniacs.png" alt="Animaniacs" title="Animaniacs"
-        /></a>
-        <a target="_blank" href="http://tardis.i-heart-you.net/doctorwho"
-          ><img src="./images/fanlistings/dw.gif" alt="Doctor Who" border="0" title="Doctor Who"
-        /></a>
-        <a target="_blank" href="https://auridon.com/elderscrolls/index.php"
-          ><img src="./images/fanlistings/tes.png" alt="The Elder Scrolls Series" title="The Elder Scrolls Series" border="0"
-        /></a>
-        <a target="_blank" href="https://beatngu.altervista.org/bi/index.php"
-          ><img src="./images/fanlistings/bi.png" alt="Bisexuality" title="Bisexuality"
-        /></a>
-        <a target="_blank" href="https://nature.i-heart-you.net/forests/"
-          ><img src="./images/fanlistings/forests.gif" alt="Forests" title="Forests"
-        /></a>
-        <a
-          target="_blank"
-          href="https://fans.thislove.nu/ghosts
+              <div
+                style="
+                  margin: 2em;
+                  border-style: dotted;
+                  padding: 2em;
+                  padding-bottom: 1em;
+                  border-radius: 2em;
+                  width: 90%;
+                ">
+                <div class="header__inner">
+                  <p style="margin-top: -40px; margin-bottom: 30px">
+                    <img
+                      src="./images/beat.gif"
+                      style="
+                        width: 25px;
+                        top: 45px;
+                        position: relative;
+                        image-rendering: pixelated;
+                        filter: invert();
+                      " /><iframe
+                      src="https://petrapixel.neocities.org/widgets/lastfm?left=1&font=Arial&fontSize=15px&color=ffffff&username=Galissia_&swapPositions=0&delimiter=-&underline=1"
+                      style="height: 55px; max-width: 200px; top: 20px; left: 40px; position: relative"
+                      frameborder="0"
+                      title="Last.Fm Status"></iframe>
+                  </p>
+                </div>
+                <hr style="margin: -10px; color: rgba(255, 255, 255, 0.14)" />
+                <div class="header__inner">
+                  <p>
+                    <small
+                      >latest played song on
+                      <a href="https://www.last.fm/user/galissia_" target="_blank">last.fm</a></small
+                    >
+                    |
+                    <small
+                      >powered by
+                      <a href="https://github.com/biancarosa/lastfm-last-played" target="_blank"
+                        >@biancarosa/lastfm-last-played</a
+                      ></small
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div style="margin: 2em; border-style: dotted; padding: 5px; border-radius: 2em; width: 90%">
+                <center><div class="sidebar-title-2">⤑ Cliques</div></center>
+                <center style="max-height: 90px; overflow-y: scroll">
+                  <a href="https://xandra.cc/patrons" target="_new">matron</a>
+                  <img src="./images/sun.gif" /> brigid<br /><br />
+                  <a href="https://callmemanatee.neocities.org/who_clique">Companions</a>
+                  <img style="width: 20px" src="./images/tardis2.gif" /> Gal is a companion of the 10th Doctor and Donna
+                  Noble.<br /><br />
+                  <a href="https://caffeinated.wings.nu/">caffeineNATION</a>
+                  <img src="./images/coffee.gif" /> caffe mocha<br /><br />
+                  <a href="http://aromatic.wings.nu/">aromatic</a>
+                  <img src="./images/wave.gif" /> harbour mist <br /><br />
+                  <a href="http://cliqued.wings.nu/">rock me</a>
+                  <img src="./images/rockme.png" /> Hall & Oates<br /><br />
+                  My favorite food is:
+                  <a href="https://frankie.fanacular.net/food" target="_blank">Gyros</a><br />
+                  <img
+                    src="https://i.imgur.com/W1LAoXq.png"
+                    style="width: 30px; position: relative; top: 20px; image-rendering: pixelated" />
+                  I am learning
+                  <a href="https://dedicated.mysticwater.org/index.php" target="_blank">Irish</a>
+                </center>
+              </div>
+            </div>
+            <div class="column">
+              <div style="margin: 2em; border-style: dotted; padding: 5px; border-radius: 2em; width: 70%">
+                <center><div class="sidebar-title-2">Fanlistings</div></center>
+                <center style="max-height: 285px; overflow-y: scroll">
+                  <a target="_blank" href="http://fanique.altervista.org/moon/buttons.php"
+                    ><img src="./images/fanlistings/moon.png" alt="Moon" title="The Moon"
+                  /></a>
+                  <a target="_blank" href="http://www.marheavenj.net/picture/index.php"
+                    ><img src="./images/fanlistings/dorian.jpg" alt="Dorian Gray" title="The Picture of Dorian Gray"
+                  /></a>
+                  <a target="_blank" href="http://fanimated.net/mylittlepony/"
+                    ><img src="./images/fanlistings/mlp.gif" alt="My Little Pony" title="My Little Pony"
+                  /></a>
+                  <a target="_blank" href="http://www.noonvale.net/scoobydoo/"
+                    ><img
+                      src="./images/fanlistings/scooby.gif"
+                      alt="Scooby Doo: Mystery Incorporated"
+                      title="Scooby Doo: Mystery Incorporated"
+                  /></a>
+                  <a target="_blank" href="http://www.royal-drama.net/scoobydoo/"
+                    ><img
+                      src="./images/fanlistings/scooby2.png"
+                      alt="Scooby Doo, Where Are You!"
+                      title="Scooby Doo, Where Are You!"
+                  /></a>
+                  <a target="_blank" href="https://yerfej.org/moulin/" title="Moulin Rouge!"
+                    ><img src="./images/fanlistings/moulin.png"
+                  /></a>
+                  <a target="_blank" href="http://theatregirl.net/jekyll&hyde"
+                    ><img
+                      src="./images/fanlistings/jekyllhyde.png"
+                      title="Jekyll and Hyde (Musical)"
+                      alt="Jekyll and Hyde (Musical)"
+                  /></a>
+                  <a target="_blank" href="https://theatregirl.net/jhsoundtrack/index.php"
+                    ><img
+                      src="./images/fanlistings/jekyllhyde4.png"
+                      title="Jekyll and Hyde (Soundtrack)"
+                      alt="Jekyll and Hyde (Soundtrack)"
+                  /></a>
+                  <a target="_blank" href="https://theatregirl.net/hyde/index.php"
+                    ><img
+                      src="./images/fanlistings/jekyllhyde3.png"
+                      alt="Jekyll and Hyde (Character)"
+                      title="Jekyll and Hyde (Character)"
+                  /></a>
+
+                  <a target="_blank" href="http://movies.i-heart-you.net/bttf."
+                    ><img
+                      src="./images/fanlistings/bttf.gif"
+                      alt="Back To The Future"
+                      border="0"
+                      title="Back to the Future"
+                  /></a>
+                  <a href="https://fan.redcrown.net/bride"
+                    ><img
+                      src="./images/fanlistings/tpb.png"
+                      alt="The Princess Bride fanlisting"
+                      title="The Princess Bride"
+                  /></a>
+                  <a target="_blank" href="http://www.ladyrose.buruma.net/animaniacs/1993"
+                    ><img src="./images/fanlistings/animaniacs.png" alt="Animaniacs" title="Animaniacs"
+                  /></a>
+                  <a target="_blank" href="http://tardis.i-heart-you.net/doctorwho"
+                    ><img src="./images/fanlistings/dw.gif" alt="Doctor Who" border="0" title="Doctor Who"
+                  /></a>
+                  <a target="_blank" href="https://auridon.com/elderscrolls/index.php"
+                    ><img
+                      src="./images/fanlistings/tes.png"
+                      alt="The Elder Scrolls Series"
+                      title="The Elder Scrolls Series"
+                      border="0"
+                  /></a>
+                  <a target="_blank" href="https://beatngu.altervista.org/bi/index.php"
+                    ><img src="./images/fanlistings/bi.png" alt="Bisexuality" title="Bisexuality"
+                  /></a>
+                  <a target="_blank" href="https://nature.i-heart-you.net/forests/"
+                    ><img src="./images/fanlistings/forests.gif" alt="Forests" title="Forests"
+                  /></a>
+                  <a
+                    target="_blank"
+                    href="https://fans.thislove.nu/ghosts
 "
-          ><img src="./images/fanlistings/ghosts.png" alt="Ghosts" title="Ghosts"
-        /></a>
-        <a target="_blank" href="https://fan.wings.nu/witchcraft/"
-          ><img src="./images/fanlistings/witchcraft.png" alt="Witchcraft" border="0" title="Witchcraft"
-        /></a>
-        <a target="_blank" href="http://fan.still-breathing.com/history/"
-          ><img src="./images/fanlistings/history.png" alt="History" title="History"
-        /></a>
-        <a target="_blank" href="https://theatregirl.net/midnight"
-          ><img src="./images/fanlistings/midnight.png" alt="Midnight" title="Midnight"
-        /></a>
-        <a target="_blank" href="https://ryo.whorehau.se/index.php"
-          ><img src="./images/fanlistings/50x50ryo1.png" alt="Ryo Asuka" title="Ryo Asuka"
-        /></a>
-        <a target="_blank" href="https://tardis.i-heart-you.net/s4/"
-          ><img src="./images/fanlistings/s4.gif" alt="Doctor Who Series 4" title="Doctor Who Series 4"
-        /></a>
-        <a target="_blank" href="https://tv.i-heart-you.net/crowley/"
-          ><img src="./images/fanlistings/crowley.gif" alt="Crowley" title="Crowley"
-        /></a>
-        <a target="_blank" href="http://contradiction.altervista.org/supernatural/index.php"
-          ><img src="./images/fanlistings/supernatural.png" alt="Supernatural" title="Supernatural"
-        /></a>
-        <a target="_blank" href="https://go.wings.nu/index.php"
-          ><img src="./images/fanlistings/go07.png" alt="Good Omens" title="Good Omens"
-        /></a>
-        <a target="_blank" href="https://yerfej.org/lucifer/"
-          ><img src="./images/fanlistings/lucifer.png" alt="Lucifer" title="Lucifer"
-        /></a>
-        <a target="_blank" href="https://www.into-a-dream.com.ar/wwstv/"
-          ><img src="./images/fanlistings/wwdits.png" alt="What We Do In The Shadows" title="What We Do In The Shadows"
-        /></a>
-        <a target="_blank" href="https://fan.robotess.net/david-tennant"
-          ><img src="./images/fanlistings/tennant.jpeg" alt="David Tennant" title="David Tennant"
-        /></a>
-        
-        <a target="_blank" href="https://yaten.net/capaldi/"
-          ><img src="./images/fanlistings/capaldi.png" alt="Peter Capaldi" title="Peter Capaldi"
-        /></a>
-        <a target="_blank" href="http://winterseve.altervista.org/jensen"
-          ><img src="./images/fanlistings/jensen.png" alt="Jensen Ackles" title="Jensen Ackles"
-        /></a>
-        <a target="_blank" href="https://boundless-realms.com/misha/"
-          ><img src="./images/fanlistings/misha.jpg" alt="Misha Collins" title="Misha Collins"
-        /></a>
-        <a target="_blank" href="https://tardis.i-heart-you.net/rose/"
-          ><img src="./images/fanlistings/rose.gif" alt="Rose Tyler" title="Rose Tyler"
-        /></a>
-        <a target="_blank" href="http://edgeofseventeen.altervista.org/sweeneytodd/index.php"
-          ><img src="./images/fanlistings/sweeney.png" alt="Sweeney Todd" title="Sweeny Todd"
-        /></a>
-        <a target="_blank" href="https://love.cordy.nu/grimm/"
-          ><img src="./images/fanlistings/monroe.webp" alt="Grimm" title="Grimm"
-        /></a>
-      <a target="_blank" href="http://amalgamate.afflatus-misery.net/apollo/"
-          ><img src="./images/fanlistings/apollo.png" alt="Apollo" title="Apollo"
-        /></a>
-        <a target="_blank" href="http://andrasta.net/artemis/"
-          ><img src="./images/fanlistings/artemis.jpg" alt="Artemis" title="Artemis"
-        /></a>
-        <a target="_blank" href="http://www.into-a-dream.com.ar/taurus/index.php"
-          ><img src="./images/fanlistings/taurus.png" alt="Taurus" title="Taurus"
-        /></a>
-        <a target="_blank" href="http://fan.greenhype.net/mp3players/about.php"
-          ><img src="./images/fanlistings/mp3players50j.gif" alt="MP3 Players" title="MP3 Players"
-        /></a>
-        <a target="_blank" href=""><img src="./images/fanlistings/html50x50_001.png" alt="HTML" title="html"> </a>
-        
-    
-        
-<!--
+                    ><img src="./images/fanlistings/ghosts.png" alt="Ghosts" title="Ghosts"
+                  /></a>
+                  <a target="_blank" href="https://fan.wings.nu/witchcraft/"
+                    ><img src="./images/fanlistings/witchcraft.png" alt="Witchcraft" border="0" title="Witchcraft"
+                  /></a>
+                  <a target="_blank" href="http://fan.still-breathing.com/history/"
+                    ><img src="./images/fanlistings/history.png" alt="History" title="History"
+                  /></a>
+                  <a target="_blank" href="https://theatregirl.net/midnight"
+                    ><img src="./images/fanlistings/midnight.png" alt="Midnight" title="Midnight"
+                  /></a>
+                  <a target="_blank" href="https://ryo.whorehau.se/index.php"
+                    ><img src="./images/fanlistings/50x50ryo1.png" alt="Ryo Asuka" title="Ryo Asuka"
+                  /></a>
+                  <a target="_blank" href="https://tardis.i-heart-you.net/s4/"
+                    ><img src="./images/fanlistings/s4.gif" alt="Doctor Who Series 4" title="Doctor Who Series 4"
+                  /></a>
+                  <a target="_blank" href="https://tv.i-heart-you.net/crowley/"
+                    ><img src="./images/fanlistings/crowley.gif" alt="Crowley" title="Crowley"
+                  /></a>
+                  <a target="_blank" href="http://contradiction.altervista.org/supernatural/index.php"
+                    ><img src="./images/fanlistings/supernatural.png" alt="Supernatural" title="Supernatural"
+                  /></a>
+                  <a target="_blank" href="https://go.wings.nu/index.php"
+                    ><img src="./images/fanlistings/go07.png" alt="Good Omens" title="Good Omens"
+                  /></a>
+                  <a target="_blank" href="https://yerfej.org/lucifer/"
+                    ><img src="./images/fanlistings/lucifer.png" alt="Lucifer" title="Lucifer"
+                  /></a>
+                  <a target="_blank" href="https://www.into-a-dream.com.ar/wwstv/"
+                    ><img
+                      src="./images/fanlistings/wwdits.png"
+                      alt="What We Do In The Shadows"
+                      title="What We Do In The Shadows"
+                  /></a>
+                  <a target="_blank" href="https://fan.robotess.net/david-tennant"
+                    ><img src="./images/fanlistings/tennant.jpeg" alt="David Tennant" title="David Tennant"
+                  /></a>
+
+                  <a target="_blank" href="https://yaten.net/capaldi/"
+                    ><img src="./images/fanlistings/capaldi.png" alt="Peter Capaldi" title="Peter Capaldi"
+                  /></a>
+                  <a target="_blank" href="http://winterseve.altervista.org/jensen"
+                    ><img src="./images/fanlistings/jensen.png" alt="Jensen Ackles" title="Jensen Ackles"
+                  /></a>
+                  <a target="_blank" href="https://boundless-realms.com/misha/"
+                    ><img src="./images/fanlistings/misha.jpg" alt="Misha Collins" title="Misha Collins"
+                  /></a>
+                  <a target="_blank" href="https://tardis.i-heart-you.net/rose/"
+                    ><img src="./images/fanlistings/rose.gif" alt="Rose Tyler" title="Rose Tyler"
+                  /></a>
+                  <a target="_blank" href="http://edgeofseventeen.altervista.org/sweeneytodd/index.php"
+                    ><img src="./images/fanlistings/sweeney.png" alt="Sweeney Todd" title="Sweeny Todd"
+                  /></a>
+                  <a target="_blank" href="https://love.cordy.nu/grimm/"
+                    ><img src="./images/fanlistings/monroe.webp" alt="Grimm" title="Grimm"
+                  /></a>
+                  <a target="_blank" href="http://amalgamate.afflatus-misery.net/apollo/"
+                    ><img src="./images/fanlistings/apollo.png" alt="Apollo" title="Apollo"
+                  /></a>
+                  <a target="_blank" href="http://andrasta.net/artemis/"
+                    ><img src="./images/fanlistings/artemis.jpg" alt="Artemis" title="Artemis"
+                  /></a>
+                  <a target="_blank" href="http://www.into-a-dream.com.ar/taurus/index.php"
+                    ><img src="./images/fanlistings/taurus.png" alt="Taurus" title="Taurus"
+                  /></a>
+                  <a target="_blank" href="http://fan.greenhype.net/mp3players/about.php"
+                    ><img src="./images/fanlistings/mp3players50j.gif" alt="MP3 Players" title="MP3 Players"
+                  /></a>
+                  <a target="_blank" href=""
+                    ><img src="./images/fanlistings/html50x50_001.png" alt="HTML" title="html" />
+                  </a>
+
+                  <!--
         <a target="_blank" href=""
           ><img src="./images/fanlistings/" alt="" title=""
         /></a>
 -->
-        
-      </center>
-            </div></div>
-            
-        </div>
-            
-                <center><div style="border-style: dotted; padding: 1em; border-radius: 2em; width: 70%">
-                <div class="sidebar-title-2">Webrings</div>
-                    <div style="max-height:200px; overflow-y:scroll;">
-                    <center>
-                                    <div style="width: 150px; /* <- Set any width you'd like! */">
-                                        <script src="https://jeith.neocities.org/assets/webring/wii-ring.js"></script>
-                                        <wii-ring site="https://galissia.neocities.org"></wii-ring><br />
-                                    </div>
-                                    <div id="ncring">
-                                        <script
-                                            type="text/javascript"
-                                            src="https://neocreatives.neocities.org/onionring-variables.js"></script>
-                                        <script
-                                            type="text/javascript"
-                                            src="https://neocreatives.neocities.org/onionring-widget.js"></script>
-                                    </div>
-                                    <br />
+                </center>
+              </div>
+            </div>
+          </div>
 
-                                    <div id="bisexualism">
-                                        <script
-                                            type="text/javascript"
-                                            src="https://emeowly.github.io/bi/onionring-variables.js"
-                                            defer></script>
-                                        <script
-                                            type="text/javascript"
-                                            src="https://emeowly.github.io/bi/onionring-img-widget.js"
-                                            defer></script>
-                                    </div>
-                                    <br />
-                                    <tr>
-                                        <td>
-                                            <a
-                                                href="https://webri.ng/webring/ladiesofthelinks/previous?via=https%3A%2F%2Fgalissia.neocities.org"
-                                                ><img src="./images/buttons/ladiesofthelink1.gif"
-                                            /></a>
-                                        </td>
-                                        <td>
-                                            <a href="https://ladiesofthe.link/"
-                                                ><img src="./images/buttons/ladiesofthelink.gif"
-                                            /></a>
-                                        </td>
-                                        <td>
-                                            <a
-                                                href="https://webri.ng/webring/ladiesofthelinks/next?via=https%3A%2F%2Fgalissia.neocities.org"
-                                                ><img src="./images/buttons/ladiesofthelink2.gif"
-                                            /></a>
-                                        </td>
-                                    </tr>
-                                    <br /><br />
-                                      <img src="https://ponywebring.neocities.org/mlp-webring.png" usemap="#webring-map" alt="MLP Webring" width="150px">
-  <map name="webring-map">
-    <area shape="rect" coords="11,14,144,69" href="https://ponywebring.neocities.org/">
-    <area shape="rect" coords="35,76,62,101" href="#" alt="Previous">
-    <area shape="rect" coords="89,77,117,101" href="#" alt="Next">
-    <area shape="rect" coords="67,72,85,100" href="#" alt="Random">
-  </map>
-  <script src="https://ponywebring.neocities.org/mlp-webring.js"></script>
-<br><br>
-                                    <div id="autiring">
-                                        <div id="autiring">
-<script type="text/javascript" src="https://ballonlea.neocities.org/autiring/onionring-variables.js"></script>
-<script type="text/javascript" src="https://ballonlea.neocities.org/autiring/onionring-widget.js"></script>
-</div>
-                                    </div>
-                                    <br />
-                                    <journal-ring icon="blue"></journal-ring>
-                                    <script
-                                        async
-                                        src="https://cdn.jsdelivr.net/gh/js044/nenrikido@main/static/js/misc/journalring.js"></script>
-                                    <script src="https://autistbh.neocities.org/webring/webringblinkgif.js"></script>
-                                    <ring-114 site="https://galissia.neocities.org/"></ring-114><br />
-                                    <script src="https://nuthead.neocities.org/ring/ring.js"></script>
-                                    <br />
+          <center>
+            <div style="border-style: dotted; padding: 1em; border-radius: 2em; width: 70%">
+              <div class="sidebar-title-2">Webrings</div>
+              <div style="max-height: 200px; overflow-y: scroll">
+                <center>
+                  <div style="width: 150px; /* <- Set any width you'd like! */">
+                    <script src="https://jeith.neocities.org/assets/webring/wii-ring.js"></script>
+                    <wii-ring site="https://galissia.neocities.org"></wii-ring><br />
+                  </div>
+                  <div id="ncring">
+                    <script
+                      type="text/javascript"
+                      src="https://neocreatives.neocities.org/onionring-variables.js"></script>
+                    <script
+                      type="text/javascript"
+                      src="https://neocreatives.neocities.org/onionring-widget.js"></script>
+                  </div>
+                  <br />
 
-                                    <br />
-                                    <a href="https://neo-neighborhoods.neocities.org/SoHo/"
-                                        ><img src="https://neo-neighborhoods.neocities.org/SoHo/sohop88.gif" /></a
-                                    ><br /><br />
-                                    <div style="color: black;" id="magical-ring">
-                                        <script
-                                            type="text/javascript"
-                                            src="https://magical-ring.neocities.org/js/onionring-variables.js"></script>
-                                        <script
-                                            type="text/javascript"
-                                            src="https://magical-ring.neocities.org/js/onionring-widget.js"></script>
-                                    </div>
-                                    <br /><!--START OF SELF INSERT WEBRING-->
-                                    <div id="selfinsertwebring">
-                                        <script src="/scripts/showWebring.js"></script>
-                                    </div>
-                        <!--END OF SELF INSERT WEBRING--></center>
-                    </div> 
-                </div>
-                    </center>
-          
+                  <div id="bisexualism">
+                    <script
+                      type="text/javascript"
+                      src="https://emeowly.github.io/bi/onionring-variables.js"
+                      defer></script>
+                    <script
+                      type="text/javascript"
+                      src="https://emeowly.github.io/bi/onionring-img-widget.js"
+                      defer></script>
+                  </div>
+                  <br />
+                  <tr>
+                    <td>
+                      <a
+                        href="https://webri.ng/webring/ladiesofthelinks/previous?via=https%3A%2F%2Fgalissia.neocities.org"
+                        ><img src="./images/buttons/ladiesofthelink1.gif"
+                      /></a>
+                    </td>
+                    <td>
+                      <a href="https://ladiesofthe.link/"><img src="./images/buttons/ladiesofthelink.gif" /></a>
+                    </td>
+                    <td>
+                      <a href="https://webri.ng/webring/ladiesofthelinks/next?via=https%3A%2F%2Fgalissia.neocities.org"
+                        ><img src="./images/buttons/ladiesofthelink2.gif"
+                      /></a>
+                    </td>
+                  </tr>
+                  <br /><br />
+                  <img
+                    src="https://ponywebring.neocities.org/mlp-webring.png"
+                    usemap="#webring-map"
+                    alt="MLP Webring"
+                    width="150px" />
+                  <map name="webring-map">
+                    <area shape="rect" coords="11,14,144,69" href="https://ponywebring.neocities.org/" />
+                    <area shape="rect" coords="35,76,62,101" href="#" alt="Previous" />
+                    <area shape="rect" coords="89,77,117,101" href="#" alt="Next" />
+                    <area shape="rect" coords="67,72,85,100" href="#" alt="Random" />
+                  </map>
+                  <script src="https://ponywebring.neocities.org/mlp-webring.js"></script>
+                  <br /><br />
+                  <div id="autiring">
+                    <div id="autiring">
+                      <script
+                        type="text/javascript"
+                        src="https://ballonlea.neocities.org/autiring/onionring-variables.js"></script>
+                      <script
+                        type="text/javascript"
+                        src="https://ballonlea.neocities.org/autiring/onionring-widget.js"></script>
+                    </div>
+                  </div>
+                  <br />
+                  <journal-ring icon="blue"></journal-ring>
+                  <script
+                    async
+                    src="https://cdn.jsdelivr.net/gh/js044/nenrikido@main/static/js/misc/journalring.js"></script>
+                  <script src="https://autistbh.neocities.org/webring/webringblinkgif.js"></script>
+                  <ring-114 site="https://galissia.neocities.org/"></ring-114><br />
+                  <script src="https://nuthead.neocities.org/ring/ring.js"></script>
+                  <br />
+
+                  <br />
+                  <a href="https://neo-neighborhoods.neocities.org/SoHo/"
+                    ><img src="https://neo-neighborhoods.neocities.org/SoHo/sohop88.gif" /></a
+                  ><br /><br />
+                  <div style="color: black" id="magical-ring">
+                    <script
+                      type="text/javascript"
+                      src="https://magical-ring.neocities.org/js/onionring-variables.js"></script>
+                    <script
+                      type="text/javascript"
+                      src="https://magical-ring.neocities.org/js/onionring-widget.js"></script>
+                  </div>
+                  <br /><!--START OF SELF INSERT WEBRING-->
+                  <div id="selfinsertwebring">
+                    <script src="/scripts/showWebring.js"></script>
+                  </div>
+                  <!--END OF SELF INSERT WEBRING-->
+                </center>
+              </div>
+            </div>
+          </center>
         </section>
       </main>
-      
+
       <!-- =============================================== -->
       <!-- Footer will be loaded per JavaScript! Edit layout.js to change. -->
       <!-- =============================================== -->
 
-  
-    <!-- Closing .layout: -->
+      <!-- Closing .layout: -->
     </div>
-
 
     <!-- Add any additional Javascript code (<script></script>) here. -->
   </body>
