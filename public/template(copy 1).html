@@ -1,0 +1,295 @@
+<!doctype html>
+<html>
+<head>
+    
+    <!-- Change your site title: (It is shown in the tab) -->
+    <title>Gal's Space!</title>
+
+    <!-- Change your site description: (It is shown in Google results) -->
+    <meta content="Gal's cozy little corner of the internet" name="description" />
+
+    <!-- Setting character encoding and viewport size. Do not remove. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FavIcon (small image in tab), change to any image you want: -->
+    <link href="./images/theme_assets/em2lV2r.gif" rel="icon" type="image/x-icon" />
+
+    <!-- CSS: -->
+    <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css" if this HTML file is in 2 subfolders, etc. -->
+    <link href="https://fonts.cdnfonts.com/css/elmono-2" rel="stylesheet" />
+<link href="https://fonts.cdnfonts.com/css/beginning-2" rel="stylesheet">
+    <link href="./css/home.css" rel="stylesheet" />
+    <style>
+        .counter {
+      position: relative;
+      left: 45px;
+      bottom: 10px;
+      margin-bottom:;
+    }
+    .map {
+      list-style-image: url("https://64.media.tumblr.com/4859e9933e910e5b2b14011dfb60a4f6/tumblr_inline_p7gi26hl0i1qfc9y0_75sq.gifv");
+      line-height: 1.6;
+    }
+    .mapsub {
+      list-style-image: url("https://64.media.tumblr.com/4859e9933e910e5b2b14011dfb60a4f6/tumblr_inline_p7gi26hl0i1qfc9y0_75sq.gifv");
+    }
+      #time {
+                            font-size: 10px;
+                            margin-left:-10px;
+                            margin-top: 5px;
+                        }</style>
+    <script src="https://status.cafe/current-status.js?name=galissia" defer></script>
+    <script>
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var site_data = JSON.parse(this.responseText);
+                    var num_arr = site_data.info.views.toString().split("");
+                    var num_str = "";
+                    for (i = 0; i < num_arr.length; i++) {
+                        num_str += num_arr[i];
+                        if ((num_arr.length - 1 - i) % 3 == 0 && num_arr.length - 1 - i != 0) {
+                            num_str += ",";
+                        }
+                        var date_str = site_data.info.last_updated;
+                        var date_obj = new Date(site_data.info.last_updated);
+                        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                        var months = [
+                            "January",
+                            "February",
+                            "March",
+                            "April",
+                            "May",
+                            "June",
+                            "July",
+                            "August",
+                            "September",
+                            "October",
+                            "November",
+                            "December"
+                        ];
+                        document.getElementById("lastupdate").innerHTML =
+                            days[date_obj.getDay()] +
+                            " " +
+                            months[date_obj.getMonth()] +
+                            " " +
+                            date_obj.getDate() +
+                            ", " +
+                            date_obj.getFullYear();
+                    }
+                    document.getElementById("hitcount").innerHTML = num_str;
+                }
+            };
+            xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=dufflebagdreamz", true);
+            xhttp.send();
+        </script>
+    <script type="text/javascript">
+      function changeStyle(style) {
+    if (style == null)
+        style = localStorage.getItem("style");
+        if (style == null) 
+            style = "/css/home";
+    document.querySelector("link[type='text/css']").setAttribute("href", "/public/css/" + style + ".css");
+    localStorage.setItem("style", style);
+}
+
+changeStyle();</script>
+    <!-- JavaScript: -->
+    <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js" if this HTML file is in 2 subfolders, etc. -->
+    <script src="./scripts/layout.js"></script>
+
+    <script>
+      // Template generated with petrapixel's layout generator.
+      // (Please do not remove this credit.)
+      console.log("%c Template generated with petrapixel's layout generator.", "font-size: 14pt;");
+      console.log("%c https://petrapixel.neocities.org/coding/layout-generator", "font-size: 14pt;");
+    </script>
+    </head>
+    <body>
+    <!-- The next line is a skip-to-content link for keyboard users. Do not remove it! -->
+    <a href="#content" id="skip-to-content-link">Skip to content</a>
+
+    <div class="layout">
+      
+      <!-- =============================================== -->
+      <!-- Header (and Sidebars) will be loaded per JavaScript! Edit layout.js to change. -->
+      <!-- =============================================== -->
+
+  
+      <main id="content"> <!-- Do NOT remove the ID here -->
+
+        <noscript>Please enable JavaScript to view this website!</noscript>
+    <div id="main">
+      <div class="mainboxes">
+        <div class="subheader"><h3 style="text-align: center">sitemap</h3></div>
+
+        <div class="mainboxescontent">
+          <div class="map">
+            <ul style="list-style-image: /images/sparkles.gif">
+              <li><a href="./home.html">Home</a></li>
+              <li>
+                <a href="./about.html" target="_blank">About Me</a
+                ><sub style="position: relative; bottom: 5px">
+                  - autoplaying music. very slight eyestrain (?) warning. CRT texture is toggleable
+                </sub>
+              </li>
+              <ul>
+                
+                <li><a href="https://galissia.neocities.org/about?z=/petsgallery">Pets</a><sub style="position: relative; bottom: 5px"> - my beloved pets</sub></li>
+                <ul>
+                  <li><a href="https://galissia.hotglue.me/?chip" target="_blank">Chip</a></li>
+                  <li><a href="https://galissia.hotglue.me/?oreo" target="_blank">Oreo</a></li>
+                  <a href="https://galissia.hotglue.me/?frank" target="_blank"><li>Frank</li></a>
+                </ul>
+                <li>
+                  <a href="https://galissia.neocities.org/about?z=/personascontent">Personas</a><sub style="position: relative; bottom: 5px" target="_blank">
+                    - a little info on my three main persona characters</sub
+                  >
+                </li>
+                <li><a href="https://galissia.neocities.org/about?z=/babyphotos">Baby Pictures</a><sub style="position: relative; bottom: 5px"> - a few pictures and videos from my childhood</sub></li>
+               
+              </ul>
+              <s><li><a href="/interests.html">Interests</a><sub style="position: relative; bottom: 5px"></sub></li></s>
+              <ul>
+                <s><li>
+                  <a href="/characters.html">Favorite Characters</a
+                  ><sub style="position: relative; bottom: 5px"> - my favorite characters!</sub>
+                </li>
+                <li>
+                  <a href="/music.html">Favorite Songs</a
+                  ><sub style="position: relative; bottom: 5px"> - my favorite songs & playlists!</sub>
+                </li></s>
+                <li>
+                  <a
+                    href="https://galissia.notion.site/Movies-Tv-Shows-Tracker-ac39f63bc51946d2b3ee10a5b3388601?pvs=4"
+                    target="_blank"
+                    >Movie/TV Tracker</a
+                  ><sub style="position: relative; bottom: 5px"> - my Notion page for tracking my favorites </sub>
+                </li>
+                <li>
+                  <a href="https://letterboxd.com/Galissia_/" target="_blank">Letterboxd</a
+                  ><sub style="position: relative; bottom: 5px"> - less used, but also movie tracking</sub>
+                </li>
+                <li>
+                  <a href="https://www.backloggd.com/u/galissia_/" target="_blank">Backloggd</a
+                  ><sub style="position: relative; bottom: 5px"> - game tracking</sub>
+                </li>
+                <li>
+                  <a href="https://galissia.notion.site/4ba61f8ca5384345962cc64d1b11a6cd" target="_blank">Library</a
+                  ><sub style="position: relative; bottom: 5px"> - my Notion page for tracking my physical library</sub>
+                </li>
+              </ul>
+              <li>
+                <a href="./art/gallery.html">Art Gallery</a
+                ><sub style="position: relative; bottom: 5px"> - a non-exhaustive collection of my art</sub>
+              </li>
+              <li>
+                <a href="./websites.html">Neat Links</a
+                ><sub style="position: relative; bottom: 5px">
+                  - a collection of sites & resources I find neat or useful! also where I display the fanlistings I'm a
+                  part of</sub
+                >
+              </li>
+              <li>
+                <a href="./zonelets/index.html" target="_blank">Blog</a
+                ><sub style="position: relative; bottom: 5px">
+                  - for the longer blog posts and entries; where i'll post any essays or articles i may write</sub
+                >
+              </li>
+              
+              <ul>
+              <li><a href="./zonelets/archive.html" target="_blank">Archive</a
+                ><sub style="position: relative; bottom: 5px">
+                  - All Posts</sub
+                >
+                </li>
+              <li>
+                    <a href="./utilities/rss_blog.xml">Blog RSS Feed</a
+                    >
+                  </li></ul>
+              <li>
+                <a href="https://galissia.thoughts.page">Mini Blog</a
+                ><sub style="position: relative; bottom: 5px"> - for the shorter, quicker thoughts and updates</sub>
+              </li>
+              <li>
+                <S><a href="changelog.html">Changelog </a
+                ><sub style="position: relative; bottom: 5px"> - any and all site updates</sub></S>
+              </li>
+              <ul>
+              <li>
+                    <a href="./utilities/rss_changelog.xml">Changelog RSS Feed</a
+                    >
+                  </li></ul>
+              <li><a href="./stamps.html">Stamps</a></li>
+              <s><li><a href="./shrines.html">Shrines</a><sub style="position: relative; bottom: 5px"> - pages dedicated to my favorite things</sub></li></s>
+              <ul>
+              <li>
+                  <a href="./shrines/tgs.html">The Glass Scientists</a
+                  ><sub style="position: relative; bottom: 5px"> - a webcomic by Sage Cotugno</sub>
+                </li>
+              <li>
+                  <a href="./shrines/Moonswirl.html">Moonswirl</a
+                  ><sub style="position: relative; bottom: 5px"> - my first oc!</sub>
+                </li></ul>
+              <li>
+                <a href="./toybox.html">Toybox</a
+                ><sub style="position: relative; bottom: 5px"> - pixel adopts, various quiz results, & fun widgets</sub>
+              </li>
+              <li>
+                <s><a href="./friendcodes.html">Friend Codes</a
+                ><sub style="position: relative; bottom: 5px"> - add me as a friend! </sub></s>
+              </li>
+              <li>
+                  <a href="./witch/witchy.html">Witchcraft</a
+                  ><sub style="position: relative; bottom: 5px"> - documenting my spiritual journey & practice </sub>
+                </li>
+                <ul>
+                  <li>
+                  <a href="https://galissia.neocities.org/witch/witchy?z=/witch/aboutme">About</a
+                  ><sub style="position: relative; bottom: 5px"> - details on my practice & beliefs</sub>
+                </li>
+                 <s> <li>
+                    <a href="">Grimoire</a><sub style="position: relative; bottom: 5px"> - tiny digital grimoire </sub>
+                     </li></s>
+                  <li>
+                    <a href="./witch/altars/altars.html">Altars</a><sub style="position: relative; bottom: 5px"> - digital altars</sub>
+                  </li>
+                  <ul>
+                    <li><a href="./witch/altars/apollo.html">Apollo</a>
+                      </li>
+                      <li><a href="./witch/altars/artemis.html">Artemis</a>
+                      </li>
+                      <li><a href="./witch/altars/brighid.html">Brigid</a>
+                      </li>
+                      <li><a href="./witch/altars/selene.html">Selene</a>
+                      </li>
+                      <li><a href="./witch/altars/dionysus.html">Dionysus</a>
+                      </li>
+                    
+                    </ul>
+                </ul>
+              <li>
+                <s><a href="/archive.html">Archive</a
+                ><sub style="position: relative; bottom: 5px">
+                  - a collection of old layouts and themes. see how this site used to look!</sub
+                ></s>
+              </li>
+              <li>
+                    <a href="./credits.html">Website Credits</a
+                    ><sub style="position: relative; bottom: 5px"> - a list of resources and snippets used to build my site! created after the fact so it is definitely not comprehensive.</sub>
+                  </li>
+              
+              
+            </ul>
+          </div>
+        </div>
+
+        <br />
+      </div>
+    </div>
+  
+      </main>
+      </div>
+    </body>
+</html>

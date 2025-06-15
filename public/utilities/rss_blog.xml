@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+	<channel>
+		<title>Gal's Blog</title>
+		<link>https://galissia.neocities.org/zonelets</link>
+		<description>Gal's RSS Feed for the Blog</description>
+
+		<item>
+			<title>New Year's Updates</title>
+			<link>https://galissia.neocities.org/zonelets/posts/2025-01-21-New-Year-Updates.html</link>
+            <guid>https://galissia.neocities.org/zonelets/posts/2024-01-21-New-Year-Updates.html</guid>
+			<description>New year, new site plans! Briefly discusses potential plans for the site as well as recent happenings.</description>
+			<pubDate>Tue, 21 Jan 2025 01:22:36 EST</pubDate>
+		</item>
+		<item>
+			<title>On a Student Film Set</title>
+			<link>https://galissia.neocities.org/zonelets/posts/2024-10-17-On-a-Student-Film-Set.html</link>
+            <guid>https://galissia.neocities.org/zonelets/posts/2024-10-17-On-a-Student-Film-Set.html</guid>
+			<description>About my experience on a film set at school</description>
+			<pubDate>Thu, 17 Oct 2024 22:21:02 EST</pubDate>
+		</item>
+        <item>
+			<title>Neocities "100 Questions"</title>
+			<link>https://galissia.neocities.org/zonelets/posts/2024-10-06-Neocities-One-Hundred-Questions.html</link>
+			<description>Filled out a fun questionaire I found!</description>
+			<pubDate>Sun, 6 Oct 2024 17:21:02 EST</pubDate>
+		</item>
+        <item>
+			<title>Fall Updates</title>
+			<link>https://galissia.neocities.org/zonelets/posts/2024-10-05-Fall-Updates.html</link>
+			<description>What's been going on</description>
+			<pubDate>Sat, 5 Oct 2024 22:21:02 EST</pubDate>
+		</item>
+        <item>
+			<title>First Post</title>
+			<link>https://galissia.neocities.org/zonelets/posts/2024-06-10-First-Post</link>
+			<description>My first zonelets blog post!</description>
+			<pubDate>Mon, 10 Jun 2024 22:21:02 EST</pubDate>
+		</item>
+
+	</channel>
+</rss>
