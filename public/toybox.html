@@ -1,7 +1,98 @@
-<link rel="shortcut icon" type="image/x-icon" href="/images/theme_assets/favicon.png" />
-    <link href="/style/iframe.css" rel="stylesheet" type="text/css" />
-<link href="https://fonts.cdnfonts.com/css/elmono-2" rel="stylesheet">
-<style>
+<!doctype html>
+<html>
+<head>
+    
+    <!-- Change your site title: (It is shown in the tab) -->
+    <title>Gal's Space!</title>
+
+    <!-- Change your site description: (It is shown in Google results) -->
+    <meta content="Gal's cozy little corner of the internet" name="description" />
+
+    <!-- Setting character encoding and viewport size. Do not remove. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FavIcon (small image in tab), change to any image you want: -->
+    <link href="./images/theme_assets/em2lV2r.gif" rel="icon" type="image/x-icon" />
+
+    <!-- CSS: -->
+    <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css" if this HTML file is in 2 subfolders, etc. -->
+    <link href="https://fonts.cdnfonts.com/css/elmono-2" rel="stylesheet" />
+<link href="https://fonts.cdnfonts.com/css/beginning-2" rel="stylesheet">
+    <link href="./css/home.css" rel="stylesheet" />
+    <style>
+      #time {
+                            font-size: 10px;
+                            margin-left:-10px;
+                            margin-top: 5px;
+                        }</style>
+    <script src="https://status.cafe/current-status.js?name=galissia" defer></script>
+    <script>
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var site_data = JSON.parse(this.responseText);
+                    var num_arr = site_data.info.views.toString().split("");
+                    var num_str = "";
+                    for (i = 0; i < num_arr.length; i++) {
+                        num_str += num_arr[i];
+                        if ((num_arr.length - 1 - i) % 3 == 0 && num_arr.length - 1 - i != 0) {
+                            num_str += ",";
+                        }
+                        var date_str = site_data.info.last_updated;
+                        var date_obj = new Date(site_data.info.last_updated);
+                        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                        var months = [
+                            "January",
+                            "February",
+                            "March",
+                            "April",
+                            "May",
+                            "June",
+                            "July",
+                            "August",
+                            "September",
+                            "October",
+                            "November",
+                            "December"
+                        ];
+                        document.getElementById("lastupdate").innerHTML =
+                            days[date_obj.getDay()] +
+                            " " +
+                            months[date_obj.getMonth()] +
+                            " " +
+                            date_obj.getDate() +
+                            ", " +
+                            date_obj.getFullYear();
+                    }
+                    document.getElementById("hitcount").innerHTML = num_str;
+                }
+            };
+            xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=dufflebagdreamz", true);
+            xhttp.send();
+        </script>
+    <script type="text/javascript">
+      function changeStyle(style) {
+    if (style == null)
+        style = localStorage.getItem("style");
+        if (style == null) 
+            style = "/css/home";
+    document.querySelector("link[type='text/css']").setAttribute("href", "/public/css/" + style + ".css");
+    localStorage.setItem("style", style);
+}
+
+changeStyle();</script>
+    <!-- JavaScript: -->
+    <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js" if this HTML file is in 2 subfolders, etc. -->
+    <script src="./scripts/layout.js"></script>
+
+    <script>
+      // Template generated with petrapixel's layout generator.
+      // (Please do not remove this credit.)
+      console.log("%c Template generated with petrapixel's layout generator.", "font-size: 14pt;");
+      console.log("%c https://petrapixel.neocities.org/coding/layout-generator", "font-size: 14pt;");
+    </script>
+    <style>
 .button-container {
       	 	display: flex;
       	 	justify-content: center;
@@ -17,34 +108,48 @@
       image-rendering: pixelated;
 	   }
 </style>
-<div id="main">
+    </head>
+    <body>
+    <!-- The next line is a skip-to-content link for keyboard users. Do not remove it! -->
+    <a href="#content" id="skip-to-content-link">Skip to content</a>
+
+    <div class="layout">
+      
+      <!-- =============================================== -->
+      <!-- Header (and Sidebars) will be loaded per JavaScript! Edit layout.js to change. -->
+      <!-- =============================================== -->
+
+  
+      <main id="content"> <!-- Do NOT remove the ID here -->
+
+        <noscript>Please enable JavaScript to view this website!</noscript>
+    <div id="main">
 
 
 <div class="mainboxes">
 
-<div class="subheader"><h3 style="text-align:center">toybox</h3></div>
+<div class="title"><div class="title-text" style="text-align:center">toybox</div></div>
 
 <div class="mainboxescontent">
 <br><p style="clear:right;"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fb372f94-1d5b-45b9-a6cf-0f7f5db0174d/dbe956u-9f3e8e7a-f1a9-44b2-8e08-55ea99e8ddee.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ZiMzcyZjk0LTFkNWItNDViOS1hNmNmLTBmN2Y1ZGIwMTc0ZFwvZGJlOTU2dS05ZjNlOGU3YS1mMWE5LTQ0YjItOGUwOC01NWVhOTllOGRkZWUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.45MWYPiOQyB7Mvckt0ruC9IqedBT489o4SCSCDosHPk" width="300px" style="float:left;margin:20px;"><br><br> <br>a place for me to keep any quiz results or digital pets and the like that I collect from around the web :)</p>
 <br>
 
 <hr class="dotted"><br>
-  <a href="https://divergentrays.com/kitty"><h3 style="text-align-last: center;">Kitty Friends Pixel Clique!</h3></a>
+  <center><a href="https://divergentrays.com/kitty"><h3 style="text-align-last: center;">Kitty Friends Pixel Clique!</h3></a>
   <div class="button-container">
-    <img title="Frank | made by me :3" src="/images/kitty-friends-frank.gif">
-    <img title="Oreo | made by me :3" src="/images/kitty-friends-oreo.gif"></div>
+    <img title="Frank | made by me :3" src="./images/kitty-friends-frank.gif">
+    <img title="Oreo | made by me :3" src="./images/kitty-friends-oreo.gif"></div>
   <hr style="width: 20%; border-style: dashed; color: rgba(0, 0, 0, 0.17);">
   <div class="button-container">
-    <a target="_blank" href="https://solaria.neocities.org/"><img src="/images/kitty-creampuffs.png"></a>
-  <a target="_blank" href="https://muttthecowcat.neocities.org/"><img src="/images/kitty-cowcat.png"></a>
-    <a target="_blank" href="https://adilene.net/"><img src="/images/kitty-glorp.gif"></a>
-    <a target="_blank" href="https://solaria.neocities.org/"><img src="/images/kitty-sol-garf.gif"></a>
-    <a target="_blank" href=""><img src="/images/kitty-pompeiipixel.gif"></a>
-    <a target="_blank" href="https://crow-queen.com"><img src="images/kitty-elvis.gif"></a>
-    <a target="_blank" href="https://doqmeat.com/"><img src="/images/kitty-doqmeat.png"></a>
-  
+    <a target="_blank" href="https://solaria.neocities.org/"><img src="./images/kitty-creampuffs.png"></a>
+  <a target="_blank" href="https://muttthecowcat.neocities.org/"><img src="./images/kitty-cowcat.png"></a>
+    <a target="_blank" href="https://adilene.net/"><img src="./images/kitty-glorp.gif"></a>
+    <a target="_blank" href="https://solaria.neocities.org/"><img src="./images/kitty-sol-garf.gif"></a>
+    <a target="_blank" href=""><img src="./images/kitty-pompeiipixel.gif"></a>
+    <a target="_blank" href="https://crow-queen.com"><img src="./images/kitty-elvis.gif"></a>
+    <a target="_blank" href="https://doqmeat.com/"><img src="./images/kitty-doqmeat.png"></a>
   </div>
-  
+  </center>
   
 <div class="adoptables" style="text-align: center;">
 
@@ -55,23 +160,23 @@
 <a target="_blank" href="https://goblincat.neocities.org/unicornfield"><img src="https://files.catbox.moe/lk7f1d.png" width="150px;" style="margin-bottom:-30px;" ></a>
 <a target="_blank" href="https://goblincat.neocities.org/unicornfield"><img src="https://files.catbox.moe/9vllm9.png" width="150px;" style="margin-bottom:-50px;"> </a>
 <a target="_blank" href="https://spiders.neocities.org/z-adopts"><img src="https://files.catbox.moe/6kx17w.png" width="75px;" ></a>
-<a target="_blank" href="https://clownfred.zone/webpets"><img src="/images/plantain.png" style="width:100px; "></a>
+<a target="_blank" href="https://clownfred.zone/webpets"><img src="./images/plantain.png" style="width:100px; "></a>
 <a target="_blank" href="https://tamanotchi.world/11955c"><img src="https://tamanotchi.world/i2/11955" alt="It's tamaNOTchi! Click to feed!" style=" margin-right:20px;"></a>
 <a target="_blank" href="https://tamanotchi.world/13087c"><img src="https://tamanotchi.world/i2/13087" alt="It's tamaNOTchi! Click to feed!" style=" margin-right:20px;"></a>
 <a target="_blank" href="https://tamanotchi.world/13088c"><img src="https://tamanotchi.world/i2/13088" alt="It's tamaNOTchi! Click to feed!" style=" margin-right:20px; margin-left:20px; margin-top:40px;"></a><br>
 </div>
 <marquee direction="right" scrollamount="10"><center>
-      <img style="margin-right:-50px;" src="/images/discord_shuffle_left.gif">
-      <img class="freezeframe" src="/images/nmmpixel.gif">
-    <img class="freezeframe" src="/images/lunapixel.gif">
-      <img src="/images/luna_fly.gif">
-      <img class="freezeframe" style="margin-left:-15px;" src="/images/derpypixel.gif">
-    <img class="freezeframe" style="margin-left:-15px;" src="/images/doc.gif">
-    <img class="freezeframe" src="/images/minuette.gif">
-    <img class="freezeframe" src="/images/sunburst.gif">
-    <img class="freezeframe" style="margin-left: -5px;" src="/images/sunset.gif"><img src="/images/ajtrot.gif">
-      <img src="/images/twi.gif">
-      <img class="freezeframe" width="110px;" style="margin-left: -20px;" src="images/moonswirl/moonswirl_trot_right.gif"></center></marquee>
+      <img style="margin-right:-50px;" src="./images/discord_shuffle_left.gif">
+      <img class="freezeframe" src="./images/nmmpixel.gif">
+    <img class="freezeframe" src="./images/lunapixel.gif">
+      <img src="./images/luna_fly.gif">
+      <img class="freezeframe" style="margin-left:-15px;" src="./images/derpypixel.gif">
+    <img class="freezeframe" style="margin-left:-15px;" src="./images/doc.gif">
+    <img class="freezeframe" src="./images/minuette.gif">
+    <img class="freezeframe" src="./images/sunburst.gif">
+    <img class="freezeframe" style="margin-left: -5px;" src="./images/sunset.gif"><img src="./images/ajtrot.gif">
+      <img src="./images/twi.gif">
+      <img class="freezeframe" width="110px;" style="margin-left: -20px;" src="./images/moonswirl/moonswirl_trot_right.gif"></center></marquee>
 <br>
 <br>
 
@@ -89,8 +194,7 @@
  <A href="https://www.theotaku.com/quizzes/view/3586/what_element_of_harmony_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/3586_Honesty.jpg" alt="What Element Of Harmony Are You?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/3586/what_element_of_harmony_are_you%3F">What Element Of Harmony Are You?</A>
   <br><br>
   <A href="https://www.theotaku.com/quizzes/view/2946/which_my_little_pony_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/2946_applejack.jpg" alt="Which My Little Pony Are You?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/2946/which_my_little_pony_are_you%3F">Which My Little Pony Are You?</A>
-  <br><br>
-<iframe title="gifypet" width="314" height="321" margin-right="-50px;" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=Acorn&dob=1713413567&gender=m&element=Earth&pet=https%3A%2F%2Fi.postimg.cc%2FvH4VCdmk%2Fmonkey-0073.gif&map=tree.jpg&background=&tablecolor=black&textcolor=black" frameborder="0"></iframe>
+  
     <br><br>
   
     <a target="_blank" href="http://www.nerdtests.com/ft_loser.php?im">
@@ -131,7 +235,7 @@ href="https://www.angelfire.com/co2/dreamchaserland/adoption.html">
 </table>
   <br><br>
   <A href="https://www.theotaku.com/quizzes/view/4031/which_undertale_soul_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/4031_Integrity.jpg" alt="Which Undertale Soul Are You?" /><br /></a><A href="https://www.theotaku.com/quizzes/view/4031/which_undertale_soul_are_you%3F">Which Undertale Soul Are You?</A><br><br>
-    <a target="_blank" href="http://cupped-expressions.net/cheese/quiz/"><img src="/images/emmental03.gif" border=0 width=226 height=93 alt="I am emmental cheese!"></a><br><b><a target="_blank" href="http://cupped-expressions.net/cheese/quiz/">Cheese Test: What type of cheese are you?</a></b>
+    <a target="_blank" href="http://cupped-expressions.net/cheese/quiz/"><img src="./images/emmental03.gif" border=0 width=226 height=93 alt="I am emmental cheese!"></a><br><b><a target="_blank" href="http://cupped-expressions.net/cheese/quiz/">Cheese Test: What type of cheese are you?</a></b>
     <br><br>
     <table width="320" height="240" border="0" align="center" cellpadding="2" cellspacing="5" bgcolor="#957cdc">
   <tr>
@@ -162,10 +266,10 @@ href="https://www.angelfire.com/co2/dreamchaserland/adoption.html">
   </tr>
 </table>
     <br>
-    <center><table bgcolor="#6495ED" border=1 width="50%"><tr><td><center><font color="#000000"><big>you are cornflowerblue</big><br>#6495ED</font></center></td></tr><tr><td bgcolor="#FFFFFF"><center><font color="#000000" size=-1><br>Your dominant hues are cyan and blue. You like people and enjoy making friends. You're conservative and like to make sure things make sense before you step into them, especially in relationships. You are curious but respected for your opinions by people who you sometimes wouldn't even suspect.<br><br>Your saturation level is medium - You're not the most decisive go-getter, but you can get a job done when it's required of you. You probably don't think the world can change for you and don't want to spend too much effort trying to force it.<br><br>Your outlook on life is bright. You see good things in situations where others may not be able to, and it frustrates you to see them get down on everything.<br></font></center></td></tr><tr><td><center><a target="_blank" href="http://spacefem.com/quizzes/colors">the spacefem.com html color quiz</a></center></td></tr></table></center>
+    <center><table bgcolor="#6495ED" border=1 width="70%"><tr><td><center><font color="#000000"><big>you are cornflowerblue</big><br>#6495ED</font></center></td></tr><tr><td bgcolor="#FFFFFF"><center><font color="#000000" size=-1><br>Your dominant hues are cyan and blue. You like people and enjoy making friends. You're conservative and like to make sure things make sense before you step into them, especially in relationships. You are curious but respected for your opinions by people who you sometimes wouldn't even suspect.<br><br>Your saturation level is medium - You're not the most decisive go-getter, but you can get a job done when it's required of you. You probably don't think the world can change for you and don't want to spend too much effort trying to force it.<br><br>Your outlook on life is bright. You see good things in situations where others may not be able to, and it frustrates you to see them get down on everything.<br></font></center></td></tr><tr><td><center><a target="_blank" href="http://spacefem.com/quizzes/colors">the spacefem.com html color quiz</a></center></td></tr></table></center>
     <br>
     <a href="https://web.archive.org/web/20030623235301/http://www.zenhex.com/tests/tarot/">
-<img src="https://web.archive.org/web/20030623235301im_/http://www.zenhex.com/tests/tarot/9.jpg" border="0" height="301" width="175"><br>Which tarot card are you?</a>
+<img src="https://web.archive.org/web/20030623235301im_/http://www.zenhex.com/tests/tarot/9.jpg" border="0" height="301" width="175"><br>Which tarot card are you?</a><br>
 <!-- // Begin Current Moon Phase HTML (c) MoonConnection.com // --><table cellpadding="0" cellspacing="0" border="0" width="212"><tr><td align="center"><a target="_blank" href="https://www.moonconnection.com"><img src="https://www.moonmodule.com/cs/dm/hn.gif" width="212" height="136" border="0" alt="" /></a><div style="position:relative;width:128px;"><div style="position:absolute;top:-20px;left:6px;background:#000000;width:116px;text-align:center;"><a target="_blank" href="https://www.moonconnection.com/"><font color="#7F7F7F" size="1" face="arial,helvetica,sans-serif"><span style="color:#7F7F7F;font-family:arial,helvetica,sans-serif;font-size:10px;">moon data</span></font></a></div></div></td></tr></table><!-- // end moon phase HTML // --></center>
 <!-- END CONTENT --><br>
 <!-- Begin I Write Like Badge -->
@@ -177,10 +281,10 @@ href="https://www.angelfire.com/co2/dreamchaserland/adoption.html">
         <div style="display: flex; justify-content: space-around;">
           <div style="padding: 5px">
             <p>Your immortal lover would be...</p>
-            <h1 class="title">Hestia</h1>
+            <h1 style="font-family: serif; margin-top: -20px;">Hestia</h1>
             <p class="description">As a lover of the goddess of the hearth, you long for stability and emotional maturity in your relationships.  You like the heat of love, but not in the fiery way of passion, but the warmth of looking at a lifelong friend.</p>
           </div>
-          <img class="image" style="width: 50%;border: 1px solid" alt="Hestia" src="https://i.ibb.co/60h1w3z/hestia.jpg">
+          <img class="image" style="width: 200%;border: 1px solid" alt="Hestia" src="https://i.ibb.co/60h1w3z/hestia.jpg">
         </div>
         <small>
           <a target="_blank" href="https://hekate.neocities.org">Want your own? Visit hekate.neocities.org!</a>
@@ -190,7 +294,7 @@ href="https://www.angelfire.com/co2/dreamchaserland/adoption.html">
   
       <div class="results" style="margin-right:-20px; margin-left:60px; margin-bottom: 20px; width: 200px;background-color: #fff;color: #000;display: block;padding: 10px;border: 1px solid;font-family: 'times';font-size: '15pt'; float:left;">
         <p style="margin: 0">This page is protected by a</p>
-        <h1 class="title" style="margin: 0">BUTTERFLY</h1>
+        <h3 style="margin: 0; font-family: serif;">BUTTERFLY</h3>
         <img class="image" style="max-width: 160px;border: 1px solid" alt="BUTTERFLY" src="https://i.ibb.co/wwhYvRp/butterfly.jpg">
         <p class="description">The Large Blue butterfly is a species of carnivorous butterfly, and went extinct in Britain in 1979.  It has since been reintroduced with new conservation methods.</p>
         <small>
@@ -214,3 +318,8 @@ href="https://www.angelfire.com/co2/dreamchaserland/adoption.html">
 
   </div>
 </div>
+
+      </main>
+      </div>
+    </body>
+</html>

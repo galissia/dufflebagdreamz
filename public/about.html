@@ -31,7 +31,6 @@ body, html {
 	margin: 0;
 	font-size: 13px;
 	background: teal;
-	color: lime;
 	font-family: 'Source Code Pro', monospace;
 	font-size: 12px;
     overflow: hidden;
@@ -91,10 +90,6 @@ img {
 	margin-top: 24px;
 }
 
-.menu a {
-	color: lime;
-}
-
 .main {
 	height: 600px;
 	width: 8000px;
@@ -108,22 +103,7 @@ img {
         display: none;
     
     }
-    
-h1, h2, h3, h4, h5 {
-	font-size: 12px;
-}
 
-h1 {
-	border-bottom: 1px solid lime;
-}
-
-h2 {
-	border-bottom: 1px dotted lime;
-}
-
-a {
-	color: red;
-}
 .footbar {
   position:fixed;
   bottom: 0;
@@ -243,13 +223,13 @@ max-height:450px;
     <div id="ads">
     <div id="ad1">
         <div id="moms">
-  <div id="momsheader"><img src="/images/momshatehim.png" title="this is draggable :)"></div>
-  <img src="/images/jermad.webp" style="position:relative; pointer-events: none; bottom:407px;">
+  <div id="momsheader"><img src="./images/momshatehim.png" title="this is draggable :)"></div>
+  <img src="./images/jermad.webp" style="position:relative; pointer-events: none; bottom:407px;">
 </div>
     </div>
     <div id="ad2">
 <div id="kingdom">
-  <div id="kingdomheader"><img src="/images/JERMAKINGDOM.png" title="this is draggable :)"></div>
+  <div id="kingdomheader"><img src="./images/JERMAKINGDOM.png" title="this is draggable :)"></div>
 </div>
 </div>
       </div>  
@@ -271,22 +251,22 @@ function myFunction() {
             img.setAttribute('src', filename);
         }
             function pets() {
-  document.getElementById("windowimage").src = "/petsgallery.html";
+  document.getElementById("windowimage").src = "./petsgallery.html";
 }
             function about() {
-  document.getElementById("windowimage").src = "/aboutgeneral.html";
+  document.getElementById("windowimage").src = "./aboutgeneral.html";
 }
             function personas() {
-  document.getElementById("windowimage").src = "/personascontent.html";
+  document.getElementById("windowimage").src = "./personascontent.html";
 }
      function wibblywobbly() {
-  document.getElementById("windowimage").src = "/binglebongle.html";
+  document.getElementById("windowimage").src = "./binglebongle.html";
 }
 
         </script>
 
     <div id="video">
-  <div id="videoheader"><img src="/images/VIDEOWINDOW.png" style="width:500px;"></div>
+  <div id="videoheader"><img src="./images/VIDEOWINDOW.png" style="width:500px;"></div>
   <iframe style="position:relative; bottom:410px; width:480px; height:300px;" src="https://www.youtube.com/embed/videoseries?si=XEPussszsxIenbTo&amp;list=PLq2KlAazbyQh1h1doVQN3geB6d5tEzu_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
     
@@ -342,46 +322,46 @@ function dragElement(elmnt) {
 <table class="appstable">
         <tbody><tr class="apps">
             <td class="apps">
-                <a href="/index.html"><img src="/images/main.png"></a>
+                <a href="./home.html"><img src="./images/main.png"></a>
             </td>
             
             <td class="apps">
-                <img src="/images/toggle.png" onclick="myFunction()">
+                <img src="./images/toggle.png" onclick="myFunction()">
                 
             </td>
         </tr>
         <tr class="apps">
             <td class="apps">
-                <a href="/aboutgeneral.html" target="mainframe"><img onclick="about(); changeImage('/images/aboutmeframe.png')" src="/images/aboutme.png"></a>
+                <a href="./aboutgeneral.html" target="mainframe"><img onclick="about(); changeImage('./images/aboutmeframe.png')" src="./images/aboutme.png"></a>
             </td>
             <td class="apps">
-                <a href="https://galissia.neocities.org/binglebongle" target="mainframe"><img onclick="wibblywobbly(); changeImage('/images/wibblywobbly.png')" src="/images/tardis.gif"></a>
-            </td>
-        </tr>
-        <tr class="apps">
-            <td class="apps">
-                <a href="/petsgallery.html" target="mainframe"><img onclick="pets(); changeImage('/images/petpictures.png')" src="images/folder.png"></a>
-            </td>
-        </tr>
-            <tr class="apps">
-            <td class="apps">
-                <a href="/personascontent.html" target="mainframe"><img onclick="personas(); changeImage('/images/ocs.png')" src="/images/personas.png"></a>
-            </td>
-        </tr>
-            <tr class="apps">
-            <td class="apps">
-                <img onclick="showvideo();" src="/images/videoplayer.png">
+                <a href="./binglebongle.html" target="mainframe"><img onclick="wibblywobbly(); changeImage('./images/wibblywobbly.png')" src="./images/tardis.gif"></a>
             </td>
         </tr>
         <tr class="apps">
             <td class="apps">
-                <a href="#" id="webamp-icon"><img src="/images/winamp.png"></a>
+                <a href="./petsgallery.html" target="mainframe"><img onclick="pets(); changeImage('./images/petpictures.png')" src="./images/folder.png"></a>
+            </td>
+        </tr>
+            <tr class="apps">
+            <td class="apps">
+                <a href="./personascontent.html" target="mainframe"><img onclick="personas(); changeImage('./images/ocs.png')" src="./images/personas.png"></a>
+            </td>
+        </tr>
+            <tr class="apps">
+            <td class="apps">
+                <img onclick="showvideo();" src="./images/videoplayer.png">
+            </td>
+        </tr>
+        <tr class="apps">
+            <td class="apps">
+                <a href="#" id="webamp-icon"><img src="./images/winamp.png"></a>
             </td>
         </tr>
             
         <tr class="apps">
             <td class="apps">
-                <img onclick="showjerma()" src="/images/jermacraft.png" >
+                <img onclick="showjerma()" src="./images/jermacraft.png" >
             </td>
         </tr>
         <tr class="apps">
@@ -639,8 +619,8 @@ function dragElement(elmnt) {
 
         <div class="main">
 <div id="main">
-  <div id="mainheader"><img id="windowimage" src="/images/aboutmeframe.png"></div>
-  <iframe id="mainframe" name="mainframe" title="mainframe" src="aboutgeneral.html"></iframe>
+  <div id="mainheader"><img id="windowimage" src="./images/aboutmeframe.png"></div>
+  <iframe id="mainframe" name="mainframe" title="mainframe" src="./aboutgeneral.html"></iframe>
 </div>
 </div>
 <script>
@@ -696,7 +676,7 @@ function dragElement(elmnt) {
 		<a class="button" href="javascript:BrowserPonies.stop();void(0)" title="Stop Pony">■</a>
                 <a class="button" href="javascript:BrowserPonies.start();void(0)" title="Start Pony">▶</a>
     </div>	
-<img src="/images/98bg2.png" class="footbar">
-<img src="/images/98barL.png" style="position:fixed; left:0px; bottom:0px;">
-<img src="/images/98barR.png" style="position:fixed; right:0px; bottom:0px;">
+<img src="./images/98bg2.png" class="footbar">
+<img src="./images/98barL.png" style="position:fixed; left:0px; bottom:0px;">
+<img src="./images/98barR.png" style="position:fixed; right:0px; bottom:0px;">
 </body></html>

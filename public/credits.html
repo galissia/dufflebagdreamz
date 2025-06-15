@@ -1,4 +1,113 @@
-<link rel="stylesheet" href="style/iframe.css" />
+<!doctype html>
+<html>
+<head>
+    
+    <!-- Change your site title: (It is shown in the tab) -->
+    <title>Gal's Space!</title>
+
+    <!-- Change your site description: (It is shown in Google results) -->
+    <meta content="Gal's cozy little corner of the internet" name="description" />
+
+    <!-- Setting character encoding and viewport size. Do not remove. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FavIcon (small image in tab), change to any image you want: -->
+    <link href="./images/theme_assets/em2lV2r.gif" rel="icon" type="image/x-icon" />
+
+    <!-- CSS: -->
+    <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css" if this HTML file is in 2 subfolders, etc. -->
+    <link href="https://fonts.cdnfonts.com/css/elmono-2" rel="stylesheet" />
+<link href="https://fonts.cdnfonts.com/css/beginning-2" rel="stylesheet">
+    <link href="./css/home.css" rel="stylesheet" />
+    <style>
+      #time {
+                            font-size: 10px;
+                            margin-left:-10px;
+                            margin-top: 5px;
+                        }</style>
+    <script src="https://status.cafe/current-status.js?name=galissia" defer></script>
+    <script>
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var site_data = JSON.parse(this.responseText);
+                    var num_arr = site_data.info.views.toString().split("");
+                    var num_str = "";
+                    for (i = 0; i < num_arr.length; i++) {
+                        num_str += num_arr[i];
+                        if ((num_arr.length - 1 - i) % 3 == 0 && num_arr.length - 1 - i != 0) {
+                            num_str += ",";
+                        }
+                        var date_str = site_data.info.last_updated;
+                        var date_obj = new Date(site_data.info.last_updated);
+                        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                        var months = [
+                            "January",
+                            "February",
+                            "March",
+                            "April",
+                            "May",
+                            "June",
+                            "July",
+                            "August",
+                            "September",
+                            "October",
+                            "November",
+                            "December"
+                        ];
+                        document.getElementById("lastupdate").innerHTML =
+                            days[date_obj.getDay()] +
+                            " " +
+                            months[date_obj.getMonth()] +
+                            " " +
+                            date_obj.getDate() +
+                            ", " +
+                            date_obj.getFullYear();
+                    }
+                    document.getElementById("hitcount").innerHTML = num_str;
+                }
+            };
+            xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=dufflebagdreamz", true);
+            xhttp.send();
+        </script>
+    <script type="text/javascript">
+      function changeStyle(style) {
+    if (style == null)
+        style = localStorage.getItem("style");
+        if (style == null) 
+            style = "/css/home";
+    document.querySelector("link[type='text/css']").setAttribute("href", "/public/css/" + style + ".css");
+    localStorage.setItem("style", style);
+}
+
+changeStyle();</script>
+    <!-- JavaScript: -->
+    <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js" if this HTML file is in 2 subfolders, etc. -->
+    <script src="./scripts/layout.js"></script>
+
+    <script>
+      // Template generated with petrapixel's layout generator.
+      // (Please do not remove this credit.)
+      console.log("%c Template generated with petrapixel's layout generator.", "font-size: 14pt;");
+      console.log("%c https://petrapixel.neocities.org/coding/layout-generator", "font-size: 14pt;");
+    </script>
+    </head>
+    <body>
+    <!-- The next line is a skip-to-content link for keyboard users. Do not remove it! -->
+    <a href="#content" id="skip-to-content-link">Skip to content</a>
+
+    <div class="layout">
+      
+      <!-- =============================================== -->
+      <!-- Header (and Sidebars) will be loaded per JavaScript! Edit layout.js to change. -->
+      <!-- =============================================== -->
+
+  
+      <main id="content"> <!-- Do NOT remove the ID here -->
+
+        <noscript>Please enable JavaScript to view this website!</noscript>
+    
 <link href="https://fonts.cdnfonts.com/css/elmono-2" rel="stylesheet" />
 <style type="text/css">
   * {
@@ -40,18 +149,13 @@
   
 
 }
-@keyframes rainbow { 
-  0%{background-position:left}
-  50%{background-position:right}
-  100%{background-position:left}
-}
+
 
 </style>
 <div id="main">
   <div class="mainboxes">
-    <div class="subheader"><h3 style="text-align: center">website credits</h3></div>
-
-    <div class="mainboxescontent">
+    <div class="title"><div class="title-text" style="text-align: center">website credits</div></div>
+<br>
       <!--CONTENT HERE!-->
       <p style="clear: right">
         <img
@@ -94,16 +198,13 @@
       <span style="margin-bottom: 10px"
         ><h3 style="display: inline-block; margin-bottom: -5px; margin-right:5px;">Browser:</h3>
         <p style="display: inline">
-          <a
-            href="https://www.opera.com/gx?utm_content=2756_ce6826bb94938f092d9e1a2a8674ac35&utm_medium=pa&utm_campaign=PWN_US&utm_id=758c2021882e4b2e91c3992ffe9bc89c&utm_source=PWNgames&edition=std-2"
-            >OperaGX</a
-          >,
+          
           <a
             href="https://www.mozilla.org/en-US/firefox/new/?gad_source=1&gclid=Cj0KCQiAkJO8BhCGARIsAMkswyj99Tk22pj4SaDc3M6XXzYbdTbh_5Ed7A6MPoKeep6-m3jhN97J0SoaAljbEALw_wcB"
             >FireFox</a
           >
-          for live preview
-        </p></span
+          </p>
+        </span
       >
       <br />
       <!--end item-->
@@ -118,7 +219,7 @@
       <h2 style="text-decoration: underline">Resources</h2>
       <ul>
         <li>
-          <a target="_blank" href="https://repth.neocities.org/theme12">Repth's Theme #12</a
+          <a target="_blank" href="https://petrapixel.neocities.org/coding/layout-generator">Petrapixel's Layout Generator</a
           ><sub style="position: relative; bottom: 5px"> - used as the base for this website.</sub>
         </li>
         <li>
@@ -133,18 +234,19 @@
           <a target="_blank" href="https://goblin-heart.net/sadgrl/learn/articles/last-update-visitors">Neocities Last Updated & Visitor counter</a
           ><sub style="position: relative; bottom: 5px"></sub>
         </li>
-        <li>
-          <a target="_blank" href="https://counter.fc2.com/en/index.html">FC2 Counter</a
-          ><sub style="position: relative; bottom: 5px"></sub>
-        </li>
+        
         <li>
           <a target="_blank" href="https://github.com/biancarosa/lastfm-last-played">LastFM Last Played</a
           ><sub style="position: relative; bottom: 5px"></sub>
         </li>
-        <li>
-          <a target="_blank" href="https://forum.melonland.net/index.php?topic=115.0">Fix iFrame Links</a
-          ><sub style="position: relative; bottom: 5px"> - used everywhere there's an iframe on this website.</sub>
+          <li>
+          <a target="_blank" href="https://petrapixel.neocities.org/coding/widgets">Petra's LastFM Last Played Widget</a
+          ><sub style="position: relative; bottom: 5px"> - used to actually display the song as i was having trouble getting the original to work. will troubleshoot in the future.</sub>
         </li>
+          
+        <li>
+        <a target="_blank" href="https://hillhouse.neocities.org/materials/snippets/list-counter">Hill House's Item counter</a> <sub style="position: relative; bottom:5px;"> - used on my resources page. counts the numebr of items in a list.</sub></li>
+       
         <li>
           <a target="_blank" href="https://zonelets.net">Zonelets</a
           ><sub style="position: relative; bottom: 5px"> - the framework for my blog</sub>
@@ -264,4 +366,7 @@
 
     <br />
   </div>
-</div>
+      </main>
+      </div>
+    </body>
+</html>

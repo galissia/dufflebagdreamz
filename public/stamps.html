@@ -1,36 +1,105 @@
 <!doctype html>
-<html lang="en">
- <head>
-  <title>Stamps</title>
-  <link rel="shortcut icon" type="image/x-icon" href="/images/theme_assets/favicon.png" />
-  <link href="/style/iframe.css" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.cdnfonts.com/css/elmono-2" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css" />
-  <style>
-   .ff-container {
-    display: inline-flex;
-   }
-   .counter {
-    position: relative;
-    left: 45px;
-    bottom: 10px;
-    margin-bottom:;
-   }
-  </style>
-  <script src="https://unpkg.com/freezeframe@3.0.10/build/js/freezeframe.pkgd.min.js"></script>
-  <script>
-   $(function () {
-    third = new freezeframe(".freezeframe").capture().setup();
-    $(".play-gif").click(function (e) {
-     e.preventDefault();
-     third.trigger();
-    });
-    $(".stop-gif").click(function (e) {
-     e.preventDefault();
-     third.release();
-    });
-   });
-  </script>
+<html>
+<head>
+    
+    <!-- Change your site title: (It is shown in the tab) -->
+    <title>Gal's Space!</title>
+
+    <!-- Change your site description: (It is shown in Google results) -->
+    <meta content="Gal's cozy little corner of the internet" name="description" />
+
+    <!-- Setting character encoding and viewport size. Do not remove. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FavIcon (small image in tab), change to any image you want: -->
+    <link href="./images/theme_assets/em2lV2r.gif" rel="icon" type="image/x-icon" />
+
+    <!-- CSS: -->
+    <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css" if this HTML file is in 2 subfolders, etc. -->
+    <link href="https://fonts.cdnfonts.com/css/elmono-2" rel="stylesheet" />
+<link href="https://fonts.cdnfonts.com/css/beginning-2" rel="stylesheet">
+    <link href="./css/home.css" rel="stylesheet" />
+    <style>
+    
+      #time {
+                            font-size: 10px;
+                            margin-left:-10px;
+                            margin-top: 5px;
+                        }</style>
+    <script src="https://status.cafe/current-status.js?name=galissia" defer></script>
+    <script>
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var site_data = JSON.parse(this.responseText);
+                    var num_arr = site_data.info.views.toString().split("");
+                    var num_str = "";
+                    for (i = 0; i < num_arr.length; i++) {
+                        num_str += num_arr[i];
+                        if ((num_arr.length - 1 - i) % 3 == 0 && num_arr.length - 1 - i != 0) {
+                            num_str += ",";
+                        }
+                        var date_str = site_data.info.last_updated;
+                        var date_obj = new Date(site_data.info.last_updated);
+                        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                        var months = [
+                            "January",
+                            "February",
+                            "March",
+                            "April",
+                            "May",
+                            "June",
+                            "July",
+                            "August",
+                            "September",
+                            "October",
+                            "November",
+                            "December"
+                        ];
+                        document.getElementById("lastupdate").innerHTML =
+                            days[date_obj.getDay()] +
+                            " " +
+                            months[date_obj.getMonth()] +
+                            " " +
+                            date_obj.getDate() +
+                            ", " +
+                            date_obj.getFullYear();
+                    }
+                    document.getElementById("hitcount").innerHTML = num_str;
+                }
+            };
+            xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=dufflebagdreamz", true);
+            xhttp.send();
+        </script>
+    <script type="text/javascript">
+      function changeStyle(style) {
+    if (style == null)
+        style = localStorage.getItem("style");
+        if (style == null) 
+            style = "/css/home";
+    document.querySelector("link[type='text/css']").setAttribute("href", "/public/css/" + style + ".css");
+    localStorage.setItem("style", style);
+}
+
+changeStyle();</script>
+    <!-- JavaScript: -->
+    <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js" if this HTML file is in 2 subfolders, etc. -->
+    <script src="./scripts/layout.js"></script>
+<script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+  const e = new Freezeframe({ trigger: false, responsive: false });
+  document.getElementById("play-gif").addEventListener("click", function(){ e.start() });
+  document.getElementById("stop-gif").addEventListener("click", function(){ e.stop() });
+});</script>
+    <script>
+      // Template generated with petrapixel's layout generator.
+      // (Please do not remove this credit.)
+      console.log("%c Template generated with petrapixel's layout generator.", "font-size: 14pt;");
+      console.log("%c https://petrapixel.neocities.org/coding/layout-generator", "font-size: 14pt;");
+    </script>
+    
   <style>
    /*********************************
 * Honeycomb Stamp Layouts v. 1.2 *
@@ -199,13 +268,47 @@
    .hc-center > * {
     margin-left: -16px;
    }
+      .freezeframe {
+          width: 100%;
+      }
+      .ff-container {
+    display: inline-flex;
+   }
+      .ff-image {
+  vertical-align: unset !important;
+}
+   .counter {
+    position: relative;
+    left: 45px;
+    bottom: 10px;
+    margin-bottom:;
+   }
+      .freezeframe{
+          height: 100%;
+          width: 100%;
+      }
+      
   </style>
- </head>
- <body>
-  <div id="main">
-   <div class="mainboxes">
-    <div class="subheader"><h3 style="text-align: center">stamps & blinkies</h3></div>
+  
+    </head>
+    <body>
+    <!-- The next line is a skip-to-content link for keyboard users. Do not remove it! -->
+    <a href="#content" id="skip-to-content-link">Skip to content</a>
 
+    <div class="layout">
+      
+      <!-- =============================================== -->
+      <!-- Header (and Sidebars) will be loaded per JavaScript! Edit layout.js to change. -->
+      <!-- =============================================== -->
+
+  
+      <main id="content"> <!-- Do NOT remove the ID here -->
+
+        <noscript>Please enable JavaScript to view this website!</noscript>
+    <div id="main">
+   <div class="mainboxes">
+    <div class="title"><div class="title-text" style="text-align: center">stamps & blinkies</div></div>
+<br>
     <div class="mainboxescontent">
      <br />
      <div style="text-align: center">
@@ -214,7 +317,7 @@
      <br />
      <div style="text-align: center">
       <button
-       class="play-gif"
+       id="play-gif"
        style="
         background-color: #6351c6;
         color: white;
@@ -227,7 +330,7 @@
        Play GIFs
       </button>
       <button
-       class="stop-gif"
+       id="stop-gif"
        style="
         background-color: #6351c6;
         color: white;
@@ -530,7 +633,7 @@
        <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/werewolvesarebetter.jpg" width="" />
        <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/heslying.png" width="25%" />
        <a href="https://www.deviantart.com/yatsuos/art/my-father-died-725960604"
-        ><img class="freezeframe" src="/images/ryo.gif" width="80px;"
+        ><img class="freezeframe" src="./images/ryo.gif" width="80px;"
        /></a>
        <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/tumblr_d94ed88d165dbc951a760eed46e5ae85_e3f553c0_250.jpg" width="100px;">
        <br />
@@ -538,10 +641,10 @@
        <a href="https://www.tumblr.com/januscorner/752961158735085568/made-these-cus-i-was-pissed-feel-free-to-use-with"
         ><img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/amatornormativity.jpeg" width="300px;"
        /></a>
-       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/karlach.jpg" width="300px;" />
-       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/gale.jpg" width="300px;" />
-       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/shadowheart.jpg" width="300px;" />
-       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/astarion.jpg" width="300px;" />
+       <img  src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/karlach.jpg" width="300px;" />
+       <img  src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/gale.jpg" width="300px;" />
+       <img  src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/shadowheart.jpg" width="300px;" />
+       <img  src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/astarion.jpg" width="300px;" />
        <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/busyguy.jpg" width="300px;" />
        <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/eepy.jpg" width="300px;" />
        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/68458310_jwTWPdUtysRqvEf.png" width="300px;">
@@ -665,7 +768,7 @@
       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/e75.gif">
       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/v77.gif">
       <img class="freezeframe" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/s11.gif">
-      <img class="freezeframe" width="150" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/tumblr_e837644cb40e3810169a29c9f4fd6948_61688946_500.gif">
+      <img class="freezeframe2" width="150" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/tumblr_e837644cb40e3810169a29c9f4fd6948_61688946_500.gif">
       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/sucklet.gif" class="freezeframe">
       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/spellcasting.gif" class="freezeframe">
       <img src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/toontown.gif" class="freezeframe">
@@ -720,11 +823,11 @@
        <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/itwasnt2.gif" />
        <img class="freezeframe" style="width: 150px" src="https://file.garden/ZoMEF_reXgpHHpnb/stamps/instakill.gif" />
       </a>
-     </div>
-     <br /><br />
-    </div>
-   </div>
-  </div>
-  <br />
- </body>
+        </div>
+       </div>
+        </div>
+          </div>
+      </main>
+      </div>
+    </body>
 </html>

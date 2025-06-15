@@ -33,31 +33,35 @@ function headerHTML() {
           <ul>
             <li><a href="./home.html">Home</a></li>
             <li><a href="./websites.html">Links</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
+            <li><a href="./about.html">About Me</a></li>
+            <li><a href="./stamps.html">Stamps</a></li>
+            <li><a href="./toybox.html">Toybox</a></li>
+            <li><a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-36095-aa">Guestbook</a></li>
 			
             <li>
               	<details>
-				<summary>Submenu</summary>
+				<summary>Shrines</summary>
                 <ul>
-                  <li><a href="#">Page A</a></li>
-                  <li><a href="#">Page B</a></li>
-                  <li><a href="#">Page C</a></li>
-                  <li><a href="#">Page D</a></li>
-                  <li><a href="#">Page E</a></li>
+                  <li><a href="./shrines/tgs.html">The Glass Scientists</a></li>
+                  <li><a href="./shrines/moonswirl.html">Moonswirl</a></li>
+                </ul>
+				</details>
+            </li>
+            <li>
+              	<details>
+				<summary>Writing</summary>
+                <ul>
+                  <li><a href="./blog.html">Blog</a></li>
+                  <li><a href="./journal.html">Journal</a></li>
                 </ul>
 				</details>
             </li>
           </ul>
         </nav>
-        <div class="sidebar-section">
-          <div class="sidebar-title"> ✧.* Section Title</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
-        </div>
+        
         
           <div class="sidebar-section">
-          <div class="sidebar-title">✧.* Section Title</div>
+          <div class="sidebar-title">✧.* buttons</div>
           <marquee scrollamount="4">
 <img src="./images/buttons/webdesign.png">
 <img src="./images/buttons/handcoded.gif">
@@ -82,6 +86,12 @@ function headerHTML() {
 <img src="./images/buttons/censor_14c.gif" >
 <img src="./images/buttons/fuckingwebmaster.gif" >
 		  </marquee>
+         
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title"> ✧.* silly image </div>
+          <img class="funny" style="width:100%" src="./images/piclogs/10likes.png">
+          
         </div>
         <div class="sidebar-section">
           <div class="sidebar-title">✧.* To-do</div>
@@ -102,7 +112,8 @@ function headerHTML() {
                     </ul>
                   </div>
         </div>
-		
+        
+
 		
       </aside>
 	
@@ -151,6 +162,7 @@ function headerHTML() {
           <a href="https://www.deviantart.com/galissiax" target="_blank"><img alt="DeviantArt" src="https://file.garden/ZoMEF_reXgpHHpnb/DeviantArt.png"></a>
           <a href="https://galissiacommissions.carrd.co/" target="_blank"><img alt="Carrd" src="https://file.garden/ZoMEF_reXgpHHpnb/Carrd.png"></a>
           <a href="https://neocities.org/site/galissia" target="_blank"><img alt="Neocities Profile" src="./images/buttons/neocities-pink.gif"></a>
+          
           </center>
           
           </div>
@@ -162,66 +174,76 @@ function headerHTML() {
 		<div class="sidebar-section">
           <div class="sidebar-title-2">neat sites ✧.*</div>
         
-		  	  <div style="max-height:200px; overflow-y:scroll;"> <center>
-   <a href="https://dustedpink.neocities.org/" target="_blank"
-          ><img alt="dustedpink.neocities.org" src="./images/buttons/dustedpink.gif"
-        /></a>
-   <a target="_blank" href="https://cavitycollector.neocities.org"
-          ><img
-            alt="cavitycollector.neocities.org"
-            src="https://file.garden/ZoMEF_reXgpHHpnb/cavitycollector-button.gif"
-        /></a>
-        <a href="https://strawbebby228.neocities.org/" target="_blank"><img alt="strawbebby228" src="./images/buttons/ButtonPink.gif" /></a>
+		  	  <div style="max-height:200px; overflow-y:scroll;">  <center>
+          <a href="https://midnightsolarium.neocities.org/"><img src="./images/buttons/misor.png"></a>
+          <a href="https://dustedpink.neocities.org/" target="_blank"
+                                        ><img alt="dustedpink.neocities.org" src="./images/buttons/dustedpink.gif"
+                                    /></a>
+          <a target="_blank" href="https://cavitycollector.neocities.org"
+                                        ><img
+                                            alt="cavitycollector.neocities.org"
+                                            src="https://file.garden/ZoMEF_reXgpHHpnb/cavitycollector-button.gif"
+                                    /></a>
+        <a href="https://strawbebby228.neocities.org/" target="_blank"><img src="./images/buttons/ButtonPink.gif" /></a>
+          <a href="https://emeowly.gay/home" target="_blank"><img src="./images/buttons/emeowly.gif"></a>
          <a href="http://cepheus.xyz" target="_blank"
             ><img alt="click to visit cepheus" src="./images/buttons/cepheus.gif"
         /></a>
         
         <a href="https://jackisnotbright.neocities.org" target="_blank"
-            ><img src="./images/buttons/JACKISNOTBRIGHT.gif" alt="jackisnotbright"/><img
+            ><img src="./images/buttons/JACKISNOTBRIGHT.gif" /><img
         /></a>
         <a href="https://petrapixel.neocities.org/" target="_blank"
             ><img src="./images/buttons/petra.webp" alt="petrapixel"
         /></a>
         <a href="https://mooeena.neocities.org" target="_blank"><img src="./images/buttons/goat.gif" /><img /></a>
-         
+         <a href="https://theponyhighway.neocities.org/" target="_blank"><img src="./images/buttons/tphbuttonshine.gif"></a>
          <a href="https://lastsunrise.art" target="_blank"><img src="./images/buttons/lastsunrise.gif" alt="Last Sunrise Button" /></a>
-        <a href="https://theponyhighway.neocities.org/" target="_blank"><img src="./images/buttons/tphbuttonshine.gif"></a>
-             <a href="https://postwick.net" target="_blank"><img src="./images/buttons/postwickbutton.gif" alt="Postwick's site button"></a>
+        
+             <a href="https://lostlove.neocities.org/"><img src="./images/buttons/LUNOSPACE.gif"></a> <a href="https://postwick.net" target="_blank"><img src="./images/buttons/postwickbutton.gif" alt="Postwick's site button"></a>
         <a href="http://whimsical.heartette.net" target="_blank"><img src="./images/buttons/whimsical.gif" /><img /></a>
         
         <a href="https://dokode.moe" target="_blank"><img src="./images/buttons/dokodemobutton3.gif" /><img /></a>
         <a href="https://olliveen.neocities.org/" target="_blank"><img src="https://olliveen.neocities.org/img/button.gif"></a>
-        
-        <a href="https://maphren.neocities.org/" target="_blank"
-            ><img src="https://maphren.neocities.org/imgs/buttons/maphren.gif" alt="maphren.neocities.org"
-        /></a>
+          <a href="https://insect.christmas" target="_blank"><img src="./images/buttons/insectchristmas.png" /><img /></a>
+          
+        <a href="https://32bit.cafe" target="_blank"><img src="./images/buttons/32b-pcb.png" /><img /></a>
+          <a target="_blank" href="https://y2kbugz.neocities.org"
+                                        ><img alt="y2kbugz.neocities.org" src="./images/buttons/y2kbugs.png"
+                                    /></a>
+        <a href="https://dimden.dev" target="_blank"><img src="./images/buttons/dimden.gif" />
+      </a>
+        <a href="https://tectrix.neocities.org" target="_blank"><img src="https://tectrix.neocities.org/images/button.gif"></a>
+        <a href="https://nathanntan.neocities.org/" target="_blank"
+                                        ><img src="https://nathanntan.neocities.org/avatars/button%20(1).png"
+                                    /></a>
+          <a href="https://maphren.neocities.org/" target="_blank"
+                                        ><img
+                                            src="https://maphren.neocities.org/imgs/buttons/maphren.gif"
+                                            alt="maphren.neocities.org"
+                                    /></a>
         <a href="https://pinkdreamsponyland.neocities.org" target="_blank"> <img src="./images/buttons/pinkpony.png"></a>
+          
         <a href="https://ballonlea.net" target="_blank"><img src="./images/buttons/sitebutton1.gif" /><img /></a>
-   <a href="https://tectrix.neocities.org" target="_blank"><img src="https://tectrix.neocities.org/images/button.gif"></a>
-   <a href="https://nathanntan.neocities.org/" target="_blank"><img src="https://nathanntan.neocities.org/avatars/button%20(1).png"></a>
         <a href="https://ne0nbandit.neocities.org/" target="_blank"><img src="https://ne0nbandit.github.io/assets/img/btn/mine/nbbanner.png"></a>
-   <a href="https://theabsoluterealm.com/" target="_blank">
+          <a href="https://theabsoluterealm.com/" target="_blank">
             <img alt="the absolute realm" src="./images/buttons/absolute-realm.gif"
         /></a>
+          
         
-   <a target="_blank" href="https://doqmeat.com"><img alt="doqmeat.com" src="./images/buttons/doqmeat.png" /></a>
+          <a target="_blank" href="https://doqmeat.com"
+                                        ><img alt="doqmeat.com" src="./images/buttons/doqmeat.png"
+                                    /></a>
         <a href="https://vidapon.net/" target="_blank"><img alt="Vidapon's Artbox!" src="./images/buttons/Astertrail_button.gif"></a>
-    <a target="_blank" href="https://numbersstory.com"
-          ><img alt="numbersstory.com" src="./images/buttons/numbers.png"
-        /></a>
+          
         <a href="https://chimeramanticore.neocities.org" target="_blank"
             ><img src="./images/buttons/chimerabutton.gif" /><img
         /></a>
-      
+          <a target="_blank" href="https://numbersstory.com"
+                                        ><img alt="numbersstory.com" src="./images/buttons/numbers.png"
+                                    /></a>
+      <a href="https://doctordizzy.space/links/" target="_blank"><img src="./images/buttons/dizzy.gif"></a>
         <a href="https://starrs.neocities.org/" target="_blank"><img src="./images/buttons/tiny_space.gif" /></a>
-   <a href="https://insect.christmas" target="_blank"><img src="./images/buttons/insectchristmas.png" /><img /></a>
-        <a href="https://32bit.cafe" target="_blank"><img src="./images/buttons/32b-pcb.png" /><img /></a>
-   <a target="_blank" href="https://y2kbugz.neocities.org"
-          ><img alt="y2kbugz.neocities.org" src="./images/buttons/y2kbugs.png"
-        /></a>
-        <a href="https://dimden.dev" target="_blank"><img src="./images/buttons/dimden.gif" />
-      </a>
-   
         
         </center>
 		  
@@ -247,7 +269,9 @@ function footerHTML() {
 
   return `
 <footer><p style="text-align: center">
-                            <a
+                           
+                           
+                           <a
                                 href="https://c4sif.org/2011/01/copyheart-copying-is-an-act-of-love-please-copy-and-share/"
                                 >♡2023-2025 by Galissia. Copying is an act of love. Please copy.</a
                             >
