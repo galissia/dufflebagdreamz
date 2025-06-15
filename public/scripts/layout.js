@@ -51,7 +51,7 @@ function headerHTML() {
               	<details>
 				<summary>Writing</summary>
                 <ul>
-                  <li><a href="./blog.html">Blog</a></li>
+                  <li><a href="./zonelets/index.html">Blog</a></li>
                   <li><a href="./journal.html">Journal</a></li>
                 </ul>
 				</details>
